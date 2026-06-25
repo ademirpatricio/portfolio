@@ -1,3 +1,5 @@
+import Whatsapp from '../ui/Whatsapp'
+
 function Footer(){
     return(
       <footer className="flex flex-col items-center justify-between gap-4 
@@ -45,7 +47,9 @@ function Footer(){
             </a>
           </li>
         </ul>
+        <Whatsapp/>
       </footer>
+      
     )
 }
 export default Footer;

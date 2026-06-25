@@ -1,8 +1,8 @@
 function Title ({span, title, content}){
     return (
         <>
-            <span className="mb-4 text-neon inline-block text-[11px] font-medium uppercase 
-            tracking-[0.15em] text-md text-orbit-cyan">
+            <span className="mb-4 text-neon text-orbit-cyan inline-block text-[11px] font-medium uppercase 
+            tracking-[0.15em] text-md ">
                 {span}
               </span>
               <h2

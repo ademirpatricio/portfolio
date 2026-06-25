@@ -85,7 +85,7 @@ function HomeHero() {
 
         <div className="mx-auto flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="primary" href="#projects" size="lg">Ver projetos</Button>
-          <Button variant="secondary" href="#contato" size="lg">Fala comigo ⇢</Button>
+          <Button variant="secondary" href="#contact" size="lg">Fala comigo ⇢</Button>
         </div>
 
       </div>

@@ -3,6 +3,7 @@ function Button({
   href = '#',
   variant = 'primary',
   size = 'md',
+  target,
   className = '',
   iconRight
 }) {
@@ -53,6 +54,7 @@ function Button({
   return (
 
     <a href={href}
+    target={target}
 
       className={`
         inline-flex items-center justify-center gap-3
