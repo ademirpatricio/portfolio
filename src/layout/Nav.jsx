@@ -1,0 +1,208 @@
+import { useState, useEffect } from 'react'
+
+import Container from './Container'
+import NavLink from '../ui/NavLink'
+import logo from '../images/logo.svg'
+
+function Nav() {
+  // Navbar ao scroll
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  // Menu Mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  return (
+    <>
+      <nav
+        className={`
+          fixed inset-x-0 top-0 z-50
+          px-6 py-5 md:px-12 md:py-6
+          transition-all duration-300
+
+          ${
+            isScrolled
+              ? 'bg-midnight-deep/75 backdrop-blur-nav'
+              : 'bg-transparent'
+          }
+        `}
+      >
+        <Container>
+
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="text-base font-semibold tracking-[-0.01em]"
+          >
+            <img
+              src={logo}
+              alt="Ademir Patrício"
+              className="h-10 w-auto md:h-12"
+            />
+          </a>
+
+          {/* Menu Desktop */}
+          <ul className="hidden items-center gap-10 md:flex">
+            <NavLink href="#about">
+              SOBRE
+            </NavLink>
+
+            <NavLink href="#services">
+              O QUE FAÇO
+            </NavLink>
+
+            <NavLink href="#projects">
+              PROJETOS
+            </NavLink>
+
+            <NavLink href="#contact" variant="cta">
+              FALA COMIGO ⇢
+            </NavLink>
+          </ul>
+
+          {/* Botão Mobile */}
+          <button
+            className="
+              text-3xl
+              text-white
+              transition
+              md:hidden
+            "
+            onClick={() => setIsMenuOpen(true)}
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+
+        </Container>
+      </nav>
+
+      {/* Overlay */}
+      <div
+        onClick={closeMenu}
+        className={`
+          fixed inset-0 z-40
+          bg-black/60
+          backdrop-blur-sm
+
+          transition-all duration-300
+
+          md:hidden
+
+          ${
+            isMenuOpen
+              ? 'opacity-100 visible'
+              : 'opacity-0 invisible'
+          }
+        `}
+      />
+
+      {/* Menu Mobile */}
+      <aside
+        className={`
+          fixed
+          top-0
+          right-0
+          z-50
+
+          h-screen
+          w-[320px]
+
+          border-l border-white/10
+          bg-midnight-deep
+
+          transition-transform duration-300 ease-out
+
+          md:hidden
+
+          ${
+            isMenuOpen
+              ? 'translate-x-0'
+              : 'translate-x-full'
+          }
+        `}
+      >
+        <div className="flex h-full flex-col">
+
+          {/* Header */}
+          <div className="flex justify-end p-6">
+            <button
+              onClick={closeMenu}
+              className="
+                text-3xl
+                text-white
+                transition
+                hover:opacity-70
+              "
+              aria-label="Fechar menu"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Navegação */}
+          <ul
+            className="
+              flex
+              flex-col
+              items-end
+              gap-8
+
+              px-8
+              pt-10
+
+              text-right
+            "
+          >
+            <NavLink
+              href="#about"
+              onClick={closeMenu}
+            >
+              SOBRE
+            </NavLink>
+
+            <NavLink
+              href="#services"
+              onClick={closeMenu}
+            >
+              O QUE FAÇO
+            </NavLink>
+
+            <NavLink
+              href="#projects"
+              onClick={closeMenu}
+            >
+              PROJETOS
+            </NavLink>
+
+            <NavLink
+              href="#contact"
+              variant="cta"
+              onClick={closeMenu}
+            >
+              FALA COMIGO ⇢
+            </NavLink>
+          </ul>
+
+        </div>
+      </aside>
+    </>
+  )
+}
+
+export default Nav
