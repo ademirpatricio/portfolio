@@ -25,7 +25,7 @@ const services = [
 function HomeServices() {
   return (
     <section id="services" className="bg-spacy-navy md:py-50 relative
-    bg-[url('./images/services-bg.jpg')] bg-cover bg-center bg-no-repeat w-full" 
+    bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat w-full" 
     aria-labelledby="services-title">
       <div className="mx-auto max-w-container px-6 md:px-12">
         <div className="mb-10 md:mb-16 text-center">

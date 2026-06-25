@@ -1,4 +1,4 @@
-import aboutImg from '../images/about-img-1.jpg'
+import aboutImg from '../../assets/images/about-img-1.jpg'
 
 import Title from '../ui/Title'
 

@@ -1,4 +1,4 @@
-import ctaBg from '../images/cta-bg.jpg'
+import ctaBg from '../../assets/images/cta-bg.jpg'
 
 import Button from '../ui/Button'
 import Fade from '../ui/Fade'

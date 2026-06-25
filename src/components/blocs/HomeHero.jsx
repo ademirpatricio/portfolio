@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Button from '../ui/Button'
 import Fade from '../ui/Fade'
 
-import heroBg from '../images/hero-bg.jpg'
+import heroBg from '../../assets/images/hero-bg.jpg'
 
 function HomeHero() {
 

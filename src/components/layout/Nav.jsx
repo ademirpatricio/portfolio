@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import Container from './Container'
 import NavLink from '../ui/NavLink'
-import logo from '../images/logo.svg'
+import logo from '../../assets/images/logo.svg'
 
 function Nav() {
   // Navbar ao scroll

@@ -1,11 +1,10 @@
-import Nav from '../layout/Nav'
-import HomeHero from '../blocs/HomeHero'
-import HomeAbout from '../blocs/HomeAbout'
-import HomeServices from '../blocs/HomeServices'
-import HomeProjects from '../blocs/HomeProjects'
-import HomeCta from '../blocs/HomeCta'
-import Footer from '../layout/Footer'
-
+import Nav from '../components/layout/Nav'
+import HomeHero from '../components/blocs/HomeHero'
+import HomeAbout from '../components/blocs/HomeAbout'
+import HomeServices from '../components/blocs/HomeServices'
+import HomeProjects from '../components/blocs/HomeProjects'
+import HomeCta from '../components/blocs/HomeCta'
+import Footer from '../components/layout/Footer'
 function Home() {
   return (
     <>
