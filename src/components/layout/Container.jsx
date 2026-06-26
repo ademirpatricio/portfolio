@@ -1,11 +1,9 @@
-function Container({ children }) {
-    return (
-        <div className="
-        max-w-6xl mx-auto  
-        px-4 sm:px-6 lg:px-8 
-        flex items-center justify-between">
-            {children}
-        </div>  
-    )
+function Container({ children, className = '' }) {
+  return (
+    <div className={`mx-auto max-w-container px-6 md:px-12 ${className}`}>
+      {children}
+    </div>
+  )
 }
-export default Container;
+
+export default Container

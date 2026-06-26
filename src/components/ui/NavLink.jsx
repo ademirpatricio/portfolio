@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function NavLink({
   href,
   children,
@@ -25,15 +27,24 @@ function NavLink({
     `,
   }
 
+  // Anchor links (#) and external URLs stay as <a>
+  const isExternal = href?.startsWith('http') || href?.startsWith('#')
+
+  if (isExternal) {
+    return (
+      <li>
+        <a href={href} onClick={onClick} className={variants[variant]}>
+          {children}
+        </a>
+      </li>
+    )
+  }
+
   return (
     <li>
-      <a
-        href={href}
-        onClick={onClick}
-        className={variants[variant]}
-      >
+      <Link to={href} onClick={onClick} className={variants[variant]}>
         {children}
-      </a>
+      </Link>
     </li>
   )
 }

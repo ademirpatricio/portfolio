@@ -7,6 +7,9 @@ import Footer from '../src/components/layout/Footer'
 
 import Home from './pages/Home'
 import About from './pages/About'
+import Services from './pages/Services'
+import Projects from './pages/Projects'
+
 import ThaynaAguiar from './pages/projects/ThaynaAguiar'
 
 function App() {
@@ -28,7 +31,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/sobre" element={<About />} />
-      <Route path="/trabalhos/thayna-aguiar" element={<ThaynaAguiar />} />
+      <Route path="/o-que-faco" element={<Services />} />
+      <Route path="/projetos" element={<Projects />} />
+      <Route path="/projetos/thayna-aguiar" element={<ThaynaAguiar />} />
     </Routes>
     
     <Footer />

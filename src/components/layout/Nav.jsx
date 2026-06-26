@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import Container from './Container'
 import NavLink from '../ui/NavLink'
@@ -32,7 +33,7 @@ function Nav() {
       <nav
         className={`
           fixed inset-x-0 top-0 z-50
-          px-6 py-5 md:px-12 md:py-6
+          py-5 md:py-6
           transition-all duration-300
 
           ${
@@ -43,10 +44,11 @@ function Nav() {
         `}
       >
         <Container>
+          <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <a
-            href="#hero"
+          <Link
+            to="/"
             className="text-base font-semibold tracking-[-0.01em]"
           >
             <img
@@ -54,19 +56,19 @@ function Nav() {
               alt="Ademir Patrício"
               className="h-10 w-auto md:h-12"
             />
-          </a>
+          </Link>
 
           {/* Menu Desktop */}
           <ul className="hidden items-center gap-10 md:flex">
-            <NavLink href="#about">
+            <NavLink href="/sobre">
               SOBRE
             </NavLink>
 
-            <NavLink href="#services">
+            <NavLink href="/o-que-faco">
               O QUE FAÇO
             </NavLink>
 
-            <NavLink href="#projects">
+            <NavLink href="/projetos">
               PROJETOS
             </NavLink>
 
@@ -89,6 +91,7 @@ function Nav() {
             ☰
           </button>
 
+          </div>
         </Container>
       </nav>
 
@@ -170,21 +173,21 @@ function Nav() {
             "
           >
             <NavLink
-              href="#about"
+              href="/sobre"
               onClick={closeMenu}
             >
               SOBRE
             </NavLink>
 
             <NavLink
-              href="#services"
+              href="/o-que-faco"
               onClick={closeMenu}
             >
               O QUE FAÇO
             </NavLink>
 
             <NavLink
-              href="#projects"
+              href="/projetos"
               onClick={closeMenu}
             >
               PROJETOS
