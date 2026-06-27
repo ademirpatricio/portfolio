@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import aboutImg from '../../assets/images/about-img-1.jpg'
-
 import Title from '../ui/Title'
 
 function HomeAbout() {
@@ -14,32 +14,30 @@ function HomeAbout() {
               aria-hidden="true"
             >
               {/* Imagem de background */} 
-                    <img
-                      src={aboutImg}
-                      alt=""
-                      className="
-                        absolute inset-0
-                        h-full w-full
-                        object-cover
-                        object-center
-                      " 
-                    />
+              <img
+                src={aboutImg}
+                alt=""
+                className="
+                  absolute inset-0
+                  h-full w-full
+                  object-cover
+                  object-center
+                " 
+              />
 
             </div>
 
             <div>
               <Title 
-                span= "Sobre" 
+                span= "Sobre o Designer" 
                 title = "Não começo pela solução"
-                content = "Tenho mais de 10 anos projetando interfaces e construindo o que projeto. Passei por agências, produtos digitais e times de tecnologia. O que não mudou: entender o problema antes de abrir qualquer ferramenta."
+                content = "Tenho mais de 15 anos projetando interfaces e construindo o que projeto. Passei por agências, produtos digitais e times de tecnologia. O que não mudou: entender o problema antes de abrir qualquer ferramenta."
               />
-              <a
+              <Link to="/sobre"
                 className="inline-flex items-center gap-2 text-[15px] font-semibold 
-                text-cosmic-blue transition-all hover:gap-3.5"
-                href="/sobre"
-              >
+                text-cosmic-blue transition-all hover:gap-3.5">
                 Saiba mais →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

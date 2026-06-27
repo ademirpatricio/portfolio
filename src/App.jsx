@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Lenis from 'lenis'
+import { setLenis } from './utils/lenisInstance'
 
 import Nav from '../src/components/layout/Nav'
 import Footer from '../src/components/layout/Footer'
+import ScrollToTop from './components/utils/ScrollToTop'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -15,6 +17,7 @@ import ThaynaAguiar from './pages/projects/ThaynaAguiar'
 function App() {
   useEffect(() => {
     const lenis = new Lenis({ duration: 1.5 })
+    setLenis(lenis)
 
     function raf(time) {
       lenis.raf(time)
@@ -22,10 +25,16 @@ function App() {
     }
 
     requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+      setLenis(null)
+    }
   }, [])
 
   return (
     <>
+    <ScrollToTop />
     <Nav />
 
     <Routes>

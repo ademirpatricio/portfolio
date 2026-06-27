@@ -79,7 +79,7 @@ function HomeHero() {
 
         {/* Texto de apoio */}
         <p className="text-body mb-13 max-w-[520px] mx-auto text-white-55">
-          Sou Ademir Patrício. Entendo o problema antes de abrir o Figma.
+          Sou <strong>Ademir Patrício</strong>. Entendo o problema antes de abrir o Figma.
           Projeto, construo e entrego.
         </p>
 

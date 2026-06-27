@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { getLenis } from '../../utils/lenisInstance'
 
 import Container from './Container'
 import NavLink from '../ui/NavLink'
@@ -28,6 +29,15 @@ function Nav() {
     setIsMenuOpen(false)
   }
 
+  const { pathname } = useLocation()
+
+  const handleLogoClick = (e) => {
+    if (pathname === '/') {
+      e.preventDefault()
+      getLenis()?.scrollTo(0, { immediate: false })
+    }
+  }
+
   return (
     <>
       <nav
@@ -49,6 +59,7 @@ function Nav() {
           {/* Logo */}
           <Link
             to="/"
+            onClick={handleLogoClick}
             className="text-base font-semibold tracking-[-0.01em]"
           >
             <img

@@ -58,7 +58,7 @@ function HomeServices() {
           ))}
         </div>
       </div>
-      <Fade size="sm" color="deepblue"/>
+      <Fade size="lg" color="deepblue"/>
     </section>
   )
 }
