@@ -45,7 +45,7 @@ function HomeProjects() {
       aria-labelledby="projects-title"
     >
       <div className="mx-auto max-w-container px-6 md:px-12">
-        <div className="mb-10 md:mb-16">
+        <div className="mb-10 md:mb-16 text-center ">
           <Title 
           span="Projetos em destaque"
           title="Do problema ao deploy."

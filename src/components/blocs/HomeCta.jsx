@@ -1,5 +1,7 @@
+import { GiCoffeeCup } from "react-icons/gi";
 import ctaBg from '../../assets/images/cta-bg.jpg'
 
+import IconeText from '../ui/IconeText'
 import Button from '../ui/Button'
 import Fade from '../ui/Fade'
 
@@ -45,7 +47,17 @@ function HomeCta() {
               Se você tem um projeto, uma vaga ou uma ideia no papel, esse pode
               ser o começo.
             </p>
-            <Button variant="secondary" href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio" size="lg" target="_blank">Fala comigo ⇢</Button>
+            <Button mobileFullWidth variant="secondary" href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio" size="lg" target="_blank">Fala comigo ⇢</Button>
+            <div className="mt-8 flex justify-center">
+              <IconeText
+                icon={GiCoffeeCup}
+                iconClassName="text-orbit-cyan"
+                title={'Freelance / Disponibilidade:'}
+                label={'Aberto à oportunidades'}
+                link={'https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio'}
+                target={'_blank'}
+              />
+            </div>
           </div>
           <Fade site="lg" color="midnightdeep"/>
         </section>

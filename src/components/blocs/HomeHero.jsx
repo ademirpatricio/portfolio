@@ -65,11 +65,11 @@ function HomeHero() {
 
         {/* Titulo */}
         <h1 className="mb-7 mx-auto max-w-[800px] 
-        text-[clamp(40px,6.5vw,65px)] 
-        font-bold leading-[1.03] tracking-[-0.03em] text-white">
+         text-white
+        text-[clamp(55px,6.5vw,65px)] font-bold leading-[1.03] tracking-[-0.05em] ">
           Designer que projeta
-          <br />
-          <span className="text-cosmic-blue">com propósito.</span>
+          <br className="hidden md:block"/>
+          <span className="text-cosmic-blue"> com propósito.</span>
         </h1>
 
         {/* Descrição */}

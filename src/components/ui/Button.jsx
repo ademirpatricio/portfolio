@@ -6,14 +6,14 @@ function Button({
   variant = 'primary',
   size = 'md',
   target,
+  mobileFullWidth = false,
   className = '',
   iconRight
 }) {
 
   const variants = {
-
     primary: `
-      bg-cosmic-blue 
+      bg-cosmic-blue
       text-white
       hover:opacity-85
       shadow
@@ -35,7 +35,8 @@ function Button({
     `,
 
     gold: `
-      bg-solar-gold text-midnight-deep
+      bg-solar-gold
+      text-midnight-deep
       hover:opacity-90
     `,
 
@@ -44,23 +45,28 @@ function Button({
       text-white-40
       pointer-events-none
     `
-
   }
 
   const sizes = {
     sm: 'min-h-10 px-5 text-sm',
     md: 'min-h-13 px-8 text-[15px]',
-    lg: 'min-h-15 px-10 text-lg'
+    lg: 'min-h-15 px-10 text-lg',
   }
 
   return (
-
-    <Link to={href}
-    target={target}
-
+    <Link
+      to={href}
+      target={target}
       className={`
-        inline-flex items-center justify-center gap-3
-        rounded-btn font-bold uppercase transition
+        inline-flex
+        items-center
+        justify-center
+        gap-3
+        rounded-btn
+        font-bold
+        uppercase
+        transition
+        ${mobileFullWidth ? 'w-full md:w-auto' : ''}
         ${variants[variant]}
         ${sizes[size]}
         ${className}
@@ -69,7 +75,6 @@ function Button({
       {children}
       {iconRight}
     </Link>
-
   )
 }
 

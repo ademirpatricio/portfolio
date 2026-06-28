@@ -40,15 +40,15 @@
 
   .text-lead {
     @apply
-    text-[clamp(18px,2vw,24px)]
+    text-[clamp(20px,2vw,24px)]
     leading-[1.45]
     tracking-[-0.01em]
   }
 
   .text-body {
     @apply
-    text-[17px]
-    leading-[1.75]
+    text-[15px]
+    leading-[1.55]
   }
 
   .text-neon {
@@ -66,5 +66,83 @@
     0 0 24px rgba(0,254,228,.3);
   }
 
+  .whatsapp-button {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 999px;
+
+  background: #25d366;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(37, 211, 102, .35),
+    0 6px 12px rgba(0,0,0,.15);
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+
+  animation: whatsapp-pulse 3s infinite;
+
+  z-index: 999;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  transform: translateY(-4px) scale(1.05);
+
+  box-shadow:
+    0 18px 40px rgba(37,211,102,.45),
+    0 8px 18px rgba(0,0,0,.2);
+}
+
+.whatsapp-button:active {
+  transform: scale(.96);
+}
+
+@keyframes whatsapp-pulse {
+
+  0%{
+    box-shadow:
+      0 0 0 0 rgba(37,211,102,.6),
+      0 12px 30px rgba(37,211,102,.35);
+  }
+
+  70%{
+    box-shadow:
+      0 0 0 22px rgba(37,211,102,0),
+      0 12px 30px rgba(37,211,102,.35);
+  }
+
+  100%{
+    box-shadow:
+      0 0 0 0 rgba(37,211,102,0),
+      0 12px 30px rgba(37,211,102,.35);
+  }
+
+}
+
+@media (max-width:768px){
+
+  .whatsapp-button{
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 58px;
+    height: 58px;
+  }
+
+}
   
 }

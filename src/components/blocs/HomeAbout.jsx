@@ -15,10 +15,11 @@ function HomeAbout() {
         <section id="about" aria-labelledby="about-title" 
         className="bg-midnight-deep py-20 md:py-40">
           
-          <div className="mx-auto grid max-w-container grid-cols-1 items-center gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-20">
+          <div className="mx-auto grid max-w-container grid-cols-1 items-center text-center md:text-left gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-20">
             
             <div
-              className="relative hidden h-[520px] items-center justify-center overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
+              className="relative h-[280px] md:h-[520px] items-center justify-center 
+              overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
               aria-hidden="true"
             >
               {/* Imagem de background */} 
@@ -41,11 +42,12 @@ function HomeAbout() {
                 title = "Não começo pela solução"
                 content = "Tenho mais de 15 anos projetando interfaces e construindo o que projeto. Passei por agências, produtos digitais e times de tecnologia. O que não mudou: entender o problema antes de abrir qualquer ferramenta."
               />
-              <Button variant="secondary" href="/sobre" size="md">Saiba mais sobre o Designer ⇢</Button>
+              <Button mobileFullWidth variant="secondary" href="/sobre" size="md">Saiba mais sobre o Designer ⇢</Button>
               
-              <div className="flex gap-10 pt-8">
+              <div className="flex gap-10">
                 <IconeText
                   icon={FaFilePdf}
+                  iconClassName="text-red-500"
                   title={'Mais informações:'}
                   label={'Download do Currículo'}
                   link={'/ademir-patricio-curriculo.pdf'}
@@ -53,6 +55,7 @@ function HomeAbout() {
                 />
                 <IconeText 
                   icon={FaGithub}
+                  iconClassName="text-orbit-cyan"
                   title={'Meus códigos:'}
                   label={'Github em Construção'}
                   link={'https://github.com/ademirpatricio'}
