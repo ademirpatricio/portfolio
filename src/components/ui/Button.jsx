@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Button({
   children,
   href = '#',
@@ -21,7 +23,7 @@ function Button({
     secondary: `
       border border-cosmic-blue
       text-white
-      hover:bg-cosmic-blue/10
+      hover:bg-cosmic-blue/30
       shadow
       hover:shadow-md
     `,
@@ -53,7 +55,7 @@ function Button({
 
   return (
 
-    <a href={href}
+    <Link to={href}
     target={target}
 
       className={`
@@ -66,7 +68,7 @@ function Button({
     >
       {children}
       {iconRight}
-    </a>
+    </Link>
 
   )
 }
