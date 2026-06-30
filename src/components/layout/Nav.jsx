@@ -83,7 +83,7 @@ function Nav() {
               PROJETOS
             </NavLink>
 
-            <NavLink href="#contact" variant="cta">
+            <NavLink href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio" variant="cta">
               FALA COMIGO ⇢
             </NavLink>
           </ul>
@@ -205,7 +205,7 @@ function Nav() {
             </NavLink>
 
             <NavLink
-              href="#contact"
+              href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio"
               variant="cta"
               onClick={closeMenu}
             >
