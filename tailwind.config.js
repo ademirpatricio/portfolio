@@ -19,6 +19,7 @@ export default {
         'cosmic-blue':    '#6465F7',
         'orbit-cyan':     '#22C8E5',
         'solar-gold':     '#D8B15A',
+        'solar-orange':   '#ffaf03',
         'white':          '#FFFFFF',
         'white-85':       'rgba(255, 255, 255, 0.85)',
         'white-75':       'rgba(255, 255, 255, 0.75)',

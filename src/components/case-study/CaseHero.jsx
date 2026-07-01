@@ -9,6 +9,7 @@ function CaseHero ({
     type,
     stack,
     year,
+    link,
     tags,
 }){
     
@@ -39,7 +40,7 @@ function CaseHero ({
             </div>
             
             {/* Meta grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-b pb-20 border-white-07 ">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 border-b pb-20 border-white-07 ">
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuLaugh /> Papel</span>
@@ -54,6 +55,12 @@ function CaseHero ({
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuPackage /> Tecnologias</span>
                     <p className="text-sm text-white-85">{stack}</p>
+                </div>
+                
+                <div>
+                    <span className="text-label font-medium uppercase tracking-widest 
+                    text-white-35 flex gap-2"><LuCalendarCheck /> Projeto</span>
+                    <a href={link}><p className="text-sm text-solar-gold hover:text-solar-orange">Link para o Projeto</p></a>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 

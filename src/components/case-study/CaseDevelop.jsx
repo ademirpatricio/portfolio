@@ -7,6 +7,7 @@ function CaseDevelop ({
     tips,
     linkGithub,
     linkBehance,
+    children
 }){
     return (
         <section className="px-6 max-w-container mx-auto my-24">
@@ -17,11 +18,7 @@ function CaseDevelop ({
             <h2 className="text-h3 font-bold text-white mb-4">
                 {title}
             </h2>
-            <p className="text-body text-white-65 mb-8 max-w-xl">
-                O site foi desenvolvido com foco em performance, fluidez e
-                escalabilidade. Controle total sobre animações, transições mais
-                naturais e estrutura moderna para futuras expansões.
-            </p>
+            <div className="text-body text-white-65 mb-8 max-w-xl">{children}</div>
             <div className="flex flex-wrap gap-3 mb-8">
                 {tips.map((tip) => (
                     <span key={tip} className="text-sm text-white-65 border border-white-07 px-4 py-2 rounded-btn">
@@ -36,13 +33,13 @@ function CaseDevelop ({
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
-                <FaGithub /> Ver repositório no GitHub</a>
+                <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
                 <a
                 href={linkBehance}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
-                <FaBehance /> Ver repositório no GitHub</a>
+                <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
             </div>
         </div>
       </section>

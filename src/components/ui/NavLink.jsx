@@ -13,6 +13,7 @@ function NavLink({
       text-white-55
       transition
       hover:text-white
+      cursor-pointer
     `,
 
     cta: `

@@ -8,8 +8,10 @@ import CaseSection from '../../components/case-study/CaseSection'
 import CaseHighlights from '../../components/case-study/CaseHighlights'
 import CasePdf from '../../components/case-study/CasePdf'
 import CaseDevelop from '../../components/case-study/CaseDevelop'
+import CaseSectionList from '../../components/case-study/CaseSectionList'
 
 import HomeCta from '../../components/blocs/HomeCta'
+import CaseCarousel from '../../components/case-study/CaseCarousel'
 
 {/* ── imagens ─────────────────────────────────────── */}
 import imgHero from '../../assets/projects/thayna-aguiar/1.jpg'
@@ -18,6 +20,12 @@ import imgObjectives from '../../assets/projects/thayna-aguiar/3.jpg'
 import imgMockup from '../../assets/projects/thayna-aguiar/4.jpg'
 import imgWeb from '../../assets/projects/thayna-aguiar/5.jpg'
 
+import galery1 from '../../assets/projects/thayna-aguiar/carrossel-thayna_01.jpg'
+import galery2 from '../../assets/projects/thayna-aguiar/carrossel-thayna_02.jpg'
+import galery3 from '../../assets/projects/thayna-aguiar/carrossel-thayna_03.jpg'
+import galery4 from '../../assets/projects/thayna-aguiar/carrossel-thayna_04.jpg'
+import galery5 from '../../assets/projects/thayna-aguiar/carrossel-thayna_05.jpg'
+import galery6 from '../../assets/projects/thayna-aguiar/carrossel-thayna_06.jpg'
 
 {/* ========================================================== */}
 
@@ -49,6 +57,15 @@ const images = {
   web: imgWeb,
 }
 
+const gallery = [
+  {src: galery1, alt: 'galery1',},
+  {src: galery2, alt: 'galery2',},
+  {src: galery3, alt: 'galery3',},
+  {src: galery4, alt: 'galery4',},
+  {src: galery5, alt: 'galery5',},
+  {src: galery6, alt: 'galery6',},
+]
+
 export default function ThaynaAguiar() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -71,6 +88,7 @@ export default function ThaynaAguiar() {
         type = {project.infos.type}
         stack = {project.infos.stack}
         year = {project.infos.year}
+        link = {project.links.liveUrl}
         tags= {project.tags}
       />
 
@@ -91,10 +109,10 @@ export default function ThaynaAguiar() {
         image={images.objectives}
         imageAlt="Detalhes da identidade visual de Thayná Aguiar"
         reverse>
-        <p>
+        <p className="mb-4">
           Copywriter, recifense, apaixonada por futebol e pelo universo digital. 
           <a href={project.links.liveUrl} target="_blank" rel="noreferrer"
-          className="text-orbit-cyan hover:text-white transition-colors"
+          className="text-solar-gold hover:text-solar-orange transition-colors"
           > Thayná Aguiar</a>, é especialista em criar conteúdos que fazem a diferença 
           nas redes sociais. Transforma marcas em histórias que conectam pessoas, 
           engajam e convertem.
@@ -137,11 +155,11 @@ export default function ThaynaAguiar() {
         target="_blank"
         image={images.mockup}
         imageAlt="Detalhes da identidade visual de Thayná Aguiar"
-      >
-      <p>
-        Confere também o material gráfico que a gente preparou para o projeto.
-        Números, informações de trabalho e links para contato com clientes.
-      </p>    
+        >
+        <p>
+          Confere também o material gráfico que a gente preparou para o projeto.
+          Números, informações de trabalho e links para contato com clientes.   
+        </p>
       </CasePdf>  
 
       {/* ── Desenvolvimento ───────────────────────────────────────── */}
@@ -151,59 +169,45 @@ export default function ThaynaAguiar() {
         tips= {project.tips}
         linkGithub={project.links.github}
         linkBehance={project.links.behance}
-      />
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* ── O que foi entregue ──────────────────────────────── */}
-      <section className="px-6 max-w-container mx-auto mb-24 grid md:grid-cols-2 gap-16 items-start">
-        <div>
-          <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
-            Entregáveis
-          </p>
-          <h2 className="text-h3 font-bold text-white mb-6">
-            Do conceito ao deploy.
-          </h2>
-          <ul className="space-y-3">
-            {[
-              'Identidade visual completa com todos os desdobramentos',
-              'Landing page responsiva com navegação intuitiva',
-              'Criativos para redes sociais alinhados à identidade',
-              'Mídia kit completo com números e links de contato',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-white-65">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <img
-          src={images.web}
-          alt="Versão mobile da landing page de Thayná Aguiar"
-          className="w-48 mx-auto rounded-card object-cover"
-          loading="lazy"
-        />
-      </section>
-
-
-
-
+        >
+        <p>
+          O site foi desenvolvido em React com Tailwind e hospedado na 
+          Cloudflare com foco em performance, fluidez e escalabilidade.
+        </p>
+      </CaseDevelop>
       
+      {/* ── O que foi entregue ──────────────────────────────── */}
+      <CaseSectionList
+        eyebrow = "o que foi entregue"
+        title = "Do conceito ao deploy."
+        image={images.web}
+        imageAlt="Detalhes da identidade visual de Thayná Aguiar"
+        btLabel="Confere o projeto no Behance ⇢"
+        href="https://drive.google.com/file/d/1DYMAKzxxF7iTj5k_gSW_kDRszFigters/view?usp=drive_link"
+        target="_blank"
+        reverse>
+        <ul>
+          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
+            Identidade visual completa com todos os desdobramentos
+          </li>
+          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
+            Landing page responsiva com navegação intuitiva
+          </li>
+          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
+            Criativos para redes sociais alinhados à identidade
+          </li>
+          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
+            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
+            Mídia kit completo com números e links de contato
+          </li>
+        </ul>
+      </CaseSectionList>
+      <CaseCarousel images={gallery} />
       <HomeCta/>
     </main>
-
-    
 
     </>
   )

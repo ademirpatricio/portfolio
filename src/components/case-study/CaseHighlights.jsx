@@ -11,7 +11,7 @@ function CaseHighlights({
     const imageOrder = reverse ? 'md:order-1' : ''
 
     return (
-        <section className="px-12 max-w-container mx-auto mb-30">
+        <section className="px-12 max-w-container mx-auto mt-14 mb-24">
             <div className="grid md:grid-cols-2 gap-16 rounded-card items-center
             border border-white-07 rounded-card py-10 px-14">
         
