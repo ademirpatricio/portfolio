@@ -1,9 +1,9 @@
-import Title from '../ui/Title'
-import Fade from '../ui/Fade'
+import Title from '../../ui/Title'
+import Fade from '../../ui/Fade'
 
-import productDesignIcon from '../../assets/icons/ic1.svg'
-import frontendIcon from '../../assets/icons/ic2.svg'
-import designSystemIcon from '../../assets/icons/ic3.svg'
+import productDesignIcon from '../../../assets/icons/ic1.svg'
+import frontendIcon from '../../../assets/icons/ic2.svg'
+import designSystemIcon from '../../../assets/icons/ic3.svg'
 
 const services = [
   {

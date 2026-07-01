@@ -3,11 +3,11 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
 
 import { Link } from 'react-router-dom'
 
-import Title from '../ui/Title'
-import IconeText from '../ui/IconeText'
-import Button from '../ui/Button'
+import Title from '../../ui/Title'
+import IconeText from '../../ui/IconeText'
+import Button from '../../ui/Button'
 
-import aboutImg from '../../assets/images/about-img-1.jpg'
+import aboutImg from '../../../assets/images/about-img-1.jpg'
 
 
 function HomeAbout() {
@@ -22,7 +22,7 @@ function HomeAbout() {
               overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
               aria-hidden="true"
             >
-              {/* Imagem de background */} 
+
               <img
                 src={aboutImg}
                 alt=""

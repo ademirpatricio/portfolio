@@ -7,7 +7,7 @@ import IconeText from '../ui/IconeText'
 import Button from '../ui/Button'
 import Fade from '../ui/Fade'
 
-function HomeCta() {
+function Cta() {
 
   // Número de Whastapp para contato
   const whatsappLink =
@@ -104,4 +104,4 @@ function HomeCta() {
   )
 }
 
-export default HomeCta
+export default Cta

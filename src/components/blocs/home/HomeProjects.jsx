@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-import Title from '../ui/Title'
-import Fade from '../ui/Fade'
+import Title from '../../ui/Title'
+import Fade from '../../ui/Fade'
 
-import propostarapidaImg from '../../assets/projects/proposta-rapida/thumbnail.jpg'
-import malabaresweddingImg from '../../assets/projects/malabares-wedding/thumbnail.jpg'
-import thaynaguiarImg from '../../assets/projects/thayna-aguiar/thumbnail.jpg'
+import propostarapidaImg from '../../../assets/projects/proposta-rapida/thumbnail.jpg'
+import malabaresweddingImg from '../../../assets/projects/malabares-wedding/thumbnail.jpg'
+import thaynaguiarImg from '../../../assets/projects/thayna-aguiar/thumbnail.jpg'
 
 const projects = [
   {

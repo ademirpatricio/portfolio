@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import Button from '../ui/Button'
-import Fade from '../ui/Fade'
+import Button from '../../ui/Button'
+import Fade from '../../ui/Fade'
 
-import heroBg from '../../assets/images/hero-bg.jpg'
+import heroBg from '../../../assets/images/hero-bg.jpg'
 
 function HomeHero() {
 
@@ -59,7 +59,6 @@ function HomeHero() {
         {/* Subtitulo */}
         <div className="mb-11 inline-flex items-center gap-2.5 text-md 
         font-medium tracking-[0.1em] text-orbit-cyan text-neon">
-          <span className="h-1.5 w-1.5 rounded-full bg-orbit-cyan shadow-neon" />
           UI / UX · Product Design · Front-end
         </div>
 

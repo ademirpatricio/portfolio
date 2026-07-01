@@ -1,9 +1,9 @@
 
-import HomeHero from '../components/blocs/HomeHero'
-import HomeAbout from '../components/blocs/HomeAbout'
-import HomeServices from '../components/blocs/HomeServices'
-import HomeProjects from '../components/blocs/HomeProjects'
-import HomeCta from '../components/blocs/HomeCta'
+import HomeHero from '../components/blocs/home/HomeHero'
+import HomeAbout from '../components/blocs/home/HomeAbout'
+import HomeServices from '../components/blocs/home/HomeServices'
+import HomeProjects from '../components/blocs/home/HomeProjects'
+import Cta from '../components/layout/Cta'
 
 function Home() {
   return (
@@ -14,7 +14,7 @@ function Home() {
         <HomeAbout />
         <HomeServices />
         <HomeProjects />
-        <HomeCta />
+        <Cta />
       </main>
 
     </>

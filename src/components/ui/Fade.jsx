@@ -12,6 +12,7 @@ function Fade({
   const colors = {
     midnightdeep : 'from-transparent to-midnight-deep',
     deepblue : 'from-transparent to-deep-blue',
+    spacynavy : 'from-transparent to-spacy-navy',
   }
 
   const positions = {

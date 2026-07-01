@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import HomeCta from '../components/blocs/HomeCta'
+import Cta from '../components/layout/Cta'
 import Title from '../components/ui/Title'
 import Fade from '../components/ui/Fade'
 
@@ -117,7 +117,7 @@ function HomeProjects() {
       <Fade />
       
     </section>
-    <HomeCta/>
+    <Cta/>
     </>
   )
 }

@@ -1,6 +1,12 @@
+import { FaFilePdf } from 'react-icons/fa6'
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
+
 import Button from '../components/ui/Button'
 import Container from '../components/layout/Container'
 import Fade from '../components/ui/Fade'
+import IconeText from '../components/ui/IconeText'
+
+import aboutImg from '../assets/images/about-img-1.jpg'
 
 const experiences = [
   {
@@ -73,14 +79,13 @@ function About() {
     <main>
 
       {/* ─── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-midnight-deep pb-24 pt-40">
+      <section className="relative overflow-hidden bg-spacy-navy pb-24 pt-40 bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
 
         <Container className="relative z-10">
 
           <div className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-            <span className="h-1.5 w-1.5 rounded-full bg-orbit-cyan shadow-neon" />
-            Sobre
+            Sobre o Designer
           </div>
 
           <h1 className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
@@ -99,25 +104,76 @@ function About() {
 
         </Container>
 
-        <Fade size="md" color="midnightdeep" />
+        <Fade size="lg" color="deepblue" />
       </section>
 
       {/* ─── TRAJETÓRIA ───────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:py-32">
+      <section className="bg-deep-blue py-20 md:py-32">
         <Container>
 
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
 
             <div>
+              <div
+                className="relative h-[280px] md:h-[520px] items-center justify-center 
+                overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
+                aria-hidden="true"
+              >
+                <img
+                  src={aboutImg}
+                  alt=""
+                  className="
+                    absolute inset-0
+                    h-full w-full
+                    object-cover
+                    object-center
+                  " 
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-10">
+                <IconeText
+                  icon={FaFilePdf}
+                  iconClassName="text-red-500"
+                  title={'Mais informações:'}
+                  label={'Download do Currículo'}
+                  link={'/ademir-patricio-curriculo.pdf'}
+                  target={'_blank'}
+                />
+                <IconeText 
+                  icon={FaGithub}
+                  iconClassName="text-orbit-cyan"
+                  title={'Meus códigos:'}
+                  label={'Github em Construção'}
+                  link={'https://github.com/ademirpatricio'}
+                  target={'_blank'}
+                />
+                <IconeText 
+                  icon={FaGithub}
+                  iconClassName="text-orbit-cyan"
+                  title={'Meus códigos:'}
+                  label={'Github em Construção'}
+                  link={'https://github.com/ademirpatricio'}
+                  target={'_blank'}
+                />
+                <IconeText 
+                  icon={FaGithub}
+                  iconClassName="text-orbit-cyan"
+                  title={'Meus códigos:'}
+                  label={'Github em Construção'}
+                  link={'https://github.com/ademirpatricio'}
+                  target={'_blank'}
+                />
+              </div>
+
+            </div>
+
+            <div className="space-y-5 text-[17px] leading-[1.75] text-white-55">
               <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
                 A trajetória
               </span>
               <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
                 Do gráfico ao produto.
               </h2>
-            </div>
-
-            <div className="space-y-5 text-[17px] leading-[1.75] text-white-55">
               <p>
                 Comecei com design gráfico em 2009. Sites, peças institucionais, campanhas
                 para educação e comunicação. Aprendi que visual tem impacto direto em como
@@ -147,16 +203,16 @@ function About() {
       </section>
 
       {/* ─── MANIFESTO ────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-spacy-navy py-20 md:py-32">
+      <section className="relative overflow-hidden py-20 md:py-32 bg-[url('./assets/images/about-page-manifesto-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_50%,rgba(52,33,109,0.45)_0%,transparent_70%)]" />
 
-        <Container className="relative z-10 text-center">
+        <Container className="relative z-10 text-left">
 
           <span className="mb-8 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-            Como trabalho
+            Manifesto
           </span>
 
-          <blockquote className="mx-auto max-w-[680px] space-y-2">
+          <blockquote className="mx-auto space-y-2">
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
               Antes de projetar, entendo.
             </p>
@@ -164,9 +220,12 @@ function About() {
               Antes de entregar, questiono.
             </p>
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white-55">
-              O problema vem primeiro. A solução, depois.
+              O problema vem primeiro.
             </p>
-            <p className="pt-4 text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-cosmic-blue">
+            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white-55">
+              A solução, depois.
+            </p>
+            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-cosmic-blue">
               Só existe o que vale a pena existir.
             </p>
           </blockquote>
@@ -212,7 +271,7 @@ function About() {
       </section>
 
       {/* ─── EXPERIÊNCIA ──────────────────────────────────────── */}
-      <section className="bg-spacy-navy py-20 md:py-32">
+      <section className="bg-midnight-deep py-20 md:py-32">
         <Container>
 
           <div className="mb-12">

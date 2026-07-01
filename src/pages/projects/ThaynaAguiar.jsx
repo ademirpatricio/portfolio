@@ -10,7 +10,7 @@ import CasePdf from '../../components/case-study/CasePdf'
 import CaseDevelop from '../../components/case-study/CaseDevelop'
 import CaseSectionList from '../../components/case-study/CaseSectionList'
 
-import HomeCta from '../../components/blocs/HomeCta'
+import Cta from '../../components/layout/Cta'
 import CaseCarousel from '../../components/case-study/CaseCarousel'
 
 {/* ── imagens ─────────────────────────────────────── */}
@@ -209,7 +209,7 @@ export default function ThaynaAguiar() {
         </ul>
       </CaseSectionList>
       <CaseCarousel images={gallery} />
-      <HomeCta/>
+      <Cta/>
     </main>
 
     </>
