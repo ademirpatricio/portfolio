@@ -1,21 +1,25 @@
 import Title from '../ui/Title'
 import Fade from '../ui/Fade'
 
+import productDesignIcon from '../../assets/icons/ic1.svg'
+import frontendIcon from '../../assets/icons/ic2.svg'
+import designSystemIcon from '../../assets/icons/ic3.svg'
+
 const services = [
   {
-    icon: '◎',
+    icon: productDesignIcon,
     title: 'Product Design',
     description:
       'Começo pelo problema, não pela tela. Fluxos, protótipos e decisões que fazem sentido para quem usa e para quem paga.',
   },
   {
-    icon: '</>',
+    icon: frontendIcon,
     title: 'Front-End',
     description:
       'O que projeto, sei construir. React, Next.js e Tailwind CSS. Do componente ao deploy.',
   },
   {
-    icon: '⬡',
+    icon: designSystemIcon,
     title: 'Design Systems',
     description:
       'Consistência não acontece por acidente. Tokens, componentes e padrões com propósito.',
@@ -43,10 +47,10 @@ function HomeServices() {
               key={service.title}
             >
               <div
-                className="mb-6 flex h-12 w-12 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue"
+                className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue"
                 aria-hidden="true"
               >
-                {service.icon}
+                <img src={service.icon} alt="" className="h-10 w-10 object-contain"/>
               </div>
               <h3 className="mb-3 text-xl font-semibold tracking-[-0.01em] text-white">
                 {service.title}

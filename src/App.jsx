@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
+import NotFound from './pages/NotFound'
 
 import ThaynaAguiar from './pages/projects/ThaynaAguiar'
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/o-que-faco" element={<Services />} />
       <Route path="/projetos" element={<Projects />} />
       <Route path="/projetos/thayna-aguiar" element={<ThaynaAguiar />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     
     <Footer />

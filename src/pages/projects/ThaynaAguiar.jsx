@@ -38,13 +38,13 @@ const project = {
   infos : {
     role: 'UI/UX Designer & Front-End',
     type: 'Website / Identidade visual',
-    stack: 'React + Tailwind',
+    stack: 'React + Tailwind + Vite',
     year: '2025',
   },
   links: {
     github: 'https://github.com/ademirpatricio/thaynaaguiar',
     behance: 'https://www.behance.net/gallery/213505967/Thayna-Aguiar-Landingpage',
-    liveUrl: 'https://www.thaynaaguiar.com.br/',
+    liveUrl: 'https://thaynaaguiar.com.br',
   },
   tips: ['Controle total sobre animações', 'Carregamento fluido', 'Estrutura escalável'],
 }
@@ -96,7 +96,7 @@ export default function ThaynaAguiar() {
       {/* ── Sobre o projeto ─────────────────────────────────── */}
       <CaseSection
         eyebrow = "Sobre o projeto"
-        title = "Presença digital com identidade, estratégia e sofisticação."
+        title = "Uma identidade que fala antes de ela precisar explicar."
         image={images.about}
         imageAlt="Detalhes da identidade visual de Thayná Aguiar">
         <p>
@@ -118,39 +118,41 @@ export default function ThaynaAguiar() {
           nas redes sociais. Transforma marcas em histórias que conectam pessoas, 
           engajam e convertem.
         </p>
-        <p>
-          Ela já tinha uma ideia muito bem estruturada do que queria para a identidade, 
-          então seguimos o conceito. Criamos a identidade e a desdobramos para o site, 
-          criativos para as redes sociais e midiakit.
+        <p className="mb-4">
+          Thayná já sabia quem era. Precisava de uma identidade 
+          que dissesse isso antes de ela precisar explicar.
         </p>
+        <p className="mb-4">
+          Partimos do conceito que ela trouxe e desdobramos em site, 
+          criativos para redes sociais e mídia kit. Cada escolha visual tinha uma razão.</p>
       </CaseSection>
 
       {/* ── Objetivos ───────────────────────────────────────── */}
       <CaseHighlights
-        title="Objetivos do Projeto 🎯"
+        title="O que precisava ser resolvido."
         items={[
-          'Fortalecer a presença digital da profissional',
-          'Facilitar o contato com potenciais clientes',
-          'Criar uma experiência moderna e intuitiva',
-          'Garantir boa performance em desktop e mobile',
-          'Apoiar ações de marketing e geração de leads',
+          'Criar uma identidade que a represente com fidelidade',
+          'Desenvolver um site que gere confiança e contato',
+          'Estruturar criativos replicáveis para redes sociais',
+          'Entregar um mídia kit pronto para uso profissional',
+          'Garantir performance consistente em desktop e mobile',
 
         ]}>
         <p>
-          A proposta era criar uma identidade capaz de transmitir autoridade,
-          personalidade e confiança. A interface precisava de navegação leve,
-          elegante e intuitiva.
+          A identidade precisava transmitir autoridade sem perder calor humano. 
+          A interface precisava ser leve o suficiente para não disputar 
+          atenção com o que ela comunica.
         </p>
         <p>
-          A direção visual apostou em minimalismo, tipografia forte, respiro e
-          micro interações sutis para construir uma experiência mais memorável.
+          A direção visual foi clara: menos decoração, mais intenção. 
+          Tipografia forte, respiro e micro interações sutis.
         </p>
       </CaseHighlights>
 
       {/* ── Mídia Kit ───────────────────────────────────────── */}
       <CasePdf
         eyebrow="Mídia Kit"
-        title="Material gráfico do Projeto 🎯"
+        title="Material gráfico do Projeto."
         btLabel="Download do MidiaKit ↗"
         href="https://drive.google.com/file/d/1DYMAKzxxF7iTj5k_gSW_kDRszFigters/view?usp=drive_link"
         target="_blank"
@@ -158,8 +160,8 @@ export default function ThaynaAguiar() {
         imageAlt="Detalhes da identidade visual de Thayná Aguiar"
         >
         <p>
-          Confere também o material gráfico que a gente preparou para o projeto.
-          Números, informações de trabalho e links para contato com clientes.   
+          O mídia kit reúne os números, os links e o material visual 
+          que Thayná usa para se apresentar a marcas e parceiros.
         </p>
       </CasePdf>  
 
