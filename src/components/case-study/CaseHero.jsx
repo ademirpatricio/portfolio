@@ -3,6 +3,7 @@ import { LuLaugh, LuCalendarCheck, LuPackage, LuCoffee } from "react-icons/lu";
 function CaseHero ({
     image,
     imageAlt,
+    className,
     title,
     subtitle,
     role,
@@ -21,7 +22,7 @@ function CaseHero ({
                 <img
                     src={image}
                     alt={imageAlt}
-                    className="w-full h-xl h-[500px] rounded-card object-cover"
+                    className={`w-full h-[500px] rounded-card object-cover ${className}`}
                     loading="eager"
                 />
             </div>

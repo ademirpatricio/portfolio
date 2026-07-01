@@ -82,6 +82,7 @@ export default function ThaynaAguiar() {
       <CaseHero
         image={images.hero}
         imageAlt="Thayná Aguiar — identidade visual e landing page"
+        className="object-[82%_center] md:object-center"
         title={project.title}
         subtitle="Presença digital com identidade, estratégia e sofisticação."
         role = {project.infos.role}
