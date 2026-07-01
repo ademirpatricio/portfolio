@@ -1,8 +1,15 @@
-function IconeText({ label, title, link, icon: Icon, target, iconClassName = 'text-cosmic-blue' }) {
+function IconeText({ 
+    label, 
+    title, 
+    link,
+    className = '', 
+    icon: Icon, target, iconClassName = 'text-cosmic-blue' 
+}) {
     
     return (
         <a
-            className="flex gap-4 items-center mt-8 text-left hover:opacity-80 transition"
+            className={`${className} flex gap-4 items-center 
+            text-left hover:opacity-80 transition`}
             href={link}
             target={target}
             rel={target === "_blank" ? "noopener noreferrer" : undefined}

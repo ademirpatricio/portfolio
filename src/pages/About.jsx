@@ -1,5 +1,5 @@
 import { FaFilePdf } from 'react-icons/fa6'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
+import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa6'
 
 import Button from '../components/ui/Button'
 import Container from '../components/layout/Container'
@@ -8,11 +8,19 @@ import IconeText from '../components/ui/IconeText'
 
 import aboutImg from '../assets/images/about-img-1.jpg'
 
+import experiencia1 from '../assets/about/ic1.jpg'
+import experiencia2 from '../assets/about/ic2.jpg'
+import experiencia3 from '../assets/about/ic3.jpg'
+import experiencia4 from '../assets/about/ic4.jpg'
+import experiencia5 from '../assets/about/ic5.jpg'
+import experiencia6 from '../assets/about/ic6.jpg'
+
 const experiences = [
   {
     period: '2021 – hoje',
     company: 'GoExplosion',
     role: 'Product Designer & Front-End Developer',
+    image: experiencia1,
     description:
       'Design de produto, sistemas internos e páginas de conversão para plataforma de infoprodutos. Ponte entre design e engenharia.',
   },
@@ -20,6 +28,7 @@ const experiences = [
     period: '2019 – 2026',
     company: 'Malabares MKT',
     role: 'Co-fundador & UX/UI Designer',
+    image: experiencia2,
     description:
       'Do briefing ao código. Design, desenvolvimento e estratégia digital para pequenas e médias empresas.',
   },
@@ -27,6 +36,7 @@ const experiences = [
     period: '2020 – 2021',
     company: 'CRO-PE',
     role: 'Designer Gráfico',
+    image: experiencia3,
     description:
       'Comunicação visual institucional em diferentes canais digitais e eventos.',
   },
@@ -34,13 +44,15 @@ const experiences = [
     period: '2018 – 2019',
     company: 'Serttel',
     role: 'Designer de Produtos Digitais',
+    image: experiencia4,
     description:
       'Mobilidade urbana. Participei da concepção do aplicativo Zona Azul Digital de Recife. Da prototipação à validação com usuários reais.',
   },
   {
     period: '2013 – 2015',
-    company: 'Grupo Ser Educacional',
+    company: 'Grupo Ser',
     role: 'Web Designer',
+    image: experiencia5,
     description:
       'Produtos digitais para educação. Sites institucionais e padronização visual.',
   },
@@ -48,6 +60,7 @@ const experiences = [
     period: '2009 – 2012',
     company: 'Início de carreira',
     role: 'Web & Graphic Designer',
+    image: experiencia6,
     description:
       'Naips Technology, Icorp, Trupe, Faculdade Nassau. Design web, gráfico e interfaces.',
   },
@@ -111,27 +124,30 @@ function About() {
       <section className="bg-deep-blue py-20 md:py-32">
         <Container>
 
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:gap-20">
 
             <div>
+
               <div
-                className="relative h-[280px] md:h-[520px] items-center justify-center 
-                overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
-                aria-hidden="true"
+              className="relative h-[280px] md:h-[520px] items-center justify-center 
+              overflow-hidden rounded-lg g-spacy-navy lg:flex"
+              aria-hidden="true"
               >
                 <img
-                  src={aboutImg}
-                  alt=""
-                  className="
-                    absolute inset-0
-                    h-full w-full
-                    object-cover
-                    object-center
-                  " 
-                />
+                src={aboutImg}
+                alt=""
+                className="
+                absolute inset-0
+                h-full w-full
+                object-cover
+                object-center
+                "/>
               </div>
-              <div className="grid grid-cols-2 gap-10">
+
+              <div className="grid grid-cols-2 gap-4 mt-8">
                 <IconeText
+                  className="bg-midnight-deep/20 
+                  hover:bg-midnight-deep/40 rounded-lg p-6"
                   icon={FaFilePdf}
                   iconClassName="text-red-500"
                   title={'Mais informações:'}
@@ -140,6 +156,18 @@ function About() {
                   target={'_blank'}
                 />
                 <IconeText 
+                  className="bg-midnight-deep/20 
+                  hover:bg-midnight-deep/40 rounded-lg p-6"
+                  icon={FaBehance}
+                  iconClassName="text-solar-gold"
+                  title={'Meus projetos:'}
+                  label={'Projetos no Behance'}
+                  link={'https://www.behance.net/ademirpatricio'}
+                  target={'_blank'}
+                />
+                <IconeText 
+                  className="bg-midnight-deep/20 
+                  hover:bg-midnight-deep/40 rounded-lg p-6"
                   icon={FaGithub}
                   iconClassName="text-orbit-cyan"
                   title={'Meus códigos:'}
@@ -148,19 +176,13 @@ function About() {
                   target={'_blank'}
                 />
                 <IconeText 
-                  icon={FaGithub}
-                  iconClassName="text-orbit-cyan"
-                  title={'Meus códigos:'}
-                  label={'Github em Construção'}
-                  link={'https://github.com/ademirpatricio'}
-                  target={'_blank'}
-                />
-                <IconeText 
-                  icon={FaGithub}
-                  iconClassName="text-orbit-cyan"
-                  title={'Meus códigos:'}
-                  label={'Github em Construção'}
-                  link={'https://github.com/ademirpatricio'}
+                  className="bg-midnight-deep/20 
+                  hover:bg-midnight-deep/40 rounded-lg p-6"
+                  icon={FaLinkedinIn}
+                  iconClassName="text-white"
+                  title={'Me segue lá:'}
+                  label={'Perfil no Linkedin'}
+                  link={'https://linkedin.com/in/ademirpatricio'}
                   target={'_blank'}
                 />
               </div>
@@ -204,35 +226,32 @@ function About() {
 
       {/* ─── MANIFESTO ────────────────────────────────────────── */}
       <section className="relative overflow-hidden py-20 md:py-32 bg-[url('./assets/images/about-page-manifesto-bg.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_50%,rgba(52,33,109,0.45)_0%,transparent_70%)]" />
+        
+        <div className="absolute inset-0 
+        bg-[radial-gradient(ellipse_80%_60%_at_65%_40%,rgba(100,101,247,0.16)_0%,transparent_60%)
+        ,radial-gradient(ellipse_55%_45%_at_10%_85%,rgba(52,33,109,0.24)_0%,transparent_55%)]" />
 
         <Container className="relative z-10 text-left">
 
           <span className="mb-8 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-            Manifesto
-          </span>
+          Manifesto</span>
 
           <blockquote className="mx-auto space-y-2">
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-              Antes de projetar, entendo.
-            </p>
+            Antes de projetar, entendo.</p>
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-              Antes de entregar, questiono.
-            </p>
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white-55">
-              O problema vem primeiro.
-            </p>
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white-55">
-              A solução, depois.
-            </p>
-            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-cosmic-blue">
-              Só existe o que vale a pena existir.
-            </p>
+            Antes de entregar, questiono.</p>
+            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
+            O problema vem primeiro.</p>
+            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
+            A solução, depois.</p>
+            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-white">
+            Só existe o que vale a pena existir.</p>
           </blockquote>
 
         </Container>
-
         <Fade size="md" color="midnightdeep" />
+
       </section>
 
       {/* ─── VALORES ──────────────────────────────────────────── */}
@@ -271,7 +290,7 @@ function About() {
       </section>
 
       {/* ─── EXPERIÊNCIA ──────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:py-32">
+      <section className="bg-midnight-deep pt-20 md:pt-32 md:pb-8">
         <Container>
 
           <div className="mb-12">
@@ -288,15 +307,28 @@ function About() {
               <article
                 key={exp.company}
                 className={`grid grid-cols-1 gap-4 py-7 md:grid-cols-[200px_1fr] md:gap-10
-                  ${index !== experiences.length - 1 ? 'border-b border-white/07' : ''}`}
+                  ${index !== experiences.length - 1 ? 'border-b border-white/10' : ''}`}
               >
-                <div>
-                  <p className="text-[13px] font-medium tracking-[0.05em] text-orbit-cyan">
+                <div className="flex gap-4 items-center">
+
+                  <div>
+                    <img
+                    src={exp.image}
+                    alt=""
+                    className="
+                    h-20 w-20 rounded-icon
+                    "/>
+                  </div>
+                  <div>
+                    <p className="text-[13px] font-medium tracking-[0.05em] text-orbit-cyan">
                     {exp.period}
                   </p>
                   <p className="mt-1 text-[15px] font-semibold text-white">
                     {exp.company}
                   </p>
+                  </div>
+
+
                 </div>
                 <div>
                   <p className="mb-1.5 text-[14px] font-medium text-white-75">

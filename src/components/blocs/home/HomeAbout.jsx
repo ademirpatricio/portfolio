@@ -46,6 +46,7 @@ function HomeAbout() {
               
               <div className="flex gap-10">
                 <IconeText
+                  className="mt-8"
                   icon={FaFilePdf}
                   iconClassName="text-red-500"
                   title={'Mais informações:'}
@@ -54,6 +55,7 @@ function HomeAbout() {
                   target={'_blank'}
                 />
                 <IconeText 
+                  className="mt-8"
                   icon={FaGithub}
                   iconClassName="text-orbit-cyan"
                   title={'Meus códigos:'}
