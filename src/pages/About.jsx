@@ -1,7 +1,8 @@
 import { FaFilePdf } from 'react-icons/fa6'
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa6'
+import { LuUserSearch, LuCodeXml, LuComponent } from 'react-icons/lu'
 
-import Button from '../components/ui/Button'
+import Cta from '../components/layout/Cta'
 import Container from '../components/layout/Container'
 import Fade from '../components/ui/Fade'
 import IconeText from '../components/ui/IconeText'
@@ -68,19 +69,19 @@ const experiences = [
 
 const values = [
   {
-    icon: '◎',
+    icon: <LuUserSearch className="text-cosmic-blue h-10 w-10" />,
     title: 'O problema vem primeiro',
     description:
       'Não projeto soluções antes de entender o que precisa ser resolvido. Esse processo não é lento. É o que evita retrabalho.',
   },
   {
-    icon: '</>',
+    icon: <LuCodeXml className="text-orbit-cyan h-10 w-10"/>,
     title: 'Tecnologia com intenção',
     description:
       'A inovação é ferramenta, não fim. Saber construir o que projeto muda como projeto. Cada decisão de design carrega peso técnico real.',
   },
   {
-    icon: '⬡',
+    icon: <LuComponent className="text-solar-gold h-10 w-10"/>,
     title: 'Construir para durar',
     description:
       'Prefiro projetos que evoluem a projetos que terminam. Processos claros, entregas consistentes, impacto que se mantém.',
@@ -130,7 +131,7 @@ function About() {
 
               <div
               className="relative h-[280px] md:h-[520px] items-center justify-center 
-              overflow-hidden rounded-lg g-spacy-navy lg:flex"
+              overflow-hidden rounded-lg bg-spacy-navy lg:flex"
               aria-hidden="true"
               >
                 <img
@@ -225,13 +226,18 @@ function About() {
       </section>
 
       {/* ─── MANIFESTO ────────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-20 md:py-32 bg-[url('./assets/images/about-page-manifesto-bg.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="relative overflow-hidden py-20 md:py-32
+      bg-[url('./assets/images/about-page-manifesto-bg.jpg')]
+      bg-cover bg-center bg-no-repeat">
         
-        <div className="absolute inset-0 
-        bg-[radial-gradient(ellipse_80%_60%_at_65%_40%,rgba(100,101,247,0.16)_0%,transparent_60%)
-        ,radial-gradient(ellipse_55%_45%_at_10%_85%,rgba(52,33,109,0.24)_0%,transparent_55%)]" />
+        <div className="absolute inset-0
+          bg-spacy-navy/50 z-20
+          md:bg-[linear-gradient(to_right,
+          rgba(2,1,17,1)_0%,
+          rgba(2,1,17,0.50)_45%,
+          rgba(2,1,17,0.10)_100%)]" />
 
-        <Container className="relative z-10 text-left">
+        <Container className="relative z-30 text-left">
 
           <span className="mb-8 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
           Manifesto</span>
@@ -245,7 +251,7 @@ function About() {
             O problema vem primeiro.</p>
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
             A solução, depois.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-white">
+            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-cosmic-blue">
             Só existe o que vale a pena existir.</p>
           </blockquote>
 
@@ -255,7 +261,7 @@ function About() {
       </section>
 
       {/* ─── VALORES ──────────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:py-32">
+      <section className="bg-midnight-deep py-20 md:pt-32 pb-10">
         <Container>
 
           <div className="mb-12 text-center md:mb-16">
@@ -273,7 +279,7 @@ function About() {
                 key={value.title}
                 className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 transition hover:-translate-y-1 hover:border-cosmic-blue/40 md:p-10"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue">
                   {value.icon}
                 </div>
                 <h3 className="mb-3 text-xl font-semibold tracking-[-0.01em] text-white">
@@ -346,32 +352,7 @@ function About() {
       </section>
 
       {/* ─── CTA FINAL ────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-midnight-deep py-20 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(100,101,247,0.10)_0%,transparent_70%)]" />
-
-        <Container className="relative z-10 text-center">
-
-          <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-            Contato
-          </span>
-          <h2 className="mb-5 text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
-            Tem um projeto ou uma vaga?
-          </h2>
-          <p className="mx-auto mb-10 max-w-[480px] text-[17px] leading-[1.75] text-white-55">
-            Se quer um designer que entende o problema antes de propor qualquer solução,
-            faz sentido conversar.
-          </p>
-          <Button
-            variant="primary"
-            href="mailto:falecom@ademirpatricio.com.br"
-            size="lg"
-          >
-            Fala comigo ⇢
-          </Button>
-
-        </Container>
-
-      </section>
+      <Cta />
 
     </main>
   )

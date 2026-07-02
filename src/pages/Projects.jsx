@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Cta from '../components/layout/Cta'
 import Title from '../components/ui/Title'
 import Fade from '../components/ui/Fade'
+import Stripe from '../components/ui/Stripe'
 
 import propostarapidaImg from '../assets/projects/proposta-rapida/thumbnail.jpg'
 import malabaresweddingImg from '../assets/projects/malabares-wedding/thumbnail.jpg'
@@ -146,10 +147,8 @@ function HomeProjects() {
           })}
         </div>
       </div>
-
-      <Fade />
-      
     </section>
+     {/*<Stripe/>*/}
     <Cta/>
     </>
   )

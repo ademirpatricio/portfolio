@@ -42,7 +42,7 @@ function Nav() {
     <>
       <nav
         className={`
-          fixed inset-x-0 top-0 z-50
+          fixed inset-x-0 top-0 z-800
           py-5 md:py-6
           transition-all duration-300
 
@@ -110,7 +110,7 @@ function Nav() {
       <div
         onClick={closeMenu}
         className={`
-          fixed inset-0 z-40
+          fixed inset-0 z-850
           bg-black/60
           backdrop-blur-sm
 
@@ -132,7 +132,7 @@ function Nav() {
           fixed
           top-0
           right-0
-          z-50
+          z-900
 
           h-screen
           w-[320px]
@@ -183,6 +183,12 @@ function Nav() {
               text-right
             "
           >
+            <NavLink
+              href="/"
+              onClick={closeMenu}
+            >
+              INÍCIO
+            </NavLink>
             <NavLink
               href="/sobre"
               onClick={closeMenu}
