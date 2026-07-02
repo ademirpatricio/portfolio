@@ -7,8 +7,21 @@ import Fade from '../components/ui/Fade'
 import propostarapidaImg from '../assets/projects/proposta-rapida/thumbnail.jpg'
 import malabaresweddingImg from '../assets/projects/malabares-wedding/thumbnail.jpg'
 import thaynaguiarImg from '../assets/projects/thayna-aguiar/thumbnail.jpg'
+import malabaresImg from '../assets/projects/malabares/thumbnail.jpg'
+import institutovalentimImg from '../assets/projects/instituto-valentim/thumbnail.jpg'
+import barbaraacciolyImg from '../assets/projects/barbara-accioly/thumbnail.jpg'
 
 const projects = [
+  {
+    accent: 'from-spacy-navy to-solar-gold/18',
+    image: thaynaguiarImg,
+    tag: 'Web / Branding',
+    title: 'Thayná Aguiar',
+    link: '/projetos/thayna-aguiar',
+    external: false,
+    description:
+      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
+  },
   {
     accent: 'from-spacy-navy to-orbit-cyan/18',
     image: propostarapidaImg,
@@ -21,23 +34,43 @@ const projects = [
   },
   {
     accent: 'from-spacy-navy to-nebula-violet/55',
+    image: malabaresImg,
+    tag: 'Web / Branding',
+    title: 'Malabares MKT & TEC',
+    link: 'https://malabares.com.br',
+    external: true,
+    description:
+      'Agência de marketing digital completa. Tudo que você precisa para o seu negócio.',
+  },
+  {
+    accent: 'from-spacy-navy to-nebula-violet/55',
     image: malabaresweddingImg,
     tag: 'Web',
     title: 'Malabares Wedding',
     link: 'https://wedding.malabares.com.br',
     external: true,
     description:
-      'Site para agência de casamentos com foco em experiência emocional e storytelling visual.',
+      'Serviço focado em identidade visual, sites de casamento e experiência emocional.',
   },
   {
-    accent: 'from-spacy-navy to-solar-gold/18',
-    image: thaynaguiarImg,
+    accent: 'from-spacy-navy to-nebula-violet/55',
+    image: institutovalentimImg,
     tag: 'Web / Branding',
-    title: 'Thayná Aguiar',
-    link: '/projetos/thayna-aguiar',
-    external: false,
+    title: 'Instituto Valentim',
+    link: 'https://institutovalentim.com.br',
+    external: true,
     description:
-      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
+      'Instituto focado em metodologias próprias e desenvolvimento humano.',
+  },
+  {
+    accent: 'from-spacy-navy to-nebula-violet/55',
+    image: barbaraacciolyImg,
+    tag: 'Web',
+    title: 'Bárbara Accioly',
+    link: 'https://barbaraaccioly.com.br',
+    external: true,
+    description:
+      'Curso completo de engajamento para instrutores de Pilates.',
   },
 ]
 
