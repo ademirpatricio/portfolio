@@ -4,6 +4,7 @@ import { LuUserSearch, LuCodeXml, LuComponent } from 'react-icons/lu'
 
 import Cta from '../components/layout/Cta'
 import Container from '../components/layout/Container'
+import Instagram from '../components/ui/Instagram'
 import Fade from '../components/ui/Fade'
 import IconeText from '../components/ui/IconeText'
 
@@ -296,7 +297,7 @@ function About() {
       </section>
 
       {/* ─── EXPERIÊNCIA ──────────────────────────────────────── */}
-      <section className="bg-midnight-deep pt-20 md:pt-32 md:pb-8">
+      <section className="bg-midnight-deep pt-20 md:pt-32 pb-24">
         <Container>
 
           <div className="mb-12">
@@ -352,6 +353,7 @@ function About() {
       </section>
 
       {/* ─── CTA FINAL ────────────────────────────────────────── */}
+      <Instagram />
       <Cta />
 
     </main>
