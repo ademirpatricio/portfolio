@@ -11,6 +11,7 @@ import CaseSectionList from '../../components/case-study/CaseSectionList'
 
 import Cta from '../../components/layout/Cta'
 import CaseCarousel from '../../components/case-study/CaseCarousel'
+import CaseScreens from '../../components/case-study/CaseScreens'
 
 {/* ── imagens ─────────────────────────────────────── */}
 import imgHero from '../../assets/projects/proposta-rapida/1.jpg'
@@ -19,6 +20,11 @@ import imgObjectives from '../../assets/projects/proposta-rapida/3.jpg'
 import imgMockup from '../../assets/projects/proposta-rapida/4.jpg'
 import imgWeb from '../../assets/projects/proposta-rapida/5.jpg'
 import imgPdfBg from '../../assets/projects/proposta-rapida/6.jpg'
+
+import screen1 from '../../assets/projects/proposta-rapida/screen-01.jpg'
+import screen2 from '../../assets/projects/proposta-rapida/screen-02.jpg'
+import screen3 from '../../assets/projects/proposta-rapida/screen-03.jpg'
+import screen4 from '../../assets/projects/proposta-rapida/screen-04.jpg'
 
 
 import galery1 from '../../assets/projects/proposta-rapida/carrossel-01.jpg'
@@ -147,6 +153,18 @@ export default function PropostaRapida() {
           Nada de distração, nada de configuração.
         </p>
       </CaseHighlights>
+
+      {/* ── Telas do produto ────────────────────────────────────── */}
+      <CaseScreens
+        eyebrow="O produto em 4 telas"
+        title="Do problema ao resultado."
+        screens={[
+          { src: screen1, alt: 'Landing page do Proposta Rápida', label: 'Landing page' },
+          { src: screen2, alt: 'Formulário de criação de proposta', label: 'Criação da proposta' },
+          { src: screen3, alt: 'PDF gerado pelo Proposta Rápida', label: 'PDF gerado' },
+          { src: screen4, alt: 'Página da versão PRO', label: 'Versão PRO' },
+        ]}
+      />
 
       {/* ── O Produto ───────────────────────────────────────── */}
       <CasePdf

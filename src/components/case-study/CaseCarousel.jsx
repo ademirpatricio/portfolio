@@ -33,7 +33,7 @@ function CaseCarousel({ images }) {
                 flex-shrink-0
                 basis-full
                 md:basis-1/3
-                lg:basis-1/4
+                lg:basis-1/5
               "
             >
               <img
