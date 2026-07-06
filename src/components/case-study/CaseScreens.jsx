@@ -17,7 +17,7 @@ function CaseScreens({ eyebrow, title, screens = [] }) {
       )}
 
       {/* Grid de telas */}
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {screens.map((screen, index) => (
           <div key={index} className="flex flex-col gap-3">
             <img
