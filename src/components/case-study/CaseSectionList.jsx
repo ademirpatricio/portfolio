@@ -13,7 +13,8 @@ function CaseSectionList({
   btLabel,
   href,
   target,
-  reverse = false
+  reverse = false,
+  btVariant = 'secondary',
   }) {
     
   const textOrder = reverse ? 'md:order-2' : ''
@@ -30,7 +31,7 @@ function CaseSectionList({
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
           <h3 className="text-h4 font-medium text-white mb-6">{subtitle}</h3>
           <div className="text-body text-white-65 mb-8">{children}</div>
-          <Button variant="secondary" href={href} target={target} size="md">{btLabel}</Button>
+          <Button variant={btVariant} href={href} target={target} size="md">{btLabel}</Button>
         </div>
 
         {/* Imagem */}

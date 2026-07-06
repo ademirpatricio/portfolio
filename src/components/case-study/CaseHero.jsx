@@ -22,7 +22,7 @@ function CaseHero ({
                 <img
                     src={image}
                     alt={imageAlt}
-                    className={`w-full h-[500px] rounded-card object-cover ${className}`}
+                    className={`w-full rounded-card object-cover ${className}`}
                     loading="eager"
                 />
             </div>

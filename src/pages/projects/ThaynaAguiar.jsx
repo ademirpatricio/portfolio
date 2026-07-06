@@ -37,7 +37,7 @@ const project = {
   tags: ['Branding', 'UI/UX Design', 'Front-End'],
   infos : {
     role: 'UI/UX Designer & Front-End',
-    type: 'Website / Identidade visual',
+    type: 'Web / Branding',
     stack: 'React + Tailwind + Vite',
     year: '2025',
   },
@@ -76,13 +76,13 @@ export default function ThaynaAguiar() {
   return (
     <>
 
-    <main className="bg-spacy-navy text-white min-h-screen">
+    <main className="bg-[#34125b] text-white min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────── */}
       <CaseHero
         image={images.hero}
         imageAlt="Thayná Aguiar — identidade visual e landing page"
-        className="object-[82%_center] md:object-center"
+        className="object-[82%_center] md:object-center h-[500px]"
         title={project.title}
         subtitle="Presença digital com identidade, estratégia e sofisticação."
         role = {project.infos.role}
@@ -158,6 +158,7 @@ export default function ThaynaAguiar() {
         target="_blank"
         image={images.mockup}
         imageAlt="Detalhes da identidade visual de Thayná Aguiar"
+        className="bg-nebula-violet"
         >
         <p>
           O mídia kit reúne os números, os links e o material visual 

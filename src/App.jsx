@@ -14,6 +14,7 @@ import Projects from './pages/Projects'
 import NotFound from './pages/NotFound'
 
 import ThaynaAguiar from './pages/projects/ThaynaAguiar'
+import PropostaRapida from './pages/projects/PropostaRapida'
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
       <Route path="/o-que-faco" element={<Services />} />
       <Route path="/projetos" element={<Projects />} />
       <Route path="/projetos/thayna-aguiar" element={<ThaynaAguiar />} />
+      <Route path="/projetos/proposta-rapida" element={<PropostaRapida />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     

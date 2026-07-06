@@ -32,8 +32,8 @@ function CaseCarousel({ images }) {
               className="
                 flex-shrink-0
                 basis-full
-                md:basis-1/2
-                lg:basis-1/3
+                md:basis-1/3
+                lg:basis-1/4
               "
             >
               <img

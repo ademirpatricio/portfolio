@@ -25,10 +25,10 @@ const projects = [
   {
     accent: 'from-spacy-navy to-orbit-cyan/18',
     image: propostarapidaImg,
-    tag: 'Produto Digital',
+    tag: 'Produto / SaaS',
     title: 'Proposta Rápida',
-    link: 'https://propostarapida.malabares.com.br',
-    external: true,
+    link: '/projetos/proposta-rapida',
+    external: false,
     description:
       'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
   },

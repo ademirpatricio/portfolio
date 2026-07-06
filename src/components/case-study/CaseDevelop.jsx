@@ -28,18 +28,22 @@ function CaseDevelop ({
             </div>
 
             <div className="flex gap-4">
-                <a
-                href={linkGithub}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
-                <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
-                <a
-                href={linkBehance}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
-                <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
+                {linkGithub && (
+                    <a
+                    href={linkGithub}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
+                    <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
+                )}
+                {linkBehance && (
+                    <a
+                    href={linkBehance}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
+                    <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
+                )}
             </div>
         </div>
       </section>
