@@ -26,6 +26,7 @@ function Fade({
         absolute
         left-0
         w-full
+        z-50
 
         ${sizes[size]}
         ${colors[color]}

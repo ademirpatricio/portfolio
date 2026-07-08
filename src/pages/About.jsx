@@ -7,6 +7,7 @@ import Container from '../components/layout/Container'
 import Instagram from '../components/ui/Instagram'
 import Fade from '../components/ui/Fade'
 import IconeText from '../components/ui/IconeText'
+import usePageTitle from '../hooks/usePageTitle'
 
 import aboutImg from '../assets/images/about-img-1.jpg'
 
@@ -90,6 +91,8 @@ const values = [
 ]
 
 function About() {
+  usePageTitle('Sobre')
+
   return (
     <main>
 
@@ -227,7 +230,7 @@ function About() {
       </section>
 
       {/* ─── MANIFESTO ────────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-20 md:py-32
+      <section className="relative overflow-hidden py-20 md:pt-32 md:pb-48
       bg-[url('./assets/images/about-page-manifesto-bg.jpg')]
       bg-cover bg-center bg-no-repeat">
         
@@ -257,7 +260,7 @@ function About() {
           </blockquote>
 
         </Container>
-        <Fade size="md" color="midnightdeep" />
+        <Fade size="lg" color="midnightdeep" />
 
       </section>
 

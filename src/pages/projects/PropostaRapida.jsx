@@ -1,5 +1,6 @@
 {/* ── geral ─────────────────────────────────────── */}
 import { useEffect } from 'react'
+import usePageTitle from '../../hooks/usePageTitle'
 
 {/* ── blocos ─────────────────────────────────────── */}
 import CaseHero from '../../components/case-study/CaseHero'
@@ -25,7 +26,6 @@ import screen1 from '../../assets/projects/proposta-rapida/screen-01.jpg'
 import screen2 from '../../assets/projects/proposta-rapida/screen-02.jpg'
 import screen3 from '../../assets/projects/proposta-rapida/screen-03.jpg'
 import screen4 from '../../assets/projects/proposta-rapida/screen-04.jpg'
-
 
 import galery1 from '../../assets/projects/proposta-rapida/carrossel-01.jpg'
 import galery2 from '../../assets/projects/proposta-rapida/carrossel-02.jpg'
@@ -73,9 +73,10 @@ const gallery = [
 ]
 
 export default function PropostaRapida() {
+  usePageTitle(project.title)
+
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = `${project.title} — Ademir Patrício`
   }, [])
 
   {/* ========================================================== */}

@@ -1,6 +1,7 @@
 {/* ── geral ─────────────────────────────────────── */}
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import usePageTitle from '../../hooks/usePageTitle'
 
 {/* ── blocos ─────────────────────────────────────── */}
 import CaseHero from '../../components/case-study/CaseHero'
@@ -67,9 +68,10 @@ const gallery = [
 ]
 
 export default function ThaynaAguiar() {
+  usePageTitle(project.title)
+
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = `${project.title} — Ademir Patrício`
   }, [])
 
   {/* ========================================================== */}

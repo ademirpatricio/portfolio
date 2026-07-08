@@ -4,6 +4,7 @@ import Cta from '../components/layout/Cta'
 import Title from '../components/ui/Title'
 import Fade from '../components/ui/Fade'
 import Stripe from '../components/ui/Stripe'
+import usePageTitle from '../hooks/usePageTitle'
 
 import propostarapidaImg from '../assets/projects/proposta-rapida/thumbnail.jpg'
 import malabaresweddingImg from '../assets/projects/malabares-wedding/thumbnail.jpg'
@@ -76,6 +77,8 @@ const projects = [
 ]
 
 function HomeProjects() {
+  usePageTitle('Projetos')
+
   return (
     <>
     <section
