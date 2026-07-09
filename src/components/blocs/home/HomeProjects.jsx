@@ -9,6 +9,7 @@ import thaynaguiarImg from '../../../assets/projects/thayna-aguiar/thumbnail.jpg
 import malabaresImg from '../../../assets/projects/malabares/thumbnail.jpg'
 import institutovalentimImg from '../../../assets/projects/instituto-valentim/thumbnail.jpg'
 import barbaraacciolyImg from '../../../assets/projects/barbara-accioly/thumbnail.jpg'
+import mowcarImg from '../../../assets/projects/mowcar/thumbnail.jpg'
 
 
 const projects = [
@@ -31,6 +32,16 @@ const projects = [
     external: false,
     description:
       'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
+  },
+  {
+    accent: 'from-spacy-navy to-nebula-violet/55',
+    image: mowcarImg,
+    tag: 'Aplicativo',
+    title: 'Mowcar',
+    link: '/projetos/mowcar',
+    external: false,
+    description:
+      'Aplicativo para gerenciamento de aluguel de veículos de frotas corporativas.',
   },
   {
     accent: 'from-spacy-navy to-nebula-violet/55',
@@ -62,6 +73,7 @@ const projects = [
     description:
       'Instituto focado em metodologias próprias e desenvolvimento humano.',
   },
+  /*
   {
     accent: 'from-spacy-navy to-nebula-violet/55',
     image: barbaraacciolyImg,
@@ -72,6 +84,7 @@ const projects = [
     description:
       'Curso completo de engajamento para instrutores de Pilates.',
   },
+  */
 ]
 
 function HomeProjects() {

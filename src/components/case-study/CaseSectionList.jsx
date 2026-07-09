@@ -15,6 +15,7 @@ function CaseSectionList({
   target,
   reverse = false,
   btVariant = 'secondary',
+  gridCols = 'lg:grid-cols-2',
   }) {
     
   const textOrder = reverse ? 'md:order-2' : ''
@@ -23,7 +24,7 @@ function CaseSectionList({
   return (
     
     <section className="px-12 max-w-container mx-auto pt-10 pb-40">
-      <div className="grid md:grid-cols-2 gap-20 items-center">
+      <div className={`grid grid-cols-1 gap-20 items-center ${gridCols}`}>
 
         {/* Conteúdo */}
         <div className={textOrder}>
@@ -31,7 +32,9 @@ function CaseSectionList({
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
           <h3 className="text-h4 font-medium text-white mb-6">{subtitle}</h3>
           <div className="text-body text-white-65 mb-8">{children}</div>
-          <Button variant={btVariant} href={href} target={target} size="md">{btLabel}</Button>
+          {btLabel && (
+            <Button variant={btVariant} href={href} target={target} size="md">{btLabel}</Button>
+          )}
         </div>
 
         {/* Imagem */}

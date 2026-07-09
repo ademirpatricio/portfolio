@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
-function CaseCarousel({ images }) {
+function CaseCarousel({ images, className ='', trackClassName = '', slideClassName = '', imageClassName='' }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'start',
@@ -18,35 +18,33 @@ function CaseCarousel({ images }) {
   }, [emblaApi])
 
   return (
-    <section className="relative w-full">
+    <section className={`relative w-full ${className}`}>
 
       <div
         ref={emblaRef}
         className="overflow-hidden"
       >
-        <div className="flex">
+        <div className={`flex ${trackClassName}`}>
 
           {images.map((image, index) => (
             <div
               key={index}
-              className="
-                flex-shrink-0
+              className={`flex-shrink-0
                 basis-full
                 md:basis-1/3
                 lg:basis-1/5
-              "
+                ${slideClassName}`}
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="
-                  w-full
+                className={`w-full
                   object-cover
                   transition-transform
                   duration-300
                   hover:scale-[1.02]
-                "
+                  ${imageClassName}`}
               />
             </div>
           ))}
