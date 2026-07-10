@@ -6,6 +6,7 @@ import { setLenis } from './utils/lenisInstance'
 import Nav from '../src/components/layout/Nav'
 import Footer from '../src/components/layout/Footer'
 import ScrollToTop from './components/utils/ScrollToTop'
+import CookieConsent from './components/ui/CookieConsent'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -38,6 +39,7 @@ function App() {
   return (
     <>
     <ScrollToTop />
+    <CookieConsent />
     <Nav />
 
     <Routes>
