@@ -70,7 +70,7 @@ const projects = [
     image: institutovalentimImg,
     tag: 'Web / Branding',
     title: 'Instituto Valentim',
-    link: 'https://institutovalentim.com.br',
+    link: 'https://www.behance.net/gallery/233370685/Instituto-Valentim-Pagina-e-Anuncios',
     external: true,
     description:
       'Instituto focado em metodologias próprias e desenvolvimento humano.',
