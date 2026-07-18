@@ -20,6 +20,7 @@ export default {
         'orbit-cyan':     '#22C8E5',
         'solar-gold':     '#D8B15A',
         'solar-orange':   '#ff9603',
+        'disabled':       '#2A293D',
         'white':          '#FFFFFF',
         'white-85':       'rgba(255, 255, 255, 0.85)',
         'white-75':       'rgba(255, 255, 255, 0.75)',

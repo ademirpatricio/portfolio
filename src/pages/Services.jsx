@@ -38,26 +38,44 @@ const steps = [
   {
     number: '01',
     title: 'Entender',
+    subtitle: 'Discovery / Pesquisa',
     description:
       'Antes de abrir o Figma, entender o contexto. Para quem, por quê e como vai ser feito.',
   },
   {
     number: '02',
+    title: 'Definir',
+    subtitle: 'PRD / Escopo',
+    description:
+      'O problema claro antes da solução. Escopo, critérios de sucesso e o que não vai entrar.',
+  },
+  {
+    number: '03',
     title: 'Projetar',
+    subtitle: 'Wireframes / Protótipo',
     description:
       'Fluxos antes de pixels. Decisões de UX antes de decisões visuais. A tela bonita é consequência.',
   },
   {
-    number: '03',
+    number: '04',
     title: 'Construir',
+    subtitle: 'MVP / Front-end',
     description:
       'Protótipo ou código. Dependendo do que o problema pede, consigo entregar os dois.',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Validar',
+    subtitle: 'Testes / Dados',
     description:
-      'Entrega não é mandar o arquivo. É garantir que o que foi projetado vai ao ar realmente funciona.',
+      'Entrega não é mandar o arquivo. É garantir que o que foi projetado vai ao ar e realmente funciona.',
+  },
+  {
+    number: '06',
+    title: 'Evoluir',
+    subtitle: 'Roadmap / Iteração',
+    description:
+      'Produto lançado é produto que começa. O que os dados mostram orienta o próximo ciclo.',
   },
 ]
 
@@ -112,7 +130,7 @@ function Services() {
     <main>
 
       {/* ─── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden text-center bg-midnight-deep pb-24 pt-40 bg-[url('./assets/images/services-page-bg.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="relative overflow-hidden text-center bg-midnight-deep pb-48 pt-40 bg-[url('./assets/images/services-page-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
 
         <Container className="relative z-10">
@@ -126,11 +144,11 @@ function Services() {
             <span className="text-cosmic-blue">compreender.</span>
           </h1>
 
-          <p className="text-lead mb-3 max-w-auto text-white-75">
+          <p className="text-lead mb-3 max-w-auto text-white-85">
             Cada entrega começa com a pergunta certa.
           </p>
 
-          <p className="text-body max-w-[500px] mx-auto text-white-55">
+          <p className="text-body max-w-[500px] mx-auto text-white-75">
             Não trabalho com escopo fechado antes de entender o problema.
             O briefing é o início da conversa, não a resposta.
           </p>
@@ -191,19 +209,26 @@ function Services() {
               Processo
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
-              Quatro etapas. Sem atalhos.
+              Seis etapas. Sem atalhos.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 bg-white/07 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="bg-spacy-navy p-8 md:p-10 rounded-lg border border-cosmic-blue/12 transition hover:-translate-y-1 hover:border-cosmic-blue/40"
+                className="bg-spacy-navy p-8 md:p-10 rounded-lg border border-cosmic-blue/12 transition hover:-translate-y-1 hover:border-cosmic-blue/40 text-left"
               >
-                <p className="mb-5 text-2xl font-semibold tracking-[0.12em] text-orbit-cyan/60">
-                  {step.number}
-                </p>
+                <div className="flex items-baseline gap-3 mb-5">
+                  <p className="text-2xl font-semibold tracking-[0.12em] text-orbit-cyan/60">
+                    {step.number}
+                  </p>
+                  {step.subtitle && (
+                    <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-cosmic-blue">
+                      {step.subtitle}
+                    </span>
+                  )}
+                </div>
                 <h3 className="mb-3 text-lg font-semibold tracking-[-0.01em] text-white">
                   {step.title}
                 </h3>

@@ -62,7 +62,7 @@ function CaseHero ({
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuCalendarCheck /> Projeto</span>
                     <a href={link} target="_blank" rel="noreferrer">
-                        <p className="text-sm text-solar-gold hover:text-solar-orange">{link}</p>
+                        <p className="text-sm text-solar-accent hover:text-solar-orange">{link}</p>
                     </a>
                 </div>
                 <div>

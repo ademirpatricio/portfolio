@@ -91,7 +91,7 @@ const values = [
 ]
 
 function About() {
-  usePageTitle('Sobre')
+  usePageTitle('Quem Sou')
 
   return (
     <main>
@@ -111,11 +111,11 @@ function About() {
             <span className="text-cosmic-blue">pela solução.</span>
           </h1>
 
-          <p className="text-lead mb-6 max-w-[520px] text-white-75">
+          <p className="text-lead mb-6 max-w-[520px] text-white-85">
             Mais de 15 anos projetando produtos digitais. Sempre começando pela pergunta certa.
           </p>
 
-          <p className="text-body max-w-[520px] text-white-55">
+          <p className="text-body max-w-[520px] text-white-75">
             Sou Ademir Patrício. Designer com background em desenvolvimento front-end.
             Recife, Brasil. Disponível remotamente.
           </p>
@@ -255,7 +255,7 @@ function About() {
             O problema vem primeiro.</p>
             <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
             A solução, depois.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-cosmic-blue">
+            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-solar-gold">
             Só existe o que vale a pena existir.</p>
           </blockquote>
 

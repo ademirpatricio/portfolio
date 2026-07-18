@@ -42,7 +42,7 @@ function CaseDevelop ({
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-white-65 hover:text-white transition-colors">
-                    <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
+                    <FaBehance className="text-solar-accent" /> Ver projeto no Behance</a>
                 )}
             </div>
         </div>

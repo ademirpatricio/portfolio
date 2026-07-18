@@ -130,7 +130,7 @@ export default function PropostaRapida() {
         <p className="mb-4">
           Um produto da{' '}
           <a href="https://malabares.com.br" target="_blank" rel="noreferrer"
-          className="text-solar-gold hover:text-solar-orange transition-colors"
+          className="text-solar-accent hover:text-solar-orange transition-colors"
           >Malabares</a>, desenvolvido do zero e lançado como ferramenta real no mercado.
         </p>
       </CaseSection>
@@ -178,7 +178,7 @@ export default function PropostaRapida() {
         imageAlt="Preview do PDF gerado pelo Proposta Rápida"
         className="bg-cover bg-center"
         style={{ backgroundImage: `url(${imgPdfBg})` }}
-        btVariant="gold"
+        btVariant="accent"
         >
         <p>
           Do formulário ao PDF profissional em menos de dois minutos.
@@ -208,7 +208,7 @@ export default function PropostaRapida() {
         image={images.web}
         imageAlt="Proposta Rápida no ar"
         btLabel="Acessar o Proposta Rápida ⇢"
-        btVariant="gold"
+        btVariant="accent"
         href={project.links.liveUrl}
         target="_blank"
         reverse>

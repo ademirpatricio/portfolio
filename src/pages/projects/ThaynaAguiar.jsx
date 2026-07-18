@@ -115,7 +115,7 @@ export default function ThaynaAguiar() {
         <p className="mb-4">
           Copywriter, recifense, apaixonada por futebol e pelo universo digital. 
           <a href={project.links.liveUrl} target="_blank" rel="noreferrer"
-          className="text-solar-gold hover:text-solar-orange transition-colors"
+          className="text-solar-accent hover:text-solar-orange transition-colors"
           > Thayná Aguiar</a>, é especialista em criar conteúdos que fazem a diferença 
           nas redes sociais. Transforma marcas em histórias que conectam pessoas, 
           engajam e convertem.

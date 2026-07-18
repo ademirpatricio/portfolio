@@ -16,7 +16,7 @@ import mowcarImg from '../assets/projects/mowcar/thumbnail.jpg'
 
 const projects = [
   {
-    accent: 'from-spacy-navy to-solar-gold/18',
+    accent: 'from-spacy-navy to-solar-accent/18',
     image: thaynaguiarImg,
     tag: 'Web / Branding',
     title: 'Thayná Aguiar',

@@ -71,8 +71,8 @@ function Nav() {
 
           {/* Menu Desktop */}
           <ul className="hidden items-center gap-10 md:flex">
-            <NavLink href="/sobre">
-              SOBRE
+            <NavLink href="/quem-sou">
+              QUEM SOU
             </NavLink>
 
             <NavLink href="/o-que-faco">
