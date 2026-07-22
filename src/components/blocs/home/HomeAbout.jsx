@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import Title from '../../ui/Title'
 import IconeText from '../../ui/IconeText'
 import Button from '../../ui/Button'
+import FadeIn from '../../ui/FadeIn'
 
 import aboutImg from '../../../assets/images/about-img-1.jpg'
 
@@ -17,8 +18,9 @@ function HomeAbout() {
           
           <div className="mx-auto grid max-w-container grid-cols-1 items-center text-center md:text-left gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-20">
             
+            <FadeIn direction="left">
             <div
-              className="relative h-[280px] md:h-[520px] items-center justify-center 
+              className="relative h-[280px] md:h-[520px] items-center justify-center
               overflow-hidden rounded-card border border-white/5 bg-spacy-navy lg:flex"
               aria-hidden="true"
             >
@@ -35,7 +37,9 @@ function HomeAbout() {
               />
 
             </div>
+            </FadeIn>
 
+            <FadeIn direction="right">
             <div>
               <Title 
                 span= "Sobre o Designer" 
@@ -66,6 +70,7 @@ function HomeAbout() {
               </div>
 
             </div>
+            </FadeIn>
           </div>
         </section>
     )

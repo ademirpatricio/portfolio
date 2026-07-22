@@ -1,12 +1,30 @@
 import { AiFillProduct, AiOutlineCodepen, AiOutlineInsertRowAbove } from "react-icons/ai";
 import { DiPhotoshop, DiIllustrator } from "react-icons/di";
 import { VscVscodeInsiders } from "react-icons/vsc";
+import { motion } from 'framer-motion'
 
 import Container from '../components/layout/Container'
 import Fade from '../components/ui/Fade'
+import FadeIn from '../components/ui/FadeIn'
 import CasePdf from '../components/case-study/CasePdf'
 import Cta from '../components/layout/Cta'
 import usePageTitle from '../hooks/usePageTitle'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] },
+})
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+}
+
+const containerVariants = {
+  hidden: {},
+  show:   { transition: { staggerChildren: 0.08 } },
+}
 
 import imgGithub from '../assets/images/services-github.jpg'
 
@@ -135,23 +153,23 @@ function Services() {
 
         <Container className="relative z-10">
 
-          <div className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
             O que faço
-          </div>
+          </motion.div>
 
-          <h1 className="mb-6 max-w-auto text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
+          <motion.h1 {...fadeUp(0.25)} className="mb-6 max-w-auto text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
             Antes de criar,<br />
             <span className="text-cosmic-blue">compreender.</span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lead mb-3 max-w-auto text-white-85">
+          <motion.p {...fadeUp(0.4)} className="text-lead mb-3 max-w-auto text-white-85">
             Cada entrega começa com a pergunta certa.
-          </p>
+          </motion.p>
 
-          <p className="text-body max-w-[500px] mx-auto text-white-75">
+          <motion.p {...fadeUp(0.5)} className="text-body max-w-[500px] mx-auto text-white-75">
             Não trabalho com escopo fechado antes de entender o problema.
             O briefing é o início da conversa, não a resposta.
-          </p>
+          </motion.p>
 
         </Container>
 
@@ -162,20 +180,29 @@ function Services() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <div className="mb-12 md:mb-16">
+          <FadeIn className="mb-12 md:mb-16">
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               Serviços
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
               Onde posso ajudar.
             </h2>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-5 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
             {services.map((service) => (
-              <article
+              <motion.article
                 key={service.title}
-                className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 transition hover:-translate-y-1 hover:border-cosmic-blue/40 md:p-10"
+                variants={cardVariants}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 hover:border-cosmic-blue/40 md:p-10"
               >
                 <div
                   className={`mb-6 flex h-20 w-20 items-center justify-center rounded-icon text-4xl ${service.color}`}
@@ -189,9 +216,9 @@ function Services() {
                 <p className="text-[15px] leading-[1.7] text-white-55">
                   {service.description}
                 </p>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
 
         </Container>
       </section>
@@ -204,20 +231,29 @@ function Services() {
 
         <Container className="relative z-10">
 
-          <div className="mb-12 md:mb-16">
+          <FadeIn className="mb-12 md:mb-16">
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               Processo
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
               Seis etapas. Sem atalhos.
             </h2>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
             {steps.map((step) => (
-              <div
+              <motion.div
                 key={step.number}
-                className="bg-spacy-navy p-8 md:p-10 rounded-lg border border-cosmic-blue/12 transition hover:-translate-y-1 hover:border-cosmic-blue/40 text-left"
+                variants={cardVariants}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="bg-spacy-navy p-8 md:p-10 rounded-lg border border-cosmic-blue/12 hover:border-cosmic-blue/40 text-left"
               >
                 <div className="flex items-baseline gap-3 mb-5">
                   <p className="text-2xl font-semibold tracking-[0.12em] text-orbit-cyan/60">
@@ -235,9 +271,9 @@ function Services() {
                 <p className="text-[15px] leading-[1.7] text-white-55">
                   {step.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
         </Container>
 
@@ -248,20 +284,27 @@ function Services() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <div className="mb-12 md:mb-16">
+          <FadeIn className="mb-12 md:mb-16">
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               Stack
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
               Com o que trabalho.
             </h2>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-5">
+          <motion.div
+            className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-5"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
             {tools.map((tool) => (
-              <div
+              <motion.div
                 key={tool.name}
-                className="flex items-center gap-3 rounded-xl border border-cosmic-blue/12 bg-spacy-navy/40 px-4 py-3.5 transition hover:border-cosmic-blue/30"
+                variants={cardVariants}
+                className="flex items-center gap-3 rounded-xl border border-cosmic-blue/12 bg-spacy-navy/40 px-4 py-3.5 hover:border-cosmic-blue/30"
               >
                 {typeof tool.icon === 'string' ? (
                   <img
@@ -280,9 +323,9 @@ function Services() {
                 <span className="text-[14px] font-medium text-white-75">
                   {tool.name}
                 </span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <p className="mt-8 text-[13px] leading-[1.6] text-white/50 text-center">
             <strong>Outras ferramentas:</strong> Sketch, Zeplin, InDesign, Bootstrap, PHP, Elementor, Miro

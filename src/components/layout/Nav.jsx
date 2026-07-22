@@ -190,7 +190,7 @@ function Nav() {
               INÍCIO
             </NavLink>
             <NavLink
-              href="/sobre"
+              href="/quem-sou"
               onClick={closeMenu}
             >
               SOBRE

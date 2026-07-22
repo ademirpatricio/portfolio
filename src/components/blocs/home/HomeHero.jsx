@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 import Button from '../../ui/Button'
 import Fade from '../../ui/Fade'
 
 import heroBg from '../../../assets/images/hero-bg.jpg'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] },
+})
 
 function HomeHero() {
 
@@ -57,31 +64,29 @@ function HomeHero() {
       <div className="relative z-10 mx-auto w-full max-w-container text-center">
 
         {/* Subtitulo */}
-        <div className="mb-11 inline-flex items-center gap-2.5 text-md 
+        <motion.div {...fadeUp(0.1)} className="mb-11 inline-flex items-center gap-2.5 text-md
         font-medium tracking-[0.1em] text-orbit-cyan text-neon">
           UI / UX · Product Design · Front-end
-        </div>
+        </motion.div>
 
         {/* Titulo */}
-        <h1 className="text-h1 mb-7 mx-auto max-w-[800px] text-white">
+        <motion.h1 {...fadeUp(0.25)} className="text-h1 mb-7 mx-auto max-w-[800px] text-white">
           Designer que projeta
           <br className="hidden md:block"/>
           <span className="text-cosmic-blue"> com propósito.</span>
-        </h1>
+        </motion.h1>
 
         {/* Descrição */}
-        <p className="mb-8 max-w-[500px] mx-auto text-stellar-white
-        text-body font-light 
-        ">
-          Do problema real à solução que funciona e vale a pena existir. Me chamo  
+        <motion.p {...fadeUp(0.4)} className="mb-8 max-w-[500px] mx-auto text-stellar-white text-body font-light">
+          Do problema real à solução que funciona e vale a pena existir. Me chamo
           <strong> Ademir Patrício</strong>. Entendo, projeto, construo e entrego.
-        </p>
+        </motion.p>
 
-        <div className="mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+        <motion.div {...fadeUp(0.55)} className="mx-auto flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="primary" href="/projetos" size="lg">Ver projetos</Button>
           <Button variant="secondary" size="lg" target="_blank"
           href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio">Fala comigo ⇢</Button>
-        </div>
+        </motion.div>
 
       </div>
 

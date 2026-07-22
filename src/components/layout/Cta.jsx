@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { GiCoffeeCup } from 'react-icons/gi'
+import FadeIn from '../ui/FadeIn'
 
 import ctaBg from '../../assets/images/cta-bg.jpg'
 
@@ -58,7 +59,7 @@ function Cta() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(100,101,247,0.10)_0%,transparent_65%),radial-gradient(ellipse_40%_40%_at_80%_20%,rgba(34,200,229,0.05)_0%,transparent_50%)]" />
 
       {/* Conteúdo */}
-      <div className="relative z-10 mx-auto max-w-[640px] px-6 md:px-12">
+      <FadeIn className="relative z-10 mx-auto max-w-[640px] px-6 md:px-12">
         <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan">
           Contato
         </span>
@@ -97,7 +98,7 @@ function Cta() {
             target="_blank"
           />
         </div>
-      </div>
+      </FadeIn>
 
       <Fade size="lg" color="midnightdeep" />
     </section>

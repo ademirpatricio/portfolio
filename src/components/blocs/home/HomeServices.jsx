@@ -1,5 +1,18 @@
+import { motion } from 'framer-motion'
+
 import Title from '../../ui/Title'
 import Fade from '../../ui/Fade'
+import FadeIn from '../../ui/FadeIn'
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+}
+
+const containerVariants = {
+  hidden: {},
+  show:   { transition: { staggerChildren: 0.12 } },
+}
 
 import productDesignIcon from '../../../assets/icons/ic1.svg'
 import frontendIcon from '../../../assets/icons/ic2.svg'
@@ -32,18 +45,27 @@ function HomeServices() {
     bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat w-full" 
     aria-labelledby="services-title">
       <div className="mx-auto max-w-container px-6 md:px-12">
-        <div className="mb-10 md:mb-16 text-center">
+        <FadeIn className="mb-10 md:mb-16 text-center">
           <Title
             span="O que faço"
             title="Antes de criar, compreender."
             content="Cada entrega começa com a pergunta certa."
           />
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 relative z-30">
+        <motion.div
+          className="grid grid-cols-1 gap-5 lg:grid-cols-3 relative z-30"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+        >
           {services.map((service) => (
-            <article
-              className="rounded-card border border-cosmic-blue/12 bg-midnight-deep/45 p-8 transition hover:-translate-y-1 hover:border-cosmic-blue/40 md:p-10 md:px-8"
+            <motion.article
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.2 }}
+              className="rounded-card border border-cosmic-blue/12 bg-midnight-deep/45 p-8 hover:border-cosmic-blue/40 md:p-10 md:px-8"
               key={service.title}
             >
               <div
@@ -58,9 +80,9 @@ function HomeServices() {
               <p className="text-[15px] leading-[1.7] text-white-55">
                 {service.description}
               </p>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
       <Fade size="lg" color="deepblue"/>
     </section>

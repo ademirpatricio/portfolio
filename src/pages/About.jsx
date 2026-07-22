@@ -1,13 +1,31 @@
 import { FaFilePdf } from 'react-icons/fa6'
 import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa6'
 import { LuUserSearch, LuCodeXml, LuComponent } from 'react-icons/lu'
+import { motion } from 'framer-motion'
 
 import Cta from '../components/layout/Cta'
 import Container from '../components/layout/Container'
 import Instagram from '../components/ui/Instagram'
 import Fade from '../components/ui/Fade'
+import FadeIn from '../components/ui/FadeIn'
 import IconeText from '../components/ui/IconeText'
 import usePageTitle from '../hooks/usePageTitle'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] },
+})
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+}
+
+const containerVariants = {
+  hidden: {},
+  show:   { transition: { staggerChildren: 0.1 } },
+}
 
 import aboutImg from '../assets/images/about-img-1.jpg'
 
@@ -100,25 +118,25 @@ function About() {
       <section className="relative overflow-hidden bg-spacy-navy pb-24 pt-40 bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
 
-        <Container className="relative z-10">
+        <Container className="relative z-90">
 
-          <div className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
             Sobre o Designer
-          </div>
+          </motion.div>
 
-          <h1 className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
+          <motion.h1 {...fadeUp(0.25)} className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
             Não começo<br />
             <span className="text-cosmic-blue">pela solução.</span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lead mb-6 max-w-[520px] text-white-85">
+          <motion.p {...fadeUp(0.4)} className="text-lead mb-6 max-w-[520px] text-white-85">
             Mais de 15 anos projetando produtos digitais. Sempre começando pela pergunta certa.
-          </p>
+          </motion.p>
 
-          <p className="text-body max-w-[520px] text-white-75">
+          <motion.p {...fadeUp(0.5)} className="text-body max-w-[520px] text-white-75">
             Sou Ademir Patrício. Designer com background em desenvolvimento front-end.
             Recife, Brasil. Disponível remotamente.
-          </p>
+          </motion.p>
 
         </Container>
 
@@ -131,6 +149,7 @@ function About() {
 
           <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:gap-20">
 
+            <FadeIn direction="left">
             <div>
 
               <div
@@ -193,7 +212,9 @@ function About() {
               </div>
 
             </div>
+            </FadeIn>
 
+            <FadeIn direction="right">
             <div className="space-y-5 text-[17px] leading-[1.75] text-white-55">
               <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
                 A trajetória
@@ -223,6 +244,7 @@ function About() {
                 valham a pena existir.
               </p>
             </div>
+            </FadeIn>
 
           </div>
 
@@ -241,23 +263,34 @@ function About() {
           rgba(2,1,17,0.50)_45%,
           rgba(2,1,17,0.10)_100%)]" />
 
-        <Container className="relative z-30 text-left">
+        <Container className="relative z-90 text-left">
 
           <span className="mb-8 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
           Manifesto</span>
 
-          <blockquote className="mx-auto space-y-2">
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-            Antes de projetar, entendo.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-            Antes de entregar, questiono.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-            O problema vem primeiro.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-medium leading-[1.3] tracking-[-0.02em] text-white">
-            A solução, depois.</p>
-            <p className="text-[clamp(22px,3vw,36px)] font-bold leading-[1.3] tracking-[-0.02em] text-solar-gold">
-            Só existe o que vale a pena existir.</p>
-          </blockquote>
+          <motion.blockquote
+            className="mx-auto space-y-2"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            {[
+              { text: 'Antes de projetar, entendo.', className: 'font-medium text-white' },
+              { text: 'Antes de entregar, questiono.', className: 'font-medium text-white' },
+              { text: 'O problema vem primeiro.', className: 'font-medium text-white' },
+              { text: 'A solução, depois.', className: 'font-medium text-white' },
+              { text: 'Só existe o que vale a pena existir.', className: 'font-bold text-solar-gold' },
+            ].map((line) => (
+              <motion.p
+                key={line.text}
+                variants={cardVariants}
+                className={`text-[clamp(22px,3vw,36px)] leading-[1.3] tracking-[-0.02em] ${line.className}`}
+              >
+                {line.text}
+              </motion.p>
+            ))}
+          </motion.blockquote>
 
         </Container>
         <Fade size="lg" color="midnightdeep" />
@@ -268,20 +301,29 @@ function About() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <div className="mb-12 text-center md:mb-16">
+          <FadeIn className="mb-12 text-center md:mb-16">
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               O que orienta cada decisão
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
               Três princípios que não negocio.
             </h2>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-5 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
             {values.map((value) => (
-              <article
+              <motion.article
                 key={value.title}
-                className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 transition hover:-translate-y-1 hover:border-cosmic-blue/40 md:p-10"
+                variants={cardVariants}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 hover:border-cosmic-blue/40 md:p-10"
               >
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue">
                   {value.icon}
@@ -292,9 +334,9 @@ function About() {
                 <p className="text-[15px] leading-[1.7] text-white-55">
                   {value.description}
                 </p>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
 
         </Container>
       </section>
@@ -303,19 +345,25 @@ function About() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <div className="mb-12">
+          <FadeIn className="mb-12">
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               Experiência
             </span>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
               O caminho até aqui.
             </h2>
-          </div>
+          </FadeIn>
 
-          <div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+          >
             {experiences.map((exp, index) => (
-              <article
+              <motion.article
                 key={exp.company}
+                variants={cardVariants}
                 className={`grid grid-cols-1 gap-4 py-7 md:grid-cols-[200px_1fr] md:gap-10
                   ${index !== experiences.length - 1 ? 'border-b border-white/10' : ''}`}
               >
@@ -348,9 +396,9 @@ function About() {
                     {exp.description}
                   </p>
                 </div>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
 
         </Container>
       </section>
