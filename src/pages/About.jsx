@@ -120,7 +120,7 @@ function About() {
 
         <Container className="relative z-90">
 
-          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-md font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
             Sobre o Designer
           </motion.div>
 
@@ -223,25 +223,16 @@ function About() {
                 Do gráfico ao produto.
               </h2>
               <p>
-                Comecei com design gráfico em 2009. Sites, peças institucionais, campanhas
-                para educação e comunicação. Aprendi que visual tem impacto direto em como
-                as pessoas percebem valor.
+                Comecei com design gráfico em 2009. Sites, peças institucionais, campanhas para educação e comunicação. Fui entendendo que a forma como as coisas aparecem muda o que as pessoas pensam delas.
               </p>
               <p>
-                Com o tempo, o trabalho ficou mais complexo. Em 2018, na Serttel, trabalhei
-                no aplicativo Zona Azul Digital de Recife. Mobilidade urbana. Problema real,
-                pessoas reais, impacto mensurável. Foi lá que entendi o tipo de trabalho
-                que quero fazer.
+                Com o tempo, o trabalho ficou mais complexo. Em 2018, na Serttel, trabalhei no aplicativo Zona Azul Digital de Recife. Mobilidade urbana com problema real, escala real e resultado para medir. Foi lá que ficou claro o tipo de trabalho que quero fazer.
               </p>
               <p>
-                Em 2019 co-fundei a Malabares MKT. Aprendi a operar os dois lados: do
-                conceito ao código. Isso mudou como projeto. Não projeto no vácuo porque
-                sei o que vai acontecer na implementação.
+                Em 2019 co-fundei a Malabares MKT. Aprendi a operar os dois lados: do conceito ao código. Isso mudou como projeto. Não projeto no vácuo porque sei o que vai acontecer na implementação.
               </p>
               <p>
-                Hoje atuo como product designer na GoExplosion e sigo construindo projetos
-                próprios. O próximo passo: colaborar com times europeus em produtos que
-                valham a pena existir.
+                Hoje atuo como product designer na GoExplosion e sigo construindo projetos próprios. O próximo passo: colaborar com times globais em produtos que valham a pena existir.
               </p>
             </div>
             </FadeIn>
