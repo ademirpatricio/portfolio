@@ -159,7 +159,7 @@ function Services() {
       </section>
 
       {/* ─── SERVIÇOS ─────────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:py-32">
+      <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
           <div className="mb-12 md:mb-16">
@@ -197,7 +197,7 @@ function Services() {
       </section>
 
       {/* ─── PROCESSO ─────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-spacy-navy py-20 md:py-32 
+      <section className="relative overflow-hidden bg-spacy-navy py-20 md:py-28
       bg-[url('./assets/images/services-page-bg-2.jpg')]
       bg-cover bg-center bg-no-repeat text-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_50%,rgba(52,33,109,0.45)_0%,transparent_70%)]" />
@@ -245,7 +245,7 @@ function Services() {
       </section>
 
       {/* ─── FERRAMENTAS ──────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:pt-14 pb-24">
+      <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
           <div className="mb-12 md:mb-16">

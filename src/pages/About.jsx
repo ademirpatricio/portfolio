@@ -126,7 +126,7 @@ function About() {
       </section>
 
       {/* ─── TRAJETÓRIA ───────────────────────────────────────── */}
-      <section className="bg-deep-blue py-20 md:py-32">
+      <section className="bg-deep-blue py-20 md:py-28">
         <Container>
 
           <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:gap-20">
@@ -265,7 +265,7 @@ function About() {
       </section>
 
       {/* ─── VALORES ──────────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:pt-32 pb-10">
+      <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
           <div className="mb-12 text-center md:mb-16">
@@ -300,7 +300,7 @@ function About() {
       </section>
 
       {/* ─── EXPERIÊNCIA ──────────────────────────────────────── */}
-      <section className="bg-midnight-deep pt-20 md:pt-32 pb-24">
+      <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
           <div className="mb-12">

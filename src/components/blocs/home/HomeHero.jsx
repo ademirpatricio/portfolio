@@ -63,23 +63,18 @@ function HomeHero() {
         </div>
 
         {/* Titulo */}
-        <h1 className="mb-7 mx-auto max-w-[800px] 
-         text-white
-        text-[clamp(55px,6.5vw,65px)] font-bold leading-[1.03] tracking-[-0.05em] ">
+        <h1 className="text-h1 mb-7 mx-auto max-w-[800px] text-white">
           Designer que projeta
           <br className="hidden md:block"/>
           <span className="text-cosmic-blue"> com propósito.</span>
         </h1>
 
         {/* Descrição */}
-        <p className="text-lead mb-5 max-w-[580px] mx-auto text-white-75">
-          Do problema real à solução que vale a pena existir.
-        </p>
-
-        {/* Texto de apoio */}
-        <p className="text-body mb-13 max-w-[520px] mx-auto text-white-55">
-          Sou <strong>Ademir Patrício</strong>. Entendo o problema antes de abrir o Figma.
-          Projeto, construo e entrego.
+        <p className="mb-8 max-w-[500px] mx-auto text-stellar-white
+        text-body font-light 
+        ">
+          Do problema real à solução que funciona e vale a pena existir. Me chamo  
+          <strong> Ademir Patrício</strong>. Entendo, projeto, construo e entrego.
         </p>
 
         <div className="mx-auto flex flex-col sm:flex-row gap-4 justify-center">

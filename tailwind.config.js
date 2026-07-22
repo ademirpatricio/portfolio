@@ -18,7 +18,9 @@ export default {
         'deep-blue':      '#3a4089',
         'cosmic-blue':    '#6465F7',
         'orbit-cyan':     '#22C8E5',
+        'stellar-white':  '#c7c7ff',
         'solar-gold':     '#D8B15A',
+        'solar-accent':   '#D8B15A',
         'solar-orange':   '#ff9603',
         'disabled':       '#2A293D',
         'white':          '#FFFFFF',
@@ -36,13 +38,15 @@ export default {
       },
 
       fontSize: {
-        'label': ['11px', { lineHeight: '1.4', letterSpacing: '0.15em' }],
-        'sm':    ['13px', { lineHeight: '1.6' }],
-        'base':  ['15px', { lineHeight: '1.7' }],
-        'body':  ['17px', { lineHeight: '1.75' }],
-        'h3':    ['32px', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
+        
+        'caption': ['13px', { lineHeight: '1.6' }],
+        'reading': ['18px', { lineHeight: '1.8' }],
+
         'h2':    ['48px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'h1':    ['80px', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        'h3':    ['32px', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
+        'span':  ['13px', { letterSpacing: '0.4em'}],
+        'label': ['11px', { lineHeight: '1.4', letterSpacing: '0.15em' }],
+        
       },
 
       fontWeight: {

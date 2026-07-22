@@ -17,7 +17,7 @@ function IconeText({
             <Icon className={`${iconClassName} text-xl shrink-0`}/>
             <div className="flex flex-col">
                 <div className="text-xs text-white-55">{title}</div>
-                <span className="text-sm text-cosmic-blue leading-tight">{label}</span>
+                <span className="text-caption text-cosmic-blue leading-tight">{label}</span>
             </div>
         </a>
     )

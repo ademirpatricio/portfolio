@@ -45,30 +45,30 @@ function CaseHero ({
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuLaugh /> Papel</span>
-                    <p className="text-sm text-white-85">{role}</p>
+                    <p className="text-caption text-white-85">{role}</p>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuCoffee /> Categoria</span>
-                    <p className="text-sm text-white-85">{type}</p>
+                    <p className="text-caption text-white-85">{type}</p>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuPackage /> Tecnologias</span>
-                    <p className="text-sm text-white-85">{stack}</p>
+                    <p className="text-caption text-white-85">{stack}</p>
                 </div>
                 
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuCalendarCheck /> Projeto</span>
                     <a href={link} target="_blank" rel="noreferrer">
-                        <p className="text-sm text-solar-accent hover:text-solar-orange">{link}</p>
+                        <p className="text-caption text-solar-accent hover:text-solar-orange">{link}</p>
                     </a>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase tracking-widest 
                     text-white-35 flex gap-2"><LuCalendarCheck /> Ano</span>
-                    <p className="text-sm text-white-85">{year}</p>
+                    <p className="text-caption text-white-85">{year}</p>
                 </div>
             </div>
 
