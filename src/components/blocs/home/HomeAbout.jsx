@@ -42,7 +42,7 @@ function HomeAbout() {
                 title = "Não começo pela solução"
                 content = "Tenho mais de 15 anos projetando interfaces e construindo o que projeto. Passei por agências, produtos digitais e times de tecnologia. O que não mudou: entender o problema antes de abrir qualquer ferramenta."
               />
-              <Button mobileFullWidth variant="secondary" href="/sobre" size="md">Saiba mais sobre o Designer ⇢</Button>
+              <Button mobileFullWidth variant="secondary" href="/quem-sou" size="md">Saiba mais sobre o Designer ⇢</Button>
               
               <div className="flex gap-10">
                 <IconeText
