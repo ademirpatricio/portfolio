@@ -29,7 +29,7 @@ function CaseHero ({
                 </div>
 
                 <h1 className="text-h2 font-bold text-white mb-4 max-w-3xl">{title}</h1>
-                <p className="text-body text-white-65 max-w-2xl mb-12">{subtitle}</p>
+                <p className="text-body text-white-85 max-w-2xl mb-12">{subtitle}</p>
 
                 <img
                 src={image}

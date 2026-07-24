@@ -27,15 +27,6 @@ import mowcarImg from '../../../assets/projects/mowcar/thumbnail.jpg'
 
 const projects = [
   {
-    image: thaynaguiarImg,
-    tag: 'Web / Branding',
-    title: 'Thayná Aguiar',
-    link: '/projetos/thayna-aguiar',
-    external: false,
-    description:
-      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
-  },
-  {
     image: propostarapidaImg,
     tag: 'Produto / SaaS',
     title: 'Proposta Rápida',
@@ -43,6 +34,15 @@ const projects = [
     external: false,
     description:
       'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
+  },
+  {
+    image: thaynaguiarImg,
+    tag: 'Web / Branding',
+    title: 'Thayná Aguiar',
+    link: '/projetos/thayna-aguiar',
+    external: false,
+    description:
+      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
   },
   {
     image: mowcarImg,

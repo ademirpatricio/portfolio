@@ -30,7 +30,7 @@ function CaseScreens({ eyebrow, title, screens = [] }) {
               <span className="text-label font-medium text-orbit-cyan">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <span className="text-label text-white-65">{screen.label}</span>
+              <span className="text-label text-white-85">{screen.label}</span>
             </div>
           </div>
         ))}

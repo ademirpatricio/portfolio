@@ -31,7 +31,7 @@ function CaseSectionList({
           <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">{eyebrow}</p>
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
           <h3 className="text-h4 font-medium text-white mb-6">{subtitle}</h3>
-          <div className="text-body text-white-65 mb-8">{children}</div>
+          <div className="text-body text-white-85 mb-8">{children}</div>
           {btLabel && (
             <Button variant={btVariant} href={href} target={target} size="md">{btLabel}</Button>
           )}

@@ -12,8 +12,8 @@ function Button({
 }) {
 
   const variants = {
-    primary: `bg-cosmic-blue hover:opacity-85`,
-    secondary: `border border-cosmic-blue hover:bg-cosmic-blue/30`,
+    primary: `bg-cosmic-blue hover:opacity-85 text-white`,
+    secondary: `border border-cosmic-blue hover:bg-cosmic-blue/30 text-white`,
     accent: `bg-solar-gold text-midnight-deep hover:bg-solar-orange`,
     disabled: `bg-disabled text-midnight-deep opacity-40 pointer-events-none`
   }
@@ -29,7 +29,7 @@ function Button({
       to = {href}
       target = {target}
       className = {`
-        font-medium text-white uppercase
+        font-medium uppercase
         inline-flex items-center justify-center
         gap-3 rounded-btn
         transition shadow hover:shadow-md

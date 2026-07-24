@@ -18,10 +18,10 @@ function CaseDevelop ({
             <h2 className="text-h3 font-bold text-white mb-4">
                 {title}
             </h2>
-            <div className="text-body text-white-65 mb-8 max-w-xl">{children}</div>
+            <div className="text-body text-white-85 mb-8 max-w-xl">{children}</div>
             <div className="flex flex-wrap gap-3 mb-8">
                 {tips.map((tip) => (
-                    <span key={tip} className="text-caption text-white-65 border border-white-07 px-4 py-2 rounded-btn">
+                    <span key={tip} className="text-caption text-white-85 border border-white-07 px-4 py-2 rounded-btn">
                         {tip}
                     </span>
                 ))}
@@ -33,7 +33,7 @@ function CaseDevelop ({
                     href={linkGithub}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-caption text-white-65 hover:text-white transition-colors">
+                    className="inline-flex items-center gap-2 text-caption text-white-85 hover:text-white transition-colors">
                     <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
                 )}
                 {linkBehance && (
@@ -41,7 +41,7 @@ function CaseDevelop ({
                     href={linkBehance}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-caption text-white-65 hover:text-white transition-colors">
+                    className="inline-flex items-center gap-2 text-caption text-white-85 hover:text-white transition-colors">
                     <FaBehance className="text-solar-accent" /> Ver projeto no Behance</a>
                 )}
             </div>

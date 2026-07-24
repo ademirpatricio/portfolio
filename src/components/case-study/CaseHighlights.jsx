@@ -19,7 +19,7 @@ function CaseHighlights({
                 <div className={textOrder}>
                     <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">{eyebrow}</p>
                     <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
-                    <div className="space-y-4 text-body text-white-65">{children}</div>
+                    <div className="space-y-4 text-body text-white-85">{children}</div>
                 </div>
                 
                 {/* Lista de tópicos */}
@@ -28,7 +28,7 @@ function CaseHighlights({
                         {items.map((item) => (
                         <li key={item} className="flex items-start gap-4">
                             <span className="mt-2 h-2 w-2 rounded-full bg-orbit-cyan flex-shrink-0" />
-                            <span className="text-body text-white-65">
+                            <span className="text-body text-white-85">
                             {item}
                             </span>
                         </li>
