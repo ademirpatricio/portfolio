@@ -112,14 +112,14 @@ export default function Mowcar() {
       {/* ── Sobre o projeto ─────────────────────────────────── */}
       <CaseSection
         eyebrow = "Sobre o projeto"
-        title = "Aplicativo para gerenciamento de aluguel de veículos."
+        title = "Um estudo de caso sobre simplificar operações complexas sem perder controle."
         image={images.about}
         imageAlt="Interface do Mowcar">
         <p className="mb-4">
-            O Mowcar é um projeto pessoal de estudo de caso desenvolvido com o objetivo de explorar soluções digitais para gerenciamento de aluguel de carros de passeio e frotas, focando em simplicidade e rapidez de implementação.
+            O Mowcar é um projeto pessoal que nasceu de uma pergunta: dá para resolver a gestão de uma locadora de veículos com um app enxuto, sem abrir mão dos fluxos críticos?
         </p>
         <p className="mb-4">
-            A proposta foi criar um MVP funcional, com fluxos claros e uma experiência intuitiva tanto para usuários finais quanto para gestores de frota.
+            Atuei como designer solo — do mapeamento de requisitos ao protótipo navegável no Figma. O foco foi priorizar o que realmente importa para o operador no dia a dia.
         </p>
       </CaseSection>
 
@@ -131,24 +131,23 @@ export default function Mowcar() {
         target="_blank"
         reverse>
         <p className="mb-4">
-            O mercado de aluguel de veículos envolve múltiplas etapas operacionais:
-            cadastro de usuários, controle de veículos, retirada, devolução, histórico de uso e acompanhamento de rotas.
+            O mercado de aluguel de veículos tem muitas etapas operacionais: cadastro, controle de frota, retirada, devolução, histórico e rastreamento. A maioria das soluções existentes resolve tudo isso com complexidade excessiva.
         </p>
         <p className="mb-4">
-            Precisei encurtar o fluxo para desenvolvimento rápido de MVP.
+            O desafio era priorizar: quais fluxos são críticos para um MVP funcional e quais podem esperar?
         </p>
         <ul>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Definição de escopo do MVP e arquitetura da informação
+            Dois perfis de uso distintos: locatário e gestor de frota
           </li>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Criação de fluxos de navegação, Wireframes e prototipação
+            Fluxo crítico com muitas etapas: reserva, retirada, uso e devolução
           </li>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Design visual da interface e padronização de componentes
+            Necessidade de visibilidade em tempo real sobre o status de cada veículo
           </li>
         </ul>
       </CaseSectionList>
@@ -173,15 +172,15 @@ export default function Mowcar() {
         <ul>
           <li className="flex items-start gap-3 text-body text-spacy-navy mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Definição de escopo do MVP e arquitetura da informação
+            Definição do escopo do MVP e mapeamento da arquitetura de informação
           </li>
           <li className="flex items-start gap-3 text-body text-spacy-navy mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Criação de fluxos de navegação, Wireframes e prototipação
+            Fluxos de navegação, wireframes e prototipação no Figma
           </li>
           <li className="flex items-start gap-3 text-body text-spacy-navy mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Design visual da interface e padronização de componentes
+            Design system com componentes reutilizáveis e tokens visuais
           </li>
         </ul>
       </CasePdf>
@@ -201,22 +200,22 @@ export default function Mowcar() {
         <ul className="mb-10">
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Interface limpa e objetiva
+            Hierarquia visual que destaca o status atual de cada veículo
           </li>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Uso de mapas para contextualizar localização e rotas
+            Mapa integrado para contextualizar localização e rotas ativas
           </li>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Redução de passos em tarefas críticas
+            Fluxo de ações críticas (retirar, abrir, devolver) reduzido ao mínimo de passos
           </li>
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Destaque para ações primárias (retirar, abrir, devolver veículo)
+            Padrão visual consistente com componentes reutilizáveis em todo o app
           </li>
         </ul>
-        <p className="mb-10">O design prioriza rapidez de uso, especialmente em contextos onde o usuário precisa agir com agilidade.</p>
+        <p className="mb-10">O design foi pensado para uso em movimento: o operador precisa agir rápido, sem ter que navegar por menus complexos para concluir uma tarefa simples.</p>
         <h3 className="text-2xl font-bold text-white mb-4">Ferramentas utilizadas</h3>
         <ul className="mb-4">
           <li className="flex items-start gap-3 text-body text-white-65 mb-2">

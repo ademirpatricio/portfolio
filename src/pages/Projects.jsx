@@ -35,15 +35,6 @@ const projects = [
       'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
   },
   {
-    image: thaynaguiarImg,
-    tag: 'Web / Branding',
-    title: 'Thayná Aguiar',
-    link: '/projetos/thayna-aguiar',
-    external: false,
-    description:
-      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
-  },
-  {
     image: mowcarImg,
     tag: 'Aplicativo',
     title: 'Mowcar',
@@ -51,6 +42,15 @@ const projects = [
     external: false,
     description:
       'Aplicativo para gerenciamento de aluguel de veículos de frotas corporativas.',
+  },
+  {
+    image: thaynaguiarImg,
+    tag: 'Web / Branding',
+    title: 'Thayná Aguiar',
+    link: '/projetos/thayna-aguiar',
+    external: false,
+    description:
+      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
   },
   {
     image: malabaresImg,
