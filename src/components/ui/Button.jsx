@@ -12,10 +12,10 @@ function Button({
 }) {
 
   const variants = {
-    primary: `bg-cosmic-blue hover:opacity-85 text-white`,
+    primary:   `bg-cosmic-blue hover:bg-cosmic-blue-light text-white`,
     secondary: `border border-cosmic-blue hover:bg-cosmic-blue/30 text-white`,
-    accent: `bg-solar-gold text-midnight-deep hover:bg-solar-orange`,
-    disabled: `bg-disabled text-midnight-deep opacity-40 pointer-events-none`
+    accent:    `bg-solar-gold text-midnight-deep hover:bg-solar-orange`,
+    disabled:  `bg-space-gray text-white opacity-40 pointer-events-none`
   }
 
   const sizes = {

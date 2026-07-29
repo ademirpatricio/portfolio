@@ -12,24 +12,24 @@ export default {
 
       // ─── CORES — Vastidão Contemplativa ───────────────────
       colors: {
-        'midnight-deep':  '#020111',
-        'spacy-navy':     '#0B0F38',
-        'nebula-violet':  '#34216D',
-        'deep-blue':      '#3a4089',
-        'cosmic-blue':    '#6465F7',
-        'orbit-cyan':     '#22C8E5',
-        'stellar-white':  '#c7c7ff',
-        'solar-gold':     '#D8B15A',
-        'solar-accent':   '#D8B15A',
-        'solar-orange':   '#ff9603',
-        'disabled':       '#2A293D',
-        'white':          '#FFFFFF',
-        'white-85':       'rgba(255, 255, 255, 0.85)',
-        'white-75':       'rgba(255, 255, 255, 0.75)',
-        'white-65':       'rgba(255, 255, 255, 0.65)',
-        'white-55':       'rgba(255, 255, 255, 0.55)',
-        'white-35':       'rgba(255, 255, 255, 0.35)',
-        'white-07':       'rgba(255, 255, 255, 0.07)',
+        // Primitives
+        'midnight-deep':     '#020111',
+        'spacy-navy':        '#0B0F38',
+        'nebula-violet':     '#34216D',
+        'deep-blue':         '#3A4089',
+        'cosmic-blue':       '#6465F7',
+        'cosmic-blue-light': '#7B7CF9',
+        'stellar-white':     '#C7C7FF',
+        'orbit-cyan':        '#22C8E5',
+        'solar-gold':        '#D8B15A',
+        'solar-orange':      '#FF9603',
+        'space-gray':        '#2A293D',
+        'white':             '#FFFFFF',
+        'white-80':          'rgba(255, 255, 255, 0.80)',
+        'white-60':          'rgba(255, 255, 255, 0.60)',
+        'white-50':          'rgba(255, 255, 255, 0.50)',
+        'white-25':          'rgba(255, 255, 255, 0.25)',
+        'white-10':          'rgba(255, 255, 255, 0.10)',
       },
 
       // ─── TIPOGRAFIA ────────────────────────────────────────
@@ -40,7 +40,7 @@ export default {
       fontSize: {
         
         'caption': ['13px', { lineHeight: '1.6' }],
-        'reading': ['18px', { lineHeight: '1.8' }],
+        'reading': ['17px', { lineHeight: '1.75' }],
 
         'h2':    ['48px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
         'h3':    ['32px', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
