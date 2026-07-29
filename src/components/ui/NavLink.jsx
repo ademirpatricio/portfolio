@@ -10,9 +10,9 @@ function NavLink({
     default: `
       text-md
       font-medium
-      text-white-55
+      text-white
       transition
-      hover:text-white
+      hover:text-stellar-white
       cursor-pointer
     `,
 

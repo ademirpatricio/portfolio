@@ -5,7 +5,7 @@ function CaseProblema({ eyebrow = 'O problema', title, children, pain = [] }) {
     <section className="px-12 max-w-container mx-auto py-16">
       <div className="
       grid md:grid-cols-2 gap-0 
-      items-center border border-white-07 
+      items-center border border-white-10 
       rounded-card py-12 bg-white/[0.10]">
 
         {/* Coluna esquerda — texto */}
@@ -14,11 +14,11 @@ function CaseProblema({ eyebrow = 'O problema', title, children, pain = [] }) {
             {eyebrow}
           </p>
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
-          <div className="text-reading text-white-85 space-y-4">{children}</div>
+          <div className="text-reading text-white-60 space-y-4">{children}</div>
         </div>
 
         {/* Divisor vertical */}
-        <div className="border-l border-white-07 px-14">
+        <div className="border-l border-white-10 px-14">
           {/* Coluna direita — dores */}
           <ul className="space-y-8">
             {pain.map((item, i) => (
@@ -29,7 +29,7 @@ function CaseProblema({ eyebrow = 'O problema', title, children, pain = [] }) {
                 {/* Conteúdo */}
                 <div>
                   <p className="text-reading font-semibold text-white mb-1">{item.title}</p>
-                  <p className="text-md text-white-65">{item.description}</p>
+                  <p className="text-md text-white-60">{item.description}</p>
                 </div>
               </li>
             ))}

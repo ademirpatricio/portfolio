@@ -19,41 +19,41 @@ function CaseDecisoes({ eyebrow = 'Processo e decisões', title, decisions = [] 
         {decisions.map((item, i) => (
           <div
             key={i}
-            className="border border-white-07 rounded-card p-8 bg-white/[0.10] flex flex-col"
+            className="border border-white-10 rounded-card p-8 bg-white-10 flex flex-col"
           >
             {/* Número + título lado a lado */}
-            <div className="flex gap-5 items-start mb-6">
-              <span className="text-h2 font-bold text-white-35 leading-none flex-shrink-0">
+            <div className="flex gap-5 items-start mb-12">
+              <span className="text-h2 font-bold text-white-25 leading-none flex-shrink-0">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <h3 className="text-reading leading-tight font-bold text-white pt-1">{item.title}</h3>
+              <h4 className="text-h4 font-bold text-white ">{item.title}</h4>
             </div>
 
-            {/* Divisor */}
-            <div className=" mb-6" />
 
             {/* O que foi feito */}
             <div className="mb-5">
-              <p className="text-label font-semibold uppercase tracking-widest text-white-35 mb-2">
+              <p className="text-label font-semibold uppercase 
+              text-white mb-2">
                 O que foi feito
               </p>
-              <p className="text-caption text-white-85">{item.decision}</p>
+              <p className="text-body text-white-60">{item.decision}</p>
             </div>
 
             {/* Alternativa descartada */}
             <div className="mb-6">
-              <p className="text-label font-semibold uppercase tracking-widest text-white-35 mb-2">
+              <p className="text-label font-semibold uppercase 
+              text-white mb-2">
                 Alternativa descartada
               </p>
-              <p className="text-caption text-white-85">{item.alternative}</p>
+              <p className="text-body text-white-60">{item.alternative}</p>
             </div>
 
             {/* Divisor + Impacto */}
-            <div className="border-t border-white-07 mt-auto pt-6">
-              <p className="text-label font-semibold uppercase tracking-widest text-orbit-cyan mb-2">
+            <div className="border-t border-white-10 mt-auto pt-6">
+              <p className="text-label font-semibold uppercase text-orbit-cyan mb-2">
                 Impacto
               </p>
-              <p className="text-caption text-white-85">{item.impact}</p>
+              <p className="text-body text-white-60">{item.impact}</p>
             </div>
           </div>
         ))}

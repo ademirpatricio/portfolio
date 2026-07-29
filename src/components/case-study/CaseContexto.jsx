@@ -9,7 +9,7 @@ function CaseContexto({ eyebrow = 'Contexto', title, children, image, imageAlt =
             <img
               src={image}
               alt={imageAlt}
-              className="w-full h-full object-cover rounded-card border border-white-07"
+              className="w-full h-full object-cover rounded-card"
               loading="lazy"
             />
           </div>
@@ -22,7 +22,7 @@ function CaseContexto({ eyebrow = 'Contexto', title, children, image, imageAlt =
             {title && (
               <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
             )}
-            <div className="text-reading text-white-85 space-y-4">{children}</div>
+            <div className="text-reading text-white-60 space-y-4">{children}</div>
           </div>
 
         </div>
@@ -39,7 +39,7 @@ function CaseContexto({ eyebrow = 'Contexto', title, children, image, imageAlt =
         {title && (
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
         )}
-        <div className="text-reading text-white-85 space-y-4">{children}</div>
+        <div className="text-reading text-white-60 space-y-4">{children}</div>
       </div>
     </section>
   )

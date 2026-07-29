@@ -9,7 +9,7 @@ function CaseProblemStatement({ statement, hmw, bgImage }) {
 
           {/* Problem Statement */}
           <div className="mb-8">
-            <p className="text-label font-medium uppercase tracking-widest text-white-55 mb-5">
+            <p className="text-label font-medium uppercase text-white-60 mb-5">
               Problem Statement
             </p>
             <p className="text-h3 font-bold text-white leading-snug">{statement}</p>
@@ -17,10 +17,10 @@ function CaseProblemStatement({ statement, hmw, bgImage }) {
 
           {/* How Might We */}
           <div>
-            <p className="text-label font-medium uppercase tracking-widest text-white-55 mb-5">
+            <p className="text-label font-medium uppercase text-white-60 mb-5">
               How might we
             </p>
-            <p className="text-reading text-white">{hmw}</p>
+            <p className="text-body text-white">{hmw}</p>
           </div>
 
         </div>

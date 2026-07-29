@@ -13,32 +13,32 @@ function CaseTelas({ eyebrow = 'As telas', title, mainScreen, screens = [] }) {
 
       {/* Tela principal */}
       {mainScreen && (
-        <div className="mb-6">
+        <div className="mb-10">
           <img
             src={mainScreen.src}
             alt={mainScreen.alt}
-            className="w-full object-cover rounded-card border border-white-07"
+            className="w-full object-cover rounded"
             loading="lazy"
           />
           {mainScreen.caption && (
-            <p className="text-caption text-white-35 mt-3">{mainScreen.caption}</p>
+            <p className="text-small text-white-50 mt-3">{mainScreen.caption}</p>
           )}
         </div>
       )}
 
       {/* Grid de telas secundárias */}
       {screens.length > 0 && (
-        <div className={`grid gap-5 ${screens.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+        <div className={`grid gap-10 ${screens.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
           {screens.map((screen, i) => (
             <div key={i}>
               <img
                 src={screen.src}
                 alt={screen.alt}
-                className="w-full object-cover rounded-card border border-white-07"
+                className="w-full object-cover rounded"
                 loading="lazy"
               />
               {screen.caption && (
-                <p className="text-caption text-white-35 mt-2">{screen.caption}</p>
+                <p className="text-small text-white-50 mt-2">{screen.caption}</p>
               )}
             </div>
           ))}

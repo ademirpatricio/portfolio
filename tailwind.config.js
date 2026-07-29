@@ -38,15 +38,17 @@ export default {
       },
 
       fontSize: {
-        
-        'caption': ['13px', { lineHeight: '1.6' }],
-        'reading': ['17px', { lineHeight: '1.75' }],
 
+        'h1':    ['72px', { lineHeight: '1.1',  letterSpacing: '-0.03em' }],
         'h2':    ['48px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
         'h3':    ['32px', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
-        'span':  ['13px', { letterSpacing: '0.4em'}],
-        'label': ['11px', { lineHeight: '1.4', letterSpacing: '0.15em' }],
-        
+        'h4':    ['24px', { lineHeight: '1.0',  letterSpacing: '-0.01em' }],
+
+        'body':  ['17px', { lineHeight: '1.75' }],
+        'small': ['13px', { lineHeight: '1.6' }],
+        'label': ['11px', { lineHeight: '1.4',  letterSpacing: '0.15em' }],
+        'span':  ['13px', { letterSpacing: '0.3em' }],
+
       },
 
       fontWeight: {

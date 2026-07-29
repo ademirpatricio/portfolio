@@ -21,57 +21,43 @@ function CaseUsuario({ eyebrow = 'O usuário', title, personas = [] }) {
         {personas.map((persona, i) => (
           <div
             key={i}
-            className="border border-white-07 rounded-card overflow-hidden bg-white/[0.10]"
+            className="border border-white-10 rounded-card overflow-hidden bg-white-10"
           >
             {/* Foto */}
-            <div className="w-full h-72 bg-spacy-navy overflow-hidden">
-              {persona.image ? (
-                <img
+            <div className="w-full h-72 overflow-hidden">
+              <img
                   src={persona.image}
                   alt={persona.name}
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-white-35 text-caption">
-                  Foto
-                </div>
-              )}
             </div>
-
             {/* Conteúdo */}
             <div className="p-6">
-              <h3 className="text-lg font-bold text-white mb-2">{persona.name}</h3>
-              <p className="text-label uppercase text-white-75 mb-2">{persona.role}</p>
-
-
-                {persona.tags?.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {persona.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-label text-white-55 border 
-                      border-white-07 rounded px-2 py-0.5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <h3 className="text-h3 font-bold text-white mb-2">{persona.name}</h3>
+              <p className="text-label uppercase text-white-80 mb-4">{persona.role}</p>
+              {persona.tags?.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {persona.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-label text-white 
+                    bg-white-10 rounded px-4 py-2"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               )}
-
-
-              <p className="text-caption text-white-85 mb-4">{persona.bio}</p>
-
-              <div className="border-t border-white-07 pt-4 mb-4">
-                <p className="text-label font-semibold uppercase tracking-widest text-solar-orange mb-2">
+              <p className="text-body text-white-60 mb-4">{persona.bio}</p>
+              <div className="pt-4 mb-4">
+                <p className="text-label font-semibold uppercase text-solar-orange mb-2">
                   Dor principal
                 </p>
-                <p className="text-caption text-white-85">
+                <p className="text-body text-white-60">
                   {persona.pain}
                 </p>
               </div>
-
-              
             </div>
           </div>
         ))}

@@ -20,7 +20,7 @@ function Button({
 
   const sizes = {
     sm: 'min-h-10 px-5 text-caption',
-    md: 'min-h-13 px-8 text-reading',
+    md: 'min-h-13 px-8 text-body',
     lg: 'min-h-15 px-10 text-lg',
   }
 

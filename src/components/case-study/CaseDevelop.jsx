@@ -11,17 +11,16 @@ function CaseDevelop ({
 }){
     return (
         <section className="px-6 max-w-container mx-auto my-24">
-        <div className="border border-white-07 rounded-card p-8 md:p-12">
+        <div className="bg-white-10 border border-white-10 rounded-card p-8 md:p-12">
             <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
                 {eyebrown}
             </p>
-            <h2 className="text-h3 font-bold text-white mb-4">
-                {title}
-            </h2>
-            <div className="text-body text-white-85 mb-8 max-w-xl">{children}</div>
+            <h3 className="text-h3 font-bold text-white mb-4">{title}</h3>
+            <div className="text-body text-white-60 mb-8 max-w-xl">{children}</div>
             <div className="flex flex-wrap gap-3 mb-8">
                 {tips.map((tip) => (
-                    <span key={tip} className="text-caption text-white-85 border border-white-07 px-4 py-2 rounded-btn">
+                    <span key={tip} className="text-small text-stellar-white 
+                    bg-white-10 px-4 py-2 rounded-btn">
                         {tip}
                     </span>
                 ))}
@@ -33,7 +32,9 @@ function CaseDevelop ({
                     href={linkGithub}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-caption text-white-85 hover:text-white transition-colors">
+                    className="inline-flex items-center gap-2 text-small px-4 py-2 
+                    rounded-btn text-white hover:text-stellar-white transition 
+                    hover:bg-nebula-violet/50">
                     <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
                 )}
                 {linkBehance && (
@@ -41,8 +42,10 @@ function CaseDevelop ({
                     href={linkBehance}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-caption text-white-85 hover:text-white transition-colors">
-                    <FaBehance className="text-solar-accent" /> Ver projeto no Behance</a>
+                    className="inline-flex items-center gap-2 text-small px-4 py-2 
+                    rounded-btn text-white hover:text-stellar-white transition 
+                    hover:bg-nebula-violet/50">
+                    <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
                 )}
             </div>
         </div>

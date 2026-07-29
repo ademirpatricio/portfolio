@@ -64,8 +64,8 @@ function HomeHero() {
       <div className="relative z-10 mx-auto w-full max-w-container text-center">
 
         {/* Subtitulo */}
-        <motion.div {...fadeUp(0.1)} className="mb-11 inline-flex items-center gap-2.5 text-md
-        font-medium tracking-[0.1em] text-orbit-cyan text-neon">
+        <motion.div {...fadeUp(0.1)} className="mb-11 inline-flex items-center gap-2.5 
+        text-md font-medium tracking-[0.1em] text-orbit-cyan text-neon">
           UI / UX · Product Design · Front-end
         </motion.div>
 
@@ -77,7 +77,8 @@ function HomeHero() {
         </motion.h1>
 
         {/* Descrição */}
-        <motion.p {...fadeUp(0.4)} className="mb-8 max-w-[500px] mx-auto text-stellar-white text-body font-light">
+        <motion.p {...fadeUp(0.4)} className="mb-8 max-w-[400px] mx-auto 
+        text-stellar-white text-body font-light">
           Do problema real à solução que funciona e vale a pena existir. Me chamo
           <strong> Ademir Patrício</strong>. Entendo, projeto, construo e entrego.
         </motion.p>
