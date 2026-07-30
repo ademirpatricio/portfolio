@@ -1,5 +1,7 @@
 import { LuLaugh, LuCalendarCheck, LuPackage, LuCoffee } from "react-icons/lu";
 
+import Tags from '../ui/Tags'
+
 function CaseHero ({
     image,
     imageAlt,
@@ -17,16 +19,10 @@ function CaseHero ({
     return (
         <>
         {/* ── Imagem hero ─────────────────────────────────────── */}
+        
         <section className="pt-36">
             <div className="px-12 max-w-container mx-auto">
-
-                <div className="flex flex-wrap gap-2 mb-6 max-w-6xl">
-                {tags.map((tag) => (
-                    <span key={tag} className="text-span font-medium uppercase
-                    text-cosmic-blue bg-cosmic-blue/10 px-4 py-2 rounded-btn">{tag}</span>
-                ))}
-                </div>
-
+                <Tags tags={tags} />
                 <h2 className="text-h2 font-bold text-white mb-4 max-w-3xl">{title}</h2>
                 <p className="text-body text-white-60 max-w-2xl mb-12">{subtitle}</p>
 

@@ -69,15 +69,16 @@ function HomeServices() {
               key={service.title}
             >
               <div
-                className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue"
+                className="mb-6 flex h-20 w-20 items-center justify-center 
+                rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue"
                 aria-hidden="true"
               >
                 <img src={service.icon} alt="" className="h-10 w-10 object-contain"/>
               </div>
-              <h3 className="mb-3 text-xl font-semibold tracking-[-0.01em] text-white">
+              <h4 className="mb-3 text-h4 font-semibold text-white">
                 {service.title}
-              </h3>
-              <p className="text-[15px] leading-[1.7] text-white-55">
+              </h4>
+              <p className="text-body text-stellar-white">
                 {service.description}
               </p>
             </motion.article>

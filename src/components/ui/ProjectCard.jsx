@@ -9,16 +9,10 @@ function ProjectCard({ image, title, tag, description }) {
         />
       </div>
 
-      <div className="p-7 pt-6">
-        <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.08em] text-orbit-cyan">
-          {tag}
-        </p>
-
-        <h3 className="mb-2 text-xl font-bold tracking-[-0.01em]">
-          {title}
-        </h3>
-
-        <p className="text-caption leading-[1.65] text-white-55 hidden md:block">
+      <div className="px-8 py-10 bg-spacy-navy">
+        <p className="text-label font-medium uppercase text-orbit-cyan mb-4">{tag}</p>
+        <h4 className="text-h4 font-bold mb-4">{title}</h4>
+        <p className="text-small text-stellar-white hidden md:block">
           {description}
         </p>
       </div>

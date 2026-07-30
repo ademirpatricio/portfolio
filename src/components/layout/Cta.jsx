@@ -59,21 +59,19 @@ function Cta() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(100,101,247,0.10)_0%,transparent_65%),radial-gradient(ellipse_40%_40%_at_80%_20%,rgba(34,200,229,0.05)_0%,transparent_50%)]" />
 
       {/* Conteúdo */}
-      <FadeIn className="relative z-10 mx-auto max-w-[640px] px-6 md:px-12">
-        <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan">
-          Contato
+      <FadeIn className="relative z-10 mx-auto max-w-[650px] px-6 md:px-12">
+        <span className="mb-4 inline-block text-span font-medium 
+        uppercase text-orbit-cyan">
+          Entre em Contato
         </span>
 
-        <h2
-          id="contact-title"
-          className="mb-5 text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white"
-        >
+        <h2 id="contact-title" className="text-h2 font-bold text-white mb-8 ">
           Toda jornada começa
           <br />
           com uma direção.
         </h2>
 
-        <p className="mb-10 text-[17px] leading-[1.75] text-white-55">
+        <p className="mb-10 text-body text-stellar-white">
           Se você tem um projeto, uma vaga ou uma ideia no papel, esse pode
           ser o começo.
         </p>
