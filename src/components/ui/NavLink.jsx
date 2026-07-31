@@ -8,7 +8,7 @@ function NavLink({
 }) {
   const variants = {
     default: `
-      text-md
+      text-body
       font-medium
       text-white
       transition
@@ -24,7 +24,7 @@ function NavLink({
       font-bold
       text-white
       transition
-      hover:opacity-85
+      hover:bg-cosmic-blue-light
     `,
   }
 

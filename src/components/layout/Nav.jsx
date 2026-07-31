@@ -60,7 +60,7 @@ function Nav() {
           <Link
             to="/"
             onClick={handleLogoClick}
-            className="text-reading font-semibold tracking-[-0.01em]"
+            className="text-body font-semibold"
           >
             <img
               src={logo}

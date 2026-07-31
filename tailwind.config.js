@@ -42,7 +42,7 @@ export default {
         'h1':    ['72px', { lineHeight: '1.1',  letterSpacing: '-0.03em' }],
         'h2':    ['48px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
         'h3':    ['32px', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
-        'h4':    ['24px', { lineHeight: '1.0',  letterSpacing: '-0.01em' }],
+        'h4':    ['24px', { lineHeight: '1.25', letterSpacing: '-0.01em' }],
 
         'body':  ['17px', { lineHeight: '1.75' }],
         'small': ['13px', { lineHeight: '1.6' }],
