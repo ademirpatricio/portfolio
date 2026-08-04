@@ -48,7 +48,7 @@ function HomeServices() {
         <FadeIn className="mb-10 md:mb-16 text-center">
           <Title
             span="O que faço"
-            title="Antes de criar, compreender."
+            titleH2="Antes de criar, compreender."
             content="Cada entrega começa com a pergunta certa."
           />
         </FadeIn>

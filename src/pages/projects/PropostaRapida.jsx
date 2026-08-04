@@ -93,7 +93,11 @@ export default function PropostaRapida() {
       />
 
       {/* 02 ── Contexto ───────────────────────────────── */}
-      <CaseContexto eyebrow="Contexto" image={img2} imageAlt="Proposta Rápida — interface do produto">
+      <CaseContexto
+        eyebrow="Contexto" 
+        image={img2} 
+        imageAlt="Proposta Rápida — interface do produto"
+      >
         <p>
           Proposta Rápida nasceu de um problema que eu via direto: profissionais autônomos
           perdendo clientes por causa de propostas mal feitas ou enviadas tarde demais.

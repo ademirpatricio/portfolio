@@ -43,7 +43,7 @@ function HomeAbout() {
             <div>
               <Title 
                 span= "Sobre o Designer" 
-                title = "Não começo pela solução"
+                titleH2 = "Não começo pela solução"
                 content = "Tenho mais de 15 anos projetando interfaces e construindo o que projeto. Passei por agências, produtos digitais e times de tecnologia. O que não mudou: entender o problema antes de abrir qualquer ferramenta."
               />
               <Button mobileFullWidth variant="secondary" href="/quem-sou" size="md">Saiba mais sobre o Designer ⇢</Button>

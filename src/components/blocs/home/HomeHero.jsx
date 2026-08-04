@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+const STARS = Array.from({ length: 120 }, () => ({
+  top: Math.random() * 100,
+  left: Math.random() * 100,
+  size: Math.random() * 2 + 1,
+  delay: Math.random() * 5,
+  duration: Math.random() * 3 + 2,
+}))
+
 import Button from '../../ui/Button'
 import Fade from '../../ui/Fade'
 
@@ -56,9 +64,23 @@ function HomeHero() {
       />
       
       {/* Sombra ao redor da imagem */}
-      <div className="absolute inset-0 
+      <div className="absolute inset-0
       bg-[radial-gradient(ellipse_80%_60%_at_65%_40%,rgba(100,101,247,0.16)_0%,transparent_60%)
       ,radial-gradient(ellipse_55%_45%_at_10%_85%,rgba(52,33,109,0.24)_0%,transparent_55%)]" />
+
+      {/* Estrelas */}
+      <style>{`@keyframes twinkle{0%,100%{opacity:0.1}50%{opacity:0.9}}`}</style>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {STARS.map((s, i) => (
+          <span key={i} className="absolute rounded-full bg-white" style={{
+            top: `${s.top}%`, left: `${s.left}%`,
+            width: `${s.size}px`, height: `${s.size}px`,
+            boxShadow: `0 0 ${s.size * 2}px rgba(255,255,255,0.8)`,
+            animation: `twinkle ${s.duration}s ${s.delay}s infinite`,
+            opacity: 0.1,
+          }} />
+        ))}
+      </div>
 
       {/* Conteúdo */}
       <div className="relative z-10 mx-auto w-full max-w-container text-center">

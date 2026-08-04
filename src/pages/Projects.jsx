@@ -23,6 +23,9 @@ import thaynaguiarImg from '../assets/projects/thayna-aguiar/thumbnail.jpg'
 import malabaresImg from '../assets/projects/malabares/thumbnail.jpg'
 import institutovalentimImg from '../assets/projects/instituto-valentim/thumbnail.jpg'
 import mowcarImg from '../assets/projects/mowcar/thumbnail.jpg'
+import designsystemImg from '../assets/projects/design-system/thumbnail.jpg'
+import anatomazelliImg from '../assets/projects/ana-tomazelli/thumbnail.jpg'
+import thaynaeademirImg from '../assets/projects/thayna-e-ademir/thumbnail.jpg'
 
 const projects = [
   {
@@ -53,6 +56,15 @@ const projects = [
       'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
   },
   {
+    image: designsystemImg,
+    tag: 'Design System',
+    title: 'Design System',
+    link: '/projetos/design-system',
+    external: false,
+    description:
+      'Sistema de design do portfólio. Tokens, componentes e padrões visuais.',
+  },
+  {
     image: malabaresImg,
     tag: 'Web / Branding',
     title: 'Malabares MKT & TEC',
@@ -79,6 +91,33 @@ const projects = [
     description:
       'Instituto focado em metodologias próprias e desenvolvimento humano.',
   },
+  {
+    image: thaynaeademirImg,
+    tag: 'Web / Branding',
+    title: 'Thayná e Ademir',
+    link: 'https://www.behance.net/gallery/218119979/Thayna-Ademir-Id-Visual-do-Casamento',
+    external: true,
+    description:
+      'Personalidade, simplicidade e delicadeza definem bem a nossa identidade visual. ',
+  },
+  {
+    image: anatomazelliImg,
+    tag: 'Web / Branding',
+    title: 'Aminders - Ana Tomazelli',
+    link: 'https://www.behance.net/gallery/224264037/Ana-Tomazelli-Landingpage',
+    external: true,
+    description:
+      'Desenvolvimento da landing page oficial para o evento Aminders.',
+  },
+  /*{
+    image: barbaraacciolyImg,
+    tag: 'Web',
+    title: 'Bárbara Accioly',
+    link: 'https://barbaraaccioly.com.br',
+    external: true,
+    description:
+      'Curso completo de engajamento para instrutores de Pilates.',
+  },*/
 ]
 
 function Projects() {

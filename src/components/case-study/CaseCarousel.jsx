@@ -2,7 +2,40 @@ import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
-function CaseCarousel({ images, className ='', trackClassName = '', slideClassName = '', imageClassName='' }) {
+const mdBasisMap = {
+  1: 'md:basis-full',
+  2: 'md:basis-1/2',
+  3: 'md:basis-1/3',
+  4: 'md:basis-1/4',
+}
+
+const lgBasisMap = {
+  3: 'lg:basis-1/3',
+  4: 'lg:basis-1/4',
+  5: 'lg:basis-1/5',
+  6: 'lg:basis-1/6',
+}
+
+/**
+ * CaseCarousel
+ *
+ * Carrossel infinito de imagens usando Embla Carousel.
+ *
+ * Props:
+ * @param {Array}  images           - Array de objetos { src, alt }
+ * @param {number} mdSlides         - Slides visíveis no breakpoint md (tablet). Valores: 1 | 2 | 3 | 4. Default: 3
+ * @param {number} lgSlides         - Slides visíveis no breakpoint lg (desktop). Valores: 3 | 4 | 5 | 6. Default: 5
+ * @param {string} className        - Classe extra no wrapper <section>
+ * @param {string} trackClassName   - Classe extra no track (flex container)
+ * @param {string} slideClassName   - Classe extra em cada slide
+ * @param {string} imageClassName   - Classe extra em cada <img>
+ *
+ * Exemplos:
+ *   <CaseCarousel images={gallery} />                        // padrão: 3 tablet, 5 desktop
+ *   <CaseCarousel images={gallery} lgSlides={3} />           // 3 no desktop (imagens altas ou poucas)
+ *   <CaseCarousel images={gallery} mdSlides={2} lgSlides={4} />
+ */
+function CaseCarousel({ images, mdSlides = 3, lgSlides = 5, className ='', trackClassName = '', slideClassName = '', imageClassName='' }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'start',
@@ -31,8 +64,8 @@ function CaseCarousel({ images, className ='', trackClassName = '', slideClassNa
               key={index}
               className={`flex-shrink-0
                 basis-full
-                md:basis-1/3
-                lg:basis-1/5
+                ${mdBasisMap[mdSlides] ?? 'md:basis-1/3'}
+                ${lgBasisMap[lgSlides] ?? 'lg:basis-1/5'}
                 ${slideClassName}`}
             >
               <img

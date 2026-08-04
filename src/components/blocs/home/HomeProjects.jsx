@@ -5,6 +5,7 @@ import Title from '../../ui/Title'
 import Fade from '../../ui/Fade'
 import ProjectCard from '../../ui/ProjectCard'
 import FadeIn from '../../ui/FadeIn'
+import Button from '../../ui/Button'
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -23,9 +24,11 @@ import malabaresImg from '../../../assets/projects/malabares/thumbnail.jpg'
 import institutovalentimImg from '../../../assets/projects/instituto-valentim/thumbnail.jpg'
 import barbaraacciolyImg from '../../../assets/projects/barbara-accioly/thumbnail.jpg'
 import mowcarImg from '../../../assets/projects/mowcar/thumbnail.jpg'
+import designsystemImg from '../../../assets/projects/design-system/thumbnail.jpg'
 
 
 const projects = [
+  
   {
     image: propostarapidaImg,
     tag: 'Produto / SaaS',
@@ -54,6 +57,15 @@ const projects = [
       'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
   },
   {
+    image: designsystemImg,
+    tag: 'Design System',
+    title: 'Design System',
+    link: '/projetos/design-system',
+    external: false,
+    description:
+      'Sistema de design do portfólio. Tokens, componentes e padrões visuais.',
+  },
+  {
     image: malabaresImg,
     tag: 'Web / Branding',
     title: 'Malabares MKT & TEC',
@@ -61,15 +73,6 @@ const projects = [
     external: true,
     description:
       'Agência de marketing digital completa. Tudo que você precisa para o seu negócio.',
-  },
-  {
-    image: malabaresweddingImg,
-    tag: 'Web',
-    title: 'Malabares Wedding',
-    link: 'https://wedding.malabares.com.br',
-    external: true,
-    description:
-      'Serviço focado em identidade visual, sites de casamento e experiência emocional.',
   },
   {
     image: institutovalentimImg,
@@ -80,17 +83,6 @@ const projects = [
     description:
       'Instituto focado em metodologias próprias e desenvolvimento humano.',
   },
-  /*
-  {,
-    image: barbaraacciolyImg,
-    tag: 'Web',
-    title: 'Bárbara Accioly',
-    link: 'https://barbaraaccioly.com.br',
-    external: true,
-    description:
-      'Curso completo de engajamento para instrutores de Pilates.',
-  },
-  */
 ]
 
 function HomeProjects() {
@@ -104,7 +96,7 @@ function HomeProjects() {
         <FadeIn className="mb-10 text-center md:mb-16">
           <Title
             span="Projetos em destaque"
-            title="Do problema ao deploy."
+            titleH2="Do problema ao deploy."
             content="Projetos reais. Coisas que estão em órbita."
           />
         </FadeIn>
@@ -147,6 +139,12 @@ function HomeProjects() {
             )
           })}
         </motion.div>
+
+        <FadeIn className="mt-10 text-center md:mt-16">
+          <Button variant="secondary" href="/projetos" size="md">
+            Ver mais projetos ⇢
+          </Button>
+        </FadeIn>
       </div>
 
       <Fade />

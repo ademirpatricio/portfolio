@@ -12,14 +12,14 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
 
   return (
     <section className="px-12 max-w-container mx-auto py-16">
-      <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
+      <p className="text-label font-medium uppercase text-orbit-cyan mb-4">
         {eyebrow}
       </p>
       {title && (
-        <h2 className="text-h3 font-bold text-white mb-4">{title}</h2>
+        <h3 className="text-h3 font-bold text-white mb-4">{title}</h3>
       )}
       {description && (
-        <p className="text-reading text-white-85 mb-10">{description}</p>
+        <p className="text-body font-light text-white-50 mb-10">{description}</p>
       )}
 
       <div className="grid md:grid-cols-2 gap-6 items-stretch">
@@ -29,13 +29,14 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
           {metrics.map((m, i) => (
             <div
               key={i}
-              className="border border-white-07 rounded-card px-6 py-5 bg-white/[0.10] flex items-center gap-6 flex-1"
+              className="border border-white-10 rounded-card px-6 py-5 
+              bg-white/[0.10] flex items-center gap-6 flex-1"
             >
-              <p className="text-h2 font-bold text-cosmic-blue leading-none flex-shrink-0">{m.value}</p>
+              <p className="text-h2 font-bold text-cosmic-blue ">{m.value}</p>
               <div>
-                <p className="text-caption font-semibold text-white mb-0.5">{m.label}</p>
+                <p className="text-body font-semibold text-white font-medium">{m.label}</p>
                 {m.description && (
-                  <p className="text-caption text-white-35">{m.description}</p>
+                  <p className="text-small font-light text-white-50">{m.description}</p>
                 )}
               </div>
             </div>

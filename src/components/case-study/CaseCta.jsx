@@ -19,7 +19,7 @@ function CaseCta({
   return (
     <section className="px-12 max-w-container mx-auto py-16">
       <div
-        className="rounded-card py-16 px-12 text-center overflow-hidden"
+        className="rounded-card py-24 px-12 text-center overflow-hidden"
         style={bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
       >
         {eyebrow && (
@@ -28,7 +28,7 @@ function CaseCta({
           </p>
         )}
         {title && (
-          <h3 className="text-h3 font-bold text-white mb-4 max-w-xl mx-auto">{title}</h3>
+          <h3 className="text-h3 font-bold text-white mb-6 max-w-xl mx-auto">{title}</h3>
         )}
         {description && (
           <p className="text-body text-white-60 max-w-md mx-auto mb-10">{description}</p>

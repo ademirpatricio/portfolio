@@ -1,4 +1,10 @@
-function CaseAprendizado({ eyebrow = 'Aprendizado', productOpinion, processOpinion, image, imageAlt = '' }) {
+function CaseAprendizado({ 
+  eyebrow = 'Aprendizado', 
+  productOpinion, 
+  processOpinion, 
+  image, 
+  imageAlt = '' }) 
+  {
   const content = (
     <>
       <p className="text-small font-medium uppercase text-orbit-cyan mb-4">
@@ -26,9 +32,9 @@ function CaseAprendizado({ eyebrow = 'Aprendizado', productOpinion, processOpini
   )
 
   return (
-    <section className="px-12 max-w-container mx-auto pt-16 pb-32">
+    <section className="px-12 max-w-container mx-auto py-14">
       {image ? (
-        <div className="grid grid-cols-[2fr_3fr] gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 items-center">
           <img
             src={image}
             alt={imageAlt}
