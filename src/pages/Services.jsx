@@ -153,20 +153,24 @@ function Services() {
 
         <Container className="relative z-10">
 
-          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-md font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <motion.div {...fadeUp(0.1)} 
+          className="mb-6 inline-flex items-center gap-2.5 text-md 
+          font-medium uppercase text-span text-orbit-cyan text-neon">
             O que faço
           </motion.div>
 
-          <motion.h1 {...fadeUp(0.25)} className="mb-6 max-w-auto text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
+          <motion.h1 {...fadeUp(0.25)}
+          className="mb-6 max-w-auto text-[clamp(40px,6vw,72px)] font-bold leading-[1.1] text-white">
             Antes de criar,<br />
             <span className="text-cosmic-blue">compreender.</span>
           </motion.h1>
 
-          <motion.p {...fadeUp(0.4)} className="text-lead mb-3 max-w-auto text-white-85">
+          <motion.p {...fadeUp(0.4)} className="text-h4 font-medium mb-3 max-w-auto text-white">
             Cada entrega começa com a pergunta certa.
           </motion.p>
 
-          <motion.p {...fadeUp(0.5)} className="text-body max-w-[500px] mx-auto text-white-75">
+          <motion.p {...fadeUp(0.5)} 
+          className="text-body font-light max-w-[500px] mx-auto text-stellar-white">
             Não trabalho com escopo fechado antes de entender o problema.
             O briefing é o início da conversa, não a resposta.
           </motion.p>
@@ -210,10 +214,10 @@ function Services() {
                 >
                   {service.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-semibold tracking-[-0.01em] text-white">
+                <h4 className="mb-3 text-h4 font-bold text-white">
                   {service.title}
-                </h3>
-                <p className="text-[15px] leading-[1.7] text-white-55">
+                </h4>
+                <p className="text-body font-light text-stellar-white">
                   {service.description}
                 </p>
               </motion.article>
@@ -235,7 +239,8 @@ function Services() {
             <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
               Processo
             </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
+            <h2 className="text-[clamp(32px,4vw,52px)] font-bold 
+            text-white">
               Seis etapas. Sem atalhos.
             </h2>
           </FadeIn>
@@ -253,22 +258,24 @@ function Services() {
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="bg-spacy-navy p-8 md:p-10 rounded-lg border border-cosmic-blue/12 hover:border-cosmic-blue/40 text-left"
+                className="bg-spacy-navy p-8 md:p-10 rounded-lg 
+                border border-cosmic-blue/12 hover:border-cosmic-blue/40 text-left"
               >
                 <div className="flex items-baseline gap-3 mb-5">
-                  <p className="text-2xl font-semibold tracking-[0.12em] text-orbit-cyan/60">
+                  <p className="text-2xl font-semibold tracking-[0.12em] text-cosmic-blue">
                     {step.number}
                   </p>
                   {step.subtitle && (
-                    <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-cosmic-blue">
+                    <span className="text-[11px] font-medium uppercase 
+                    tracking-[0.12em] text-cosmic-blue">
                       {step.subtitle}
                     </span>
                   )}
                 </div>
-                <h3 className="mb-3 text-lg font-semibold tracking-[-0.01em] text-white">
+                <h4 className="mb-3 text-h4 font-semibold text-white">
                   {step.title}
-                </h3>
-                <p className="text-[15px] leading-[1.7] text-white-55">
+                </h4>
+                <p className="text-body font-light text-stellar-white">
                   {step.description}
                 </p>
               </motion.div>
@@ -346,11 +353,10 @@ function Services() {
         imageAlt="Preview do PDF gerado pelo Proposta Rápida"
         className="bg-cover bg-center"
         >
-        <p>
+        <p className="text-body font-light text-stellar-white">
           No meu <strong>GitHub</strong> você encontra aplicações reais, experimentos, componentes e produtos que desenvolvi do design ao deploy.
         </p>
       </CasePdf>
-
 
 
       {/* ─── CTA FINAL ────────────────────────────────────────── */}

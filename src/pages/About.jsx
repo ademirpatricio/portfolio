@@ -133,9 +133,9 @@ function About() {
             Mais de 15 anos projetando produtos digitais. Sempre começando pela pergunta certa.
           </motion.p>
 
-          <motion.p {...fadeUp(0.5)} className="text-body max-w-[520px] text-white-75">
+          <motion.p {...fadeUp(0.5)} className="max-w-[520px] text-body font-light text-stellar-white mb-8">
             Sou Ademir Patrício. Designer com background em desenvolvimento front-end.
-            Recife, Brasil. Disponível remotamente.
+            Recife, Brasil. Disponível para trabalhos, freelance e oportunidades remotas.
           </motion.p>
 
         </Container>
@@ -222,16 +222,16 @@ function About() {
               <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
                 Do gráfico ao produto.
               </h2>
-              <p>
+              <p className="text-body font-light text-stellar-white mb-8">
                 Comecei com design gráfico em 2009. Sites, peças institucionais, campanhas para educação e comunicação. Fui entendendo que a forma como as coisas aparecem muda o que as pessoas pensam delas.
               </p>
-              <p>
+              <p className="text-body font-light text-stellar-white mb-8">
                 Com o tempo, o trabalho ficou mais complexo. Em 2018, na Serttel, trabalhei no aplicativo Zona Azul Digital de Recife. Mobilidade urbana com problema real, escala real e resultado para medir. Foi lá que ficou claro o tipo de trabalho que quero fazer.
               </p>
-              <p>
+              <p className="text-body font-light text-stellar-white mb-8">
                 Em 2019 co-fundei a Malabares MKT. Aprendi a operar os dois lados: do conceito ao código. Isso mudou como projeto. Não projeto no vácuo porque sei o que vai acontecer na implementação.
               </p>
-              <p>
+              <p className="text-body font-light text-stellar-white mb-8">
                 Hoje atuo como product designer na GoExplosion e sigo construindo projetos próprios. O próximo passo: colaborar com times globais em produtos que valham a pena existir.
               </p>
             </div>
@@ -319,10 +319,10 @@ function About() {
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue">
                   {value.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-semibold tracking-[-0.01em] text-white">
+                <h4 className="mb-3 text-h4 font-semibold text-white">
                   {value.title}
-                </h3>
-                <p className="text-[15px] leading-[1.7] text-white-55">
+                </h4>
+                <p className="font-light text-stellar-white mb-8">
                   {value.description}
                 </p>
               </motion.article>
@@ -369,10 +369,10 @@ function About() {
                     "/>
                   </div>
                   <div>
-                    <p className="text-[13px] font-medium tracking-[0.05em] text-orbit-cyan">
+                    <p className="text-small font-medium text-orbit-cyan">
                     {exp.period}
                   </p>
-                  <p className="mt-1 text-[15px] font-semibold text-white">
+                  <p className="mt-1 text-body font-semibold text-white">
                     {exp.company}
                   </p>
                   </div>
@@ -380,10 +380,10 @@ function About() {
 
                 </div>
                 <div>
-                  <p className="mb-1.5 text-[14px] font-medium text-white-75">
+                  <p className="mb-1 text-h4 font-medium text-white">
                     {exp.role}
                   </p>
-                  <p className="text-[15px] leading-[1.7] text-white-55">
+                  <p className="text-body font-light text-stellar-white">
                     {exp.description}
                   </p>
                 </div>

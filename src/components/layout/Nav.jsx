@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { getLenis } from '../../utils/lenisInstance'
 
 import Container from './Container'
-import NavLink from '../ui/NavLink'
+import NavLink from './NavLink'
 import logo from '../../assets/images/logo.svg'
 
 function Nav() {
