@@ -228,8 +228,8 @@ export default function DesignSystem() {
 
         {/* ── CTA ──────────────────────────────────────── */}
         <CaseCta
-          label="Minha identidade visual"
-          href='https://ademirpatricio.com.br/files/ademir-patricio-manual-de-identidade.pdf'
+          label="Acompanha no Figma"
+          href='https://www.figma.com/design/guMcFy55s0bvcfNLjpd4ts/Ademir-Patr%C3%ADcio-%E2%80%94-Design-System?node-id=0-1&t=TbDbN1rAsX56ium2-1'
           eyebrow="O sistema em uso"
           title="Tudo que você está vendo foi e continua sendo construído com esse sistema."
           bgImage={imgCta}

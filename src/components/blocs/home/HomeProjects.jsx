@@ -7,6 +7,8 @@ import ProjectCard from '../../ui/ProjectCard'
 import FadeIn from '../../ui/FadeIn'
 import Button from '../../ui/Button'
 
+import { featuredProjects as projects } from '../../../data/projects'
+
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
   show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
@@ -16,74 +18,6 @@ const containerVariants = {
   hidden: {},
   show:   { transition: { staggerChildren: 0.1 } },
 }
-
-import propostarapidaImg from '../../../assets/projects/proposta-rapida/thumbnail.jpg'
-import malabaresweddingImg from '../../../assets/projects/malabares-wedding/thumbnail.jpg'
-import thaynaguiarImg from '../../../assets/projects/thayna-aguiar/thumbnail.jpg'
-import malabaresImg from '../../../assets/projects/malabares/thumbnail.jpg'
-import institutovalentimImg from '../../../assets/projects/instituto-valentim/thumbnail.jpg'
-import barbaraacciolyImg from '../../../assets/projects/barbara-accioly/thumbnail.jpg'
-import mowcarImg from '../../../assets/projects/mowcar/thumbnail.jpg'
-import designsystemImg from '../../../assets/projects/design-system/thumbnail.jpg'
-
-
-const projects = [
-  
-  {
-    image: propostarapidaImg,
-    tag: 'Produto / SaaS',
-    title: 'Proposta Rápida',
-    link: '/projetos/proposta-rapida',
-    external: false,
-    description:
-      'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
-  },
-  {
-    image: mowcarImg,
-    tag: 'Aplicativo',
-    title: 'Mowcar',
-    link: '/projetos/mowcar',
-    external: false,
-    description:
-      'Aplicativo para gerenciamento de aluguel de veículos de frotas corporativas.',
-  },
-  {
-    image: thaynaguiarImg,
-    tag: 'Web / Branding',
-    title: 'Thayná Aguiar',
-    link: '/projetos/thayna-aguiar',
-    external: false,
-    description:
-      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
-  },
-  {
-    image: designsystemImg,
-    tag: 'Design System',
-    title: 'Design System',
-    link: '/projetos/design-system',
-    external: false,
-    description:
-      'Sistema de design do portfólio. Tokens, componentes e padrões visuais.',
-  },
-  {
-    image: malabaresImg,
-    tag: 'Web / Branding',
-    title: 'Malabares MKT & TEC',
-    link: 'https://malabares.com.br',
-    external: true,
-    description:
-      'Agência de marketing digital completa. Tudo que você precisa para o seu negócio.',
-  },
-  {
-    image: institutovalentimImg,
-    tag: 'Web / Branding',
-    title: 'Instituto Valentim',
-    link: 'https://www.behance.net/gallery/233370685/Instituto-Valentim-Pagina-e-Anuncios',
-    external: true,
-    description:
-      'Instituto focado em metodologias próprias e desenvolvimento humano.',
-  },
-]
 
 function HomeProjects() {
   return (

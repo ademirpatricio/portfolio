@@ -17,108 +17,7 @@ const containerVariants = {
   show:   { transition: { staggerChildren: 0.1 } },
 }
 
-import propostarapidaImg from '../assets/projects/proposta-rapida/thumbnail.jpg'
-import malabaresweddingImg from '../assets/projects/malabares-wedding/thumbnail.jpg'
-import thaynaguiarImg from '../assets/projects/thayna-aguiar/thumbnail.jpg'
-import malabaresImg from '../assets/projects/malabares/thumbnail.jpg'
-import institutovalentimImg from '../assets/projects/instituto-valentim/thumbnail.jpg'
-import mowcarImg from '../assets/projects/mowcar/thumbnail.jpg'
-import designsystemImg from '../assets/projects/design-system/thumbnail.jpg'
-import anatomazelliImg from '../assets/projects/ana-tomazelli/thumbnail.jpg'
-import thaynaeademirImg from '../assets/projects/thayna-e-ademir/thumbnail.jpg'
-
-const projects = [
-  {
-    image: propostarapidaImg,
-    tag: 'Produto / SaaS',
-    title: 'Proposta Rápida',
-    link: '/projetos/proposta-rapida',
-    external: false,
-    description:
-      'Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy.',
-  },
-  {
-    image: mowcarImg,
-    tag: 'Aplicativo',
-    title: 'Mowcar',
-    link: '/projetos/mowcar',
-    external: false,
-    description:
-      'Aplicativo para gerenciamento de aluguel de veículos de frotas corporativas.',
-  },
-  {
-    image: thaynaguiarImg,
-    tag: 'Web / Branding',
-    title: 'Thayná Aguiar',
-    link: '/projetos/thayna-aguiar',
-    external: false,
-    description:
-      'Portfólio pessoal construído em React, do wireframe ao ar em uma semana.',
-  },
-  {
-    image: designsystemImg,
-    tag: 'Design System',
-    title: 'Design System',
-    link: '/projetos/design-system',
-    external: false,
-    description:
-      'Sistema de design do portfólio. Tokens, componentes e padrões visuais.',
-  },
-  {
-    image: malabaresImg,
-    tag: 'Web / Branding',
-    title: 'Malabares MKT & TEC',
-    link: 'https://malabares.com.br',
-    external: true,
-    description:
-      'Agência de marketing digital completa. Tudo que você precisa para o seu negócio.',
-  },
-  {
-    image: malabaresweddingImg,
-    tag: 'Web',
-    title: 'Malabares Wedding',
-    link: 'https://wedding.malabares.com.br',
-    external: true,
-    description:
-      'Serviço focado em identidade visual, sites de casamento e experiência emocional.',
-  },
-  {
-    image: institutovalentimImg,
-    tag: 'Web / Branding',
-    title: 'Instituto Valentim',
-    link: 'https://www.behance.net/gallery/233370685/Instituto-Valentim-Pagina-e-Anuncios',
-    external: true,
-    description:
-      'Instituto focado em metodologias próprias e desenvolvimento humano.',
-  },
-  {
-    image: thaynaeademirImg,
-    tag: 'Web / Branding',
-    title: 'Thayná e Ademir',
-    link: 'https://www.behance.net/gallery/218119979/Thayna-Ademir-Id-Visual-do-Casamento',
-    external: true,
-    description:
-      'Personalidade, simplicidade e delicadeza definem bem a nossa identidade visual. ',
-  },
-  {
-    image: anatomazelliImg,
-    tag: 'Web / Branding',
-    title: 'Aminders - Ana Tomazelli',
-    link: 'https://www.behance.net/gallery/224264037/Ana-Tomazelli-Landingpage',
-    external: true,
-    description:
-      'Desenvolvimento da landing page oficial para o evento Aminders.',
-  },
-  /*{
-    image: barbaraacciolyImg,
-    tag: 'Web',
-    title: 'Bárbara Accioly',
-    link: 'https://barbaraaccioly.com.br',
-    external: true,
-    description:
-      'Curso completo de engajamento para instrutores de Pilates.',
-  },*/
-]
+import { projects } from '../data/projects'
 
 function Projects() {
   usePageTitle('Projetos')
@@ -134,7 +33,7 @@ function Projects() {
         <FadeIn className="mb-10 text-center md:mb-16">
           <Title
             span="Projetos em destaque"
-            title="Do problema ao deploy."
+            titleH2="Do problema ao deploy."
             content="Projetos reais. Coisas que estão em órbita."
           />
         </FadeIn>
