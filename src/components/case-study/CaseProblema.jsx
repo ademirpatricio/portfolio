@@ -29,7 +29,7 @@ function CaseProblema({ eyebrow = 'O problema', title, children, pain = [] }) {
                 {/* Conteúdo */}
                 <div>
                   <p className="text-reading font-semibold text-white mb-1">{item.title}</p>
-                  <p className="text-md text-white-60">{item.description}</p>
+                  <p className="text-white-60">{item.description}</p>
                 </div>
               </li>
             ))}

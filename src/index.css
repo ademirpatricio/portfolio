@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 @config '../tailwind.config.js';
 
+/* text-span: tamanho, espaçamento e peso vêm do tailwind.config.js.
+   O uppercase fica aqui porque o fontSize do Tailwind não aceita textTransform. */
+@layer components {
+  .text-span {
+    text-transform: uppercase;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

@@ -154,8 +154,8 @@ function Services() {
         <Container className="relative z-10">
 
           <motion.div {...fadeUp(0.1)} 
-          className="mb-6 inline-flex items-center gap-2.5 text-md 
-          font-medium uppercase text-span text-orbit-cyan text-neon">
+          className="mb-6 inline-flex items-center gap-2.5
+          text-span text-orbit-cyan text-neon">
             O que faço
           </motion.div>
 

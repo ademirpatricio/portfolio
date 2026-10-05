@@ -23,19 +23,19 @@ const services = [
     icon: productDesignIcon,
     title: 'Product Design',
     description:
-      'Começo pelo problema, não pela tela. Fluxos, protótipos e decisões que fazem sentido para quem usa e para quem paga.',
+      'Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão.',
   },
   {
     icon: frontendIcon,
     title: 'Front-End',
     description:
-      'O que projeto, sei construir. React, Next.js e Tailwind CSS. Do componente ao deploy.',
+      'O que projeto, sei construir. Uso React, Next.js e Tailwind CSS e levo o componente do desenho até o deploy.',
   },
   {
     icon: designSystemIcon,
     title: 'Design Systems',
     description:
-      'Consistência não acontece por acidente. Tokens, componentes e padrões com propósito.',
+      'Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce.',
   },
 ]
 
@@ -48,8 +48,7 @@ function HomeServices() {
         <FadeIn className="mb-10 md:mb-16 text-center">
           <Title
             span="O que faço"
-            titleH2="Antes de criar, compreender."
-            content="Cada entrega começa com a pergunta certa."
+            titleH2="Onde posso ajudar cada projeto"
           />
         </FadeIn>
 

@@ -22,7 +22,7 @@ const containerVariants = {
 function HomeProjects() {
   return (
     <section
-      className="relative bg-deep-blue py-20 md:py-28"
+      className="relative bg-deep-blue pt-4 py-10 md:py-28"
       id="projects"
       aria-labelledby="projects-title"
     >
@@ -31,12 +31,11 @@ function HomeProjects() {
           <Title
             span="Projetos em destaque"
             titleH2="Do problema ao deploy."
-            content="Projetos reais. Coisas que estão em órbita."
           />
         </FadeIn>
 
         <motion.div
-          className="relative z-20 grid grid-cols-2 gap-5 lg:grid-cols-3"
+          className="relative z-20 grid grid-cols-1 gap-5 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"

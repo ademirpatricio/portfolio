@@ -16,8 +16,7 @@ function Title ({
   return (
     <div className={center ? "text-center" : ""}>
       <span className={`
-        text-span font-medium uppercase
-        text-neon text-orbit-cyan
+        text-span text-neon text-orbit-cyan
         mb-4 ${center ? "block" : "inline-block"}`}
       >{span}
       </span>

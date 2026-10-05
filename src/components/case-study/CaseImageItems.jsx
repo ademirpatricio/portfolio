@@ -24,7 +24,7 @@ function CaseImageItems({ image, imageAlt, eyebrow, title, items = [], reverse =
                   <h4 className="text-h4 font-semibold text-white mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-md font-light text-white-50">
+                  <p className="font-light text-white-50">
                     {item.content}
                   </p>
                 </li>

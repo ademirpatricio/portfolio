@@ -60,7 +60,7 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-nebula-violet/30 flex-shrink-0" />
                 <div>
-                  <p className="text-md font-semibold text-white">{testimonials[current].name}</p>
+                  <p className="font-semibold text-white">{testimonials[current].name}</p>
                   <p className="text-label text-white-55">{testimonials[current].role}</p>
                 </div>
               </div>

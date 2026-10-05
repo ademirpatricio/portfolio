@@ -120,7 +120,7 @@ function About() {
 
         <Container className="relative z-90">
 
-          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-md font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-span text-orbit-cyan text-neon">
             Sobre o Designer
           </motion.div>
 
@@ -149,7 +149,7 @@ function About() {
 
           <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:gap-20">
 
-            <FadeIn direction="left">
+            <FadeIn direction="up">
             <div>
 
               <div
@@ -214,7 +214,7 @@ function About() {
             </div>
             </FadeIn>
 
-            <FadeIn direction="right">
+            <FadeIn direction="up">
             <div className="space-y-5 text-[17px] leading-[1.75] text-white-55">
               <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
                 A trajetória

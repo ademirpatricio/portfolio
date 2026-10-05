@@ -59,21 +59,21 @@ function Cta() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(100,101,247,0.10)_0%,transparent_65%),radial-gradient(ellipse_40%_40%_at_80%_20%,rgba(34,200,229,0.05)_0%,transparent_50%)]" />
 
       {/* Conteúdo */}
-      <FadeIn className="relative z-10 mx-auto max-w-[650px] px-6 md:px-12">
-        <span className="mb-4 inline-block text-span font-medium 
-        uppercase text-orbit-cyan">
+      <FadeIn className="relative z-60 mx-auto max-w-[650px] px-6 md:px-12">
+        <span className="mb-4 inline-block text-span
+        text-orbit-cyan text-neon">
           Entre em Contato
         </span>
 
         <h2 id="contact-title" className="text-h2 font-bold text-white mb-8 ">
-          Toda jornada começa
-          <br />
-          com uma direção.
+          Toda jornada começa 
+          <span className="text-stellar-white">
+          <br className="hidden md:block" />com uma direção.</span>
         </h2>
 
         <p className="mb-10 text-body text-stellar-white">
-          Se você tem um projeto, uma vaga ou uma ideia no papel, esse pode
-          ser o começo.
+          Se você tem um projeto, uma vaga ou uma ideia no papel, 
+          me conta. A gente descobre juntos para onde isso precisa ir.
         </p>
 
         <Button
@@ -83,10 +83,10 @@ function Cta() {
           href={whatsappLink}
           target="_blank"
         >
-          Fala comigo ⇢
+          Falar comigo ⇢
         </Button>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex justify-center relative z-60">
           <IconeText
             icon={GiCoffeeCup}
             iconClassName="text-orbit-cyan"

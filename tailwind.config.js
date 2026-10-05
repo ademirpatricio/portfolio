@@ -39,15 +39,15 @@ export default {
 
       fontSize: {
 
-        'h1':    ['clamp(40px, 6vw, 72px)',   { lineHeight: '1.1',  letterSpacing: '-0.03em' }],
-        'h2':    ['clamp(28px, 4vw, 48px)',   { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'h3':    ['clamp(22px, 2.7vw, 32px)', { lineHeight: '1.2',  letterSpacing: '-0.01em' }],
+        'h1':    ['clamp(45px, 5vw, 64px)',   { lineHeight: '1.1',  letterSpacing: '-0.03em' }],
+        'h2':    ['clamp(32px, 4vw, 45px)',   { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'h3':    ['clamp(22px, 2.7vw, 32px)', { lineHeight: '1.1',  letterSpacing: '-0.01em' }],
         'h4':    ['24px', { lineHeight: '1.25', letterSpacing: '-0.01em' }],
 
         'body':  ['17px', { lineHeight: '1.75' }],
+        'span':  ['clamp(10px, 3vw, 14px)', { letterSpacing: '0.2em', fontWeight: '500' }], // uppercase vem do index.css
         'small': ['13px', { lineHeight: '1.6' }],
         'label': ['11px', { lineHeight: '1.4',  letterSpacing: '0.15em' }],
-        'span':  ['13px', { letterSpacing: '0.3em' }],
 
       },
 

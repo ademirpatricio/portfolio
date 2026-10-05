@@ -4,8 +4,8 @@ function Tags({ tags = [] }) {
       {tags.map((tag) => (
         <span
           key={tag}
-          className="text-span font-medium uppercase border border-cosmic-blue
-          text-cosmic-blue border border-cosmic-blue/30 bg-cosmic-blue/10 px-4 py-2 rounded-btn"
+          className="text-span border border-cosmic-blue/30
+          text-cosmic-blue bg-cosmic-blue/10 px-4 py-2 rounded-btn"
         >
           {tag}
         </span>

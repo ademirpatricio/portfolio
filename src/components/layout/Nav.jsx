@@ -43,16 +43,20 @@ function Nav() {
       <nav
         className={`
           fixed inset-x-0 top-0 z-800
-          py-5 md:py-6
-          transition-all duration-300
-
-          ${
-            isScrolled
-              ? 'bg-midnight-deep/75 backdrop-blur-nav'
-              : 'bg-transparent'
-          }
+          py-5 md:pt-8 pb-8
         `}
       >
+        {/* Fundo ao scroll: degradê escuro (topo) para transparente (base) */}
+        <div
+          aria-hidden="true"
+          className={`
+            pointer-events-none absolute inset-0 -z-10
+            bg-linear-to-b from-midnight-deep via-midnight-deep/40 to-transparent
+            transition-opacity duration-300
+            ${isScrolled ? 'opacity-100' : 'opacity-0'}
+          `}
+        />
+
         <Container>
           <div className="flex items-center justify-between">
 
