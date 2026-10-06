@@ -92,21 +92,21 @@ const experiences = [
 const values = [
   {
     icon: <LuUserSearch className="text-cosmic-blue h-10 w-10" />,
-    title: 'O problema vem primeiro',
+    title: 'Entender antes de desenhar',
     description:
-      'Não projeto soluções antes de entender o que precisa ser resolvido. Esse processo não é lento. É o que evita retrabalho.',
+      'Antes de propor qualquer solução, pergunto o que precisa ser resolvido e para quem. Entender primeiro leva um pouco mais de tempo e evita muito retrabalho.',
   },
   {
     icon: <LuCodeXml className="text-orbit-cyan h-10 w-10"/>,
-    title: 'Tecnologia com intenção',
+    title: 'Projetar com o código em mente',
     description:
-      'A inovação é ferramenta, não fim. Saber construir o que projeto muda como projeto. Cada decisão de design carrega peso técnico real.',
+      'Como também construo, sei o que cada decisão custa na implementação. Isso me leva a propor soluções que o time consegue entregar.',
   },
   {
     icon: <LuComponent className="text-solar-gold h-10 w-10"/>,
-    title: 'Construir para durar',
+    title: 'Construir produtos para durar',
     description:
-      'Prefiro projetos que evoluem a projetos que terminam. Processos claros, entregas consistentes, impacto que se mantém.',
+      'Penso no que acontece depois da entrega. Componentes reutilizáveis e um sistema de design mantêm o produto pronto para crescer sem recomeçar do zero.',
   },
 ]
 
@@ -291,14 +291,14 @@ function About() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <FadeIn className="mb-12 text-center md:mb-16">
+          <FadeIn className="mb-12 text-center">
             <span className="mb-6 inline-flex 
             items-center gap-2.5 
             text-span text-orbit-cyan text-neon">
               O que orienta cada decisão
             </span>
             <h2 className="text-h2 font-bold text-white mb-6">
-              Três princípios que não negocio.
+              Três <span className="text-stellar-white">princípios</span> que não mudam.
             </h2>
           </FadeIn>
 
@@ -315,7 +315,8 @@ function About() {
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="rounded-card border border-cosmic-blue/12 bg-spacy-navy/50 p-8 hover:border-cosmic-blue/40 md:p-10"
+                className="rounded-card border border-cosmic-blue/12 
+                bg-spacy-navy/50 p-8 hover:border-cosmic-blue/40 md:p-10"
               >
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-icon bg-cosmic-blue/10 text-xl text-cosmic-blue">
                   {value.icon}
@@ -323,7 +324,7 @@ function About() {
                 <h4 className="mb-3 text-h4 font-semibold text-white">
                   {value.title}
                 </h4>
-                <p className="font-light text-stellar-white mb-8">
+                <p className="font-light text-stellar-white">
                   {value.description}
                 </p>
               </motion.article>
