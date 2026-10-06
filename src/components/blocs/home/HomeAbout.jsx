@@ -18,7 +18,7 @@ function HomeAbout() {
           
           <div className="mx-auto grid 
           max-w-container grid-cols-1 items-center 
-          text-center md:text-left gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-20">
+          text-left gap-10 px-6 md:px-12 lg:grid-cols-2 lg:gap-20">
             
             <FadeIn direction="left">
             <div

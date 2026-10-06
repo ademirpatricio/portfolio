@@ -11,6 +11,8 @@ import FadeIn from '../components/ui/FadeIn'
 import IconeText from '../components/ui/IconeText'
 import usePageTitle from '../hooks/usePageTitle'
 
+import AboutHero from '../components/blocs/about/AboutHero'
+
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -27,7 +29,7 @@ const containerVariants = {
   show:   { transition: { staggerChildren: 0.1 } },
 }
 
-import aboutImg from '../assets/images/about-img-1.jpg'
+import aboutImg from '../assets/images/about-img-2.jpg'
 
 import experiencia1 from '../assets/about/ic1.jpg'
 import experiencia2 from '../assets/about/ic2.jpg'
@@ -114,46 +116,20 @@ function About() {
   return (
     <main>
 
-      {/* ─── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-spacy-navy pb-24 pt-40 bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
-
-        <Container className="relative z-90">
-
-          <motion.div {...fadeUp(0.1)} className="mb-6 inline-flex items-center gap-2.5 text-span text-orbit-cyan text-neon">
-            Sobre o Designer
-          </motion.div>
-
-          <motion.h1 {...fadeUp(0.25)} className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
-            Não começo<br />
-            <span className="text-cosmic-blue">pela solução.</span>
-          </motion.h1>
-
-          <motion.p {...fadeUp(0.4)} className="text-lead mb-6 max-w-[520px] text-white-85">
-            Mais de 15 anos projetando produtos digitais. Sempre começando pela pergunta certa.
-          </motion.p>
-
-          <motion.p {...fadeUp(0.5)} className="max-w-[520px] text-body font-light text-stellar-white mb-8">
-            Sou Ademir Patrício. Designer com background em desenvolvimento front-end.
-            Recife, Brasil. Disponível para trabalhos, freelance e oportunidades remotas.
-          </motion.p>
-
-        </Container>
-
-        <Fade size="lg" color="deepblue" />
-      </section>
+      <AboutHero />
 
       {/* ─── TRAJETÓRIA ───────────────────────────────────────── */}
       <section className="bg-deep-blue py-20 md:py-28">
         <Container>
 
-          <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 items-center
+          gap-12 md:grid-cols-2 lg:gap-20">
 
             <FadeIn direction="up">
             <div>
 
               <div
-              className="relative h-[280px] md:h-[520px] items-center justify-center 
+              className="relative h-[280px] md:h-[550px] justify-center 
               overflow-hidden rounded-lg bg-spacy-navy lg:flex"
               aria-hidden="true"
               >
@@ -164,11 +140,11 @@ function About() {
                 absolute inset-0
                 h-full w-full
                 object-cover
-                object-center
+                object-top
                 "/>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
                 <IconeText
                   className="bg-midnight-deep/20 
                   hover:bg-midnight-deep/40 rounded-lg p-6"
@@ -195,7 +171,7 @@ function About() {
                   icon={FaGithub}
                   iconClassName="text-orbit-cyan"
                   title={'Meus códigos:'}
-                  label={'Github em Construção'}
+                  label={'Meu Github'}
                   link={'https://github.com/ademirpatricio'}
                   target={'_blank'}
                 />
@@ -215,24 +191,44 @@ function About() {
             </FadeIn>
 
             <FadeIn direction="up">
-            <div className="space-y-5 text-[17px] leading-[1.75] text-white-55">
-              <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-                A trajetória
+            <div className="text-body font-light text-stellar-white">
+              <span className="mb-7 inline-flex
+              text-span text-orbit-cyan text-neon">
+                Minha jornada
               </span>
-              <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
-                Do gráfico ao produto.
+              <h2 className="text-h2 font-bold text-white mb-6">
+                Como cheguei até aqui.
               </h2>
-              <p className="text-body font-light text-stellar-white mb-8">
-                Comecei com design gráfico em 2009. Sites, peças institucionais, campanhas para educação e comunicação. Fui entendendo que a forma como as coisas aparecem muda o que as pessoas pensam delas.
+              <p className="mb-6">
+                Comecei como designer gráfico em 2009 no departamento de
+                marketing da Uninassau, um pouco antes de me formar em
+                Publicidade e Propaganda. Fui entendendo que a forma
+                como as coisas aparecem muda o que as pessoas pensam delas.
               </p>
-              <p className="text-body font-light text-stellar-white mb-8">
-                Com o tempo, o trabalho ficou mais complexo. Em 2018, na Serttel, trabalhei no aplicativo Zona Azul Digital de Recife. Mobilidade urbana com problema real, escala real e resultado para medir. Foi lá que ficou claro o tipo de trabalho que quero fazer.
+              <p className="mb-6">
+                Pouco tempo depois comecei a estudar web design / front-end
+                e fui chamado para o núcleo de tecnologia da instituição.
+                Foi lá que comecei a entender como as coisas funcionam e 
+                são projetadas.
               </p>
-              <p className="text-body font-light text-stellar-white mb-8">
-                Em 2019 co-fundei a Malabares MKT. Aprendi a operar os dois lados: do conceito ao código. Isso mudou como projeto. Não projeto no vácuo porque sei o que vai acontecer na implementação.
+              <p className="mb-6">
+                Com o tempo, o trabalho ficou mais complexo. 
+                Em 2018, na Serttel, atuei no desenvolvimento do aplicativo
+                Zona Azul Digital de Recife. Mobilidade urbana com problema real, 
+                escala e resultado para medir. Foi lá que ficou 
+                claro o tipo de trabalho que quero fazer.
               </p>
-              <p className="text-body font-light text-stellar-white mb-8">
-                Hoje atuo como product designer na GoExplosion e sigo construindo projetos próprios. O próximo passo: colaborar com times globais em produtos que valham a pena existir.
+              <p className="mb-6">
+                Em 2019 co-fundei a <a href="https://malabares.com.br" target="_blank" 
+                rel="noopener noreferrer" className="text-solar-gold font-black">
+                Malabares MKT</a>. Aprendi a operar os
+                dois lados: do conceito ao código. Isso mudou como trabalho.
+                Projeto entendendo como será feita a implementação.
+              </p>
+              <p className="mb-6">
+                Hoje atuo como product designer na GoExplosion e sigo 
+                construindo projetos próprios. O próximo passo é 
+                colaborar com times globais em produtos que valham a pena existir.
               </p>
             </div>
             </FadeIn>
@@ -247,16 +243,18 @@ function About() {
       bg-[url('./assets/images/about-page-manifesto-bg.jpg')]
       bg-cover bg-center bg-no-repeat">
         
-        <div className="absolute inset-0
+        {/* <div className="absolute inset-0
           bg-spacy-navy/50 z-20
           md:bg-[linear-gradient(to_right,
           rgba(2,1,17,1)_0%,
           rgba(2,1,17,0.50)_45%,
-          rgba(2,1,17,0.10)_100%)]" />
+          rgba(2,1,17,0.10)_100%)]" />*/}
 
         <Container className="relative z-90 text-left">
 
-          <span className="mb-8 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <span className="
+          mb-7 inline-flex
+        text-span text-orbit-cyan text-neon">
           Manifesto</span>
 
           <motion.blockquote
@@ -267,8 +265,8 @@ function About() {
             viewport={{ once: true, margin: '-80px' }}
           >
             {[
-              { text: 'Antes de projetar, entendo.', className: 'font-medium text-white' },
-              { text: 'Antes de entregar, questiono.', className: 'font-medium text-white' },
+              { text: 'Antes de projetar, entender.', className: 'font-medium text-white' },
+              { text: 'Antes de entregar, questionar.', className: 'font-medium text-white' },
               { text: 'O problema vem primeiro.', className: 'font-medium text-white' },
               { text: 'A solução, depois.', className: 'font-medium text-white' },
               { text: 'Só existe o que vale a pena existir.', className: 'font-bold text-solar-gold' },
@@ -276,7 +274,8 @@ function About() {
               <motion.p
                 key={line.text}
                 variants={cardVariants}
-                className={`text-[clamp(22px,3vw,36px)] leading-[1.3] tracking-[-0.02em] ${line.className}`}
+                className={`text-[clamp(22px,3vw,36px)] leading-[1.3] 
+                  tracking-[-0.02em] ${line.className}`}
               >
                 {line.text}
               </motion.p>
@@ -293,10 +292,12 @@ function About() {
         <Container>
 
           <FadeIn className="mb-12 text-center md:mb-16">
-            <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+            <span className="mb-6 inline-flex 
+            items-center gap-2.5 
+            text-span text-orbit-cyan text-neon">
               O que orienta cada decisão
             </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
+            <h2 className="text-h2 font-bold text-white mb-6">
               Três princípios que não negocio.
             </h2>
           </FadeIn>
@@ -337,10 +338,12 @@ function About() {
         <Container>
 
           <FadeIn className="mb-12">
-            <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+            <span className="mb-6 inline-flex 
+            items-center gap-2.5 
+            text-span text-orbit-cyan text-neon">
               Experiência
             </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
+            <h2 className="text-h2 font-bold text-white mb-6">
               O caminho até aqui.
             </h2>
           </FadeIn>

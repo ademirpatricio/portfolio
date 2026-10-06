@@ -68,12 +68,12 @@ function Cta() {
         <h2 id="contact-title" className="text-h2 font-bold text-white mb-8 ">
           Toda jornada começa 
           <span className="text-stellar-white">
-          <br className="hidden md:block" />com uma direção.</span>
+          <br className="hidden md:block" /> com uma direção.</span>
         </h2>
 
         <p className="mb-10 text-body text-stellar-white">
           Se você tem um projeto, uma vaga ou uma ideia no papel, 
-          me conta. A gente descobre juntos para onde isso precisa ir.
+          fala comigo. A gente descobre juntos para qual direção isso precisa ir.
         </p>
 
         <Button

@@ -1,7 +1,7 @@
 /* 
 Este componente é responsável por renderizar o título de uma seção, 
 incluindo um span, um título principal (h2), um subtítulo (h3) e um conteúdo adicional. 
-Ele também permite centralizar o conteúdo com base na propriedade `center`. 
+Com a propriedade `center`, o conteúdo fica alinhado à esquerda no mobile e centralizado a partir de md. 
 */
 
 function Title ({
@@ -14,10 +14,10 @@ function Title ({
   {
 
   return (
-    <div className={center ? "text-center" : ""}>
+    <div className={center ? "text-left md:text-center" : ""}>
       <span className={`
         text-span text-neon text-orbit-cyan
-        mb-4 ${center ? "block" : "inline-block"}`}
+        mb-4 ${center ? "inline-block md:block" : "inline-block"}`}
       >{span}
       </span>
       <h2 className="text-h2 mb-5 font-bold text-white">{titleH2}</h2>
