@@ -34,21 +34,21 @@ const services = [
     title: 'Product Design',
     color: 'bg-cosmic-blue/10 text-cosmic-blue',
     description:
-      'Projeto com foco no problema real. Fluxos, protótipos e decisões que fazem sentido para quem usa e para quem paga. Do discovery à interface final.',
+      'Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão.',
   },
   {
     icon: <AiOutlineCodepen />,
     title: 'Front-End',
     color: 'bg-cosmic-blue/10 text-orbit-cyan',
     description:
-      'O que projeto, sei construir. React, Vite e Tailwind CSS. Do componente ao deploy. Sem ruído entre design e engenharia.',
+      'O que projeto, sei construir. Uso React e Tailwind CSS e levo o componente até o deploy com apoio e revisão de IA. ',
   },
   {
     icon: <AiOutlineInsertRowAbove />,
     title: 'Design Systems',
     color: 'bg-cosmic-blue/10 text-solar-gold',
     description:
-      'Consistência não acontece por acidente. Tokens, componentes e padrões documentados. Uma base que escala sem perder coerência.',
+      'Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce.',
   },
 ]
 
@@ -56,42 +56,42 @@ const steps = [
   {
     number: '01',
     title: 'Entender',
-    subtitle: 'Discovery / Pesquisa',
+    subtitle: 'Pesquisa',
     description:
-      'Antes de abrir o Figma, entender o contexto. Para quem, por quê e como vai ser feito.',
+      'Antes de abrir o Figma, entendo o contexto: para quem é, por que existe e como vai ser feito.',
   },
   {
     number: '02',
     title: 'Definir',
-    subtitle: 'PRD / Escopo',
+    subtitle: 'Escopo',
     description:
-      'O problema claro antes da solução. Escopo, critérios de sucesso e o que não vai entrar.',
+      'Deixo o problema claro antes da solução. Defino escopo, critérios de sucesso e o que fica para depois.',
   },
   {
     number: '03',
     title: 'Projetar',
-    subtitle: 'Wireframes / Protótipo',
+    subtitle: 'Protótipo',
     description:
-      'Fluxos antes de pixels. Decisões de UX antes de decisões visuais. A tela bonita é consequência.',
+      'Primeiro o fluxo, depois o visual. As decisões de experiência vêm antes das decisões estéticas. A tela bonita é consequência.',
   },
   {
     number: '04',
     title: 'Construir',
-    subtitle: 'MVP / Front-end',
+    subtitle: 'MVP',
     description:
-      'Protótipo ou código. Dependendo do que o problema pede, consigo entregar os dois.',
+      'Protótipo ou código, conforme o problema pede. Consigo entregar os dois. Uso IA para ganhar velocidade e reviso tudo que ela escreve.',
   },
   {
     number: '05',
     title: 'Validar',
-    subtitle: 'Testes / Dados',
+    subtitle: 'Testes',
     description:
-      'Entrega não é mandar o arquivo. É garantir que o que foi projetado vai ao ar e realmente funciona.',
+      'Testo com quem vai usar e confiro se o que foi projetado vai ao ar e funciona. Ajusto antes de chamar de pronto.',
   },
   {
     number: '06',
     title: 'Evoluir',
-    subtitle: 'Roadmap / Iteração',
+    subtitle: 'Roadmap',
     description:
       'Produto lançado é produto que começa. O que os dados mostram orienta o próximo ciclo.',
   },
@@ -113,6 +113,14 @@ const tools = [
   {
     name: 'React',
     icon: 'https://cdn.simpleicons.org/react/61DAFB',
+  },
+  {
+    name: 'Claude',
+    icon: 'https://cdn.simpleicons.org/claude/61DAFB',
+  },
+  {
+    name: 'Chatgpt',
+    icon: 'https://cdn.simpleicons.org/gpt/61DAFB',
   },
   {
     name: 'Vite',
@@ -148,31 +156,35 @@ function Services() {
     <main>
 
       {/* ─── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden text-center bg-midnight-deep pb-48 pt-40 bg-[url('./assets/images/services-page-bg.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="relative overflow-hidden text-center
+      bg-midnight-deep pb-20 pt-40
+      bg-[url('./assets/images/services-page-bg.jpg')]
+      bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
 
         <Container className="relative z-10">
 
           <motion.div {...fadeUp(0.1)} 
-          className="mb-6 inline-flex items-center gap-2.5
-          text-span text-orbit-cyan text-neon">
+          className="mb-7 inline-flex
+        text-span text-orbit-cyan text-neon">
             O que faço
           </motion.div>
 
           <motion.h1 {...fadeUp(0.25)}
-          className="mb-6 max-w-auto text-[clamp(40px,6vw,72px)] font-bold leading-[1.1] text-white">
-            Antes de criar,<br />
-            <span className="text-cosmic-blue">compreender.</span>
+          className="mb-6 max-w-auto 
+          text-h1 font-bold text-white">
+            Primeiro entendo.<br />
+            <span className="text-cosmic-blue"> Depois construo.</span>
           </motion.h1>
 
-          <motion.p {...fadeUp(0.4)} className="text-h4 font-medium mb-3 max-w-auto text-white">
+          <motion.h4 {...fadeUp(0.4)} className="text-h4 font-medium mb-3 
+          max-w-auto text-white">
             Cada entrega começa com a pergunta certa.
-          </motion.p>
+          </motion.h4>
 
           <motion.p {...fadeUp(0.5)} 
-          className="text-body font-light max-w-[500px] mx-auto text-stellar-white">
-            Não trabalho com escopo fechado antes de entender o problema.
-            O briefing é o início da conversa, não a resposta.
+          className="text-body font-light max-w-[400px] mx-auto text-stellar-white">
+            O briefing abre a conversa e o escopo vem depois de compreender o problema.
           </motion.p>
 
         </Container>
@@ -181,17 +193,8 @@ function Services() {
       </section>
 
       {/* ─── SERVIÇOS ─────────────────────────────────────────── */}
-      <section className="bg-midnight-deep py-20 md:py-28">
+      <section className="bg-midnight-deep py-20 md:pt-10 md:pb-30">
         <Container>
-
-          <FadeIn className="mb-12 md:mb-16">
-            <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
-              Serviços
-            </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
-              Onde posso ajudar.
-            </h2>
-          </FadeIn>
 
           <motion.div
             className="grid grid-cols-1 gap-5 lg:grid-cols-3"
@@ -236,13 +239,13 @@ function Services() {
         <Container className="relative z-10">
 
           <FadeIn className="mb-12 md:mb-16">
-            <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+            <span className="mb-6 inline-flex items-center gap-2.5 
+          text-span text-orbit-cyan text-neon">
               Processo
             </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold 
-            text-white">
-              Seis etapas. Sem atalhos.
-            </h2>
+            <h3 className="text-h3 font-bold text-white">
+              Seis etapas. Do problema ao próximo ciclo.
+            </h3>
           </FadeIn>
 
           <motion.div
@@ -291,13 +294,14 @@ function Services() {
       <section className="bg-midnight-deep py-20 md:py-28">
         <Container>
 
-          <FadeIn className="mb-12 md:mb-16">
-            <span className="mb-4 inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-orbit-cyan text-neon">
+          <FadeIn className="mb-12">
+            <span className="mb-6 inline-flex items-center gap-2.5 
+          text-span text-orbit-cyan text-neon">
               Stack
             </span>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-[1.1] tracking-[-0.025em] text-white">
+            <h3 className="text-h3 font-bold text-white">
               Com o que trabalho.
-            </h2>
+            </h3>
           </FadeIn>
 
           <motion.div
@@ -345,16 +349,17 @@ function Services() {
 
       <CasePdf
         eyebrow="Códigos"
-        title="Os projetos não terminam no Figma. Eles ganham vida."
+        title="O design vira código de verdade."
         btLabel="Ver projetos no GitHub →"
         href={"https://github.com/ademirpatricio"}
         target="_blank"
         image={imgGithub}
-        imageAlt="Preview do PDF gerado pelo Proposta Rápida"
+        imageAlt="Tela do GitHub com projetos de design e front-end"
         className="bg-cover bg-center"
         >
         <p className="text-body font-light text-stellar-white">
-          No meu <strong>GitHub</strong> você encontra aplicações reais, experimentos, componentes e produtos que desenvolvi do design ao deploy.
+          No meu <strong>GitHub</strong> você encontra aplicações reais, experimentos, componentes
+          e produtos que desenvolvi do design ao deploy.
         </p>
       </CasePdf>
 

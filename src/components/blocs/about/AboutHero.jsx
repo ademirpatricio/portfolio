@@ -26,9 +26,9 @@ function AboutHero() {
             Quem sou
           </motion.div>
 
-          <motion.h1 {...fadeUp(0.25)} className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
+          <motion.h1 {...fadeUp(0.25)} 
+          className="mb-6 max-w-[700px] text-[clamp(40px,6vw,72px)] font-bold leading-[1.03] tracking-[-0.03em] text-white">
             Do gráfico<br /> <span className="text-stellar-white">ao produto.</span>
-            
           </motion.h1>
 
           <motion.p {...fadeUp(0.4)} className="text-lead mb-6 max-w-[520px] text-white-85">
