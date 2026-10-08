@@ -24,7 +24,8 @@ function CasePdf({
 
             {/* Conteúdo */}
             <div>
-                <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">{eyebrow}</p>
+                <p className="mb-6 inline-flex items-center gap-2.5 
+          text-span text-orbit-cyan text-neon">{eyebrow}</p>
                 <h2 className={`text-h3 font-bold mb-6 ${titleColor}`}>{title}</h2>
                 <h3 className="text-h4 font-medium text-white mb-6">{subtitle}</h3>
                 <div className="space-y-4 text-body text-white-60 mb-6">{children}</div>

@@ -1,5 +1,6 @@
 import { AiFillProduct, AiOutlineCodepen, AiOutlineInsertRowAbove } from "react-icons/ai";
-import { DiPhotoshop, DiIllustrator } from "react-icons/di";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeIndesign } from "react-icons/tb";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { motion } from 'framer-motion'
 
@@ -104,11 +105,15 @@ const tools = [
   },
   {
     name: 'Photoshop',
-    icon: <DiPhotoshop color="#31a8ff" />,
+    icon: <TbBrandAdobePhotoshop color="#31a8ff" />,
   },
   {
     name: 'Illustrator',
-    icon: <DiIllustrator color="#ff9a00"/>,
+    icon: <TbBrandAdobeIllustrator color="#ff9a00"/>,
+  },
+  {
+    name: 'InDesign',
+    icon: <TbBrandAdobeIndesign color="#ff3366"/>,
   },
   {
     name: 'React',
@@ -116,11 +121,11 @@ const tools = [
   },
   {
     name: 'Claude',
-    icon: 'https://cdn.simpleicons.org/claude/61DAFB',
+    icon: 'https://cdn.simpleicons.org/claude/e94f0f',
   },
   {
-    name: 'Chatgpt',
-    icon: 'https://cdn.simpleicons.org/gpt/61DAFB',
+    name: 'ChatGPT',
+    icon: <IoChatbubbleEllipsesOutline color="#cccccc"/>,
   },
   {
     name: 'Vite',
@@ -135,12 +140,20 @@ const tools = [
     icon: 'https://cdn.simpleicons.org/wordpress/21759B',
   },
   {
+    name: 'Bootstrap',
+    icon: 'https://cdn.simpleicons.org/bootstrap/8612fb',
+  },
+  {
     name: 'VS Code',
     icon: <VscVscodeInsiders />,
   },
   {
     name: 'Notion',
     icon: 'https://cdn.simpleicons.org/notion/ffffff',
+  },
+  {
+    name: 'Miro',
+    icon: 'https://cdn.simpleicons.org/miro/ffdd33',
   },
   {
     name: 'GitHub',
@@ -156,7 +169,7 @@ function Services() {
     <main>
 
       {/* ─── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden text-center
+      <section className="relative overflow-hidden text-left
       bg-midnight-deep pb-20 pt-40
       bg-[url('./assets/images/services-page-bg.jpg')]
       bg-cover bg-center bg-no-repeat">
@@ -183,7 +196,7 @@ function Services() {
           </motion.h4>
 
           <motion.p {...fadeUp(0.5)} 
-          className="text-body font-light max-w-[400px] mx-auto text-stellar-white">
+          className="text-body font-light max-w-[400px] text-stellar-white">
             O briefing abre a conversa e o escopo vem depois de compreender o problema.
           </motion.p>
 
@@ -297,7 +310,7 @@ function Services() {
           <FadeIn className="mb-12">
             <span className="mb-6 inline-flex items-center gap-2.5 
           text-span text-orbit-cyan text-neon">
-              Stack
+              Ferramentas
             </span>
             <h3 className="text-h3 font-bold text-white">
               Com o que trabalho.
@@ -339,7 +352,7 @@ function Services() {
           </motion.div>
 
           <p className="mt-8 text-[13px] leading-[1.6] text-white/50 text-center">
-            <strong>Outras ferramentas:</strong> Sketch, Zeplin, InDesign, Bootstrap, PHP, Elementor, Miro
+            <strong>Outras ferramentas:</strong> Sketch, Zeplin, PHP, Elementor
           </p>
 
         </Container>
