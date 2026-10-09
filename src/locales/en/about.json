@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "About"
+  },
+  "hero": {
+    "eyebrow": "About me",
+    "titleLine1": "From graphic design",
+    "titleLine2": "to product.",
+    "lead": "Over 10 years designing digital products. Always starting with the right question.",
+    "description": "My name is Ademir Patrício. I'm a product designer with a front-end development background. Currently based in Recife, Brazil. Available for jobs, freelance work and remote opportunities."
+  },
+  "trajectory": {
+    "links": {
+      "resumeTitle": "More info:",
+      "resumeLabel": "Download CV",
+      "behanceTitle": "My projects:",
+      "behanceLabel": "Projects on Behance",
+      "githubTitle": "My code:",
+      "githubLabel": "My GitHub",
+      "linkedinTitle": "Follow me:",
+      "linkedinLabel": "LinkedIn profile"
+    },
+    "eyebrow": "My journey",
+    "title": "How I got here.",
+    "p1": "I started as a graphic designer in 2009, in the marketing department at Uninassau, shortly before finishing my degree in Advertising. I came to understand that the way things look changes what people think of them.",
+    "p2": "Not long after, I started studying web design and front-end, and was invited to join the institution's technology team. That is where I began to understand how things work and how they are designed.",
+    "p3": "Over time, the work got more complex. In 2018, at Serttel, I worked on Recife's Zona Azul Digital parking app. Urban mobility with a real problem, real scale and results to measure. That is where the kind of work I want to do became clear.",
+    "p4": "In 2019 I co-founded <malabares>Malabares MKT</malabares>. I learned to work on both sides: from concept to code. That changed how I work. I design knowing how it will be built.",
+    "p5": "Today I work as a product designer at GoExplosion and keep building my own projects. The next step is to collaborate with global teams on products that deserve to exist."
+  },
+  "manifesto": {
+    "eyebrow": "Manifesto",
+    "lines": [
+      "Before designing, understand.",
+      "Before delivering, question.",
+      "The problem comes first.",
+      "Then the solution.",
+      "Only what deserves to exist, exists."
+    ]
+  },
+  "values": {
+    "eyebrow": "What guides every decision",
+    "title": "Three <highlight>principles</highlight> that don't change.",
+    "items": {
+      "understand": {
+        "title": "Understand before designing",
+        "description": "Before proposing any solution, I ask what needs solving and for whom. Understanding first takes a little more time and saves a lot of rework."
+      },
+      "code": {
+        "title": "Design with code in mind",
+        "description": "Because I also build, I know what each decision costs to implement. That leads me to propose solutions the team can actually deliver."
+      },
+      "lasting": {
+        "title": "Build products to last",
+        "description": "I think about what happens after delivery. Reusable components and a design system keep the product ready to grow without starting over."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "The path so far.",
+    "items": {
+      "goexplosion": {
+        "period": "2021 – present",
+        "company": "GoExplosion",
+        "role": "Product Designer & Front-End Developer",
+        "description": "Product design, internal systems and conversion pages for an info-product platform. A bridge between design and engineering."
+      },
+      "malabares": {
+        "period": "2019 – 2026",
+        "company": "Malabares MKT",
+        "role": "Co-founder & UX/UI Designer",
+        "description": "From brief to code. Design, development and digital strategy for small and medium businesses."
+      },
+      "crope": {
+        "period": "2020 – 2021",
+        "company": "CRO-PE",
+        "role": "Graphic Designer",
+        "description": "Institutional visual communication across digital channels and events."
+      },
+      "serttel": {
+        "period": "2018 – 2019",
+        "company": "Serttel",
+        "role": "Digital Product Designer",
+        "description": "Urban mobility. I took part in conceiving Recife's Zona Azul Digital parking app. From prototyping to validation with real users."
+      },
+      "gruposer": {
+        "period": "2013 – 2015",
+        "company": "Grupo Ser",
+        "role": "Web Designer",
+        "description": "Digital products for education. Institutional websites and visual consistency."
+      },
+      "early": {
+        "period": "2009 – 2012",
+        "company": "Early career",
+        "role": "Web & Graphic Designer",
+        "description": "Naips Technology, Icorp, Trupe, Faculdade Nassau. Web, graphic and interface design."
+      }
+    }
+  }
+}

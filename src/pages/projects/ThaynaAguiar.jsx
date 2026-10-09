@@ -1,9 +1,8 @@
-{/* ── geral ─────────────────────────────────────── */}
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+// ── geral ───────────────────────────────────────
+import { useTranslation, Trans } from 'react-i18next'
 import usePageTitle from '../../hooks/usePageTitle'
 
-{/* ── blocos ─────────────────────────────────────── */}
+// ── blocos ──────────────────────────────────────
 import CaseHero from '../../components/case-study/CaseHero'
 import CaseSection from '../../components/case-study/CaseSection'
 import CaseHighlights from '../../components/case-study/CaseHighlights'
@@ -14,7 +13,7 @@ import CaseSectionList from '../../components/case-study/CaseSectionList'
 import Cta from '../../components/layout/Cta'
 import CaseCarousel from '../../components/case-study/CaseCarousel'
 
-{/* ── imagens ─────────────────────────────────────── */}
+// ── imagens ─────────────────────────────────────
 import imgHero from '../../assets/projects/thayna-aguiar/1.jpg'
 import imgAbout from '../../assets/projects/thayna-aguiar/2.jpg'
 import imgObjectives from '../../assets/projects/thayna-aguiar/3.jpg'
@@ -28,15 +27,14 @@ import galery4 from '../../assets/projects/thayna-aguiar/carrossel-thayna_04.jpg
 import galery5 from '../../assets/projects/thayna-aguiar/carrossel-thayna_05.jpg'
 import galery6 from '../../assets/projects/thayna-aguiar/carrossel-thayna_06.jpg'
 
-{/* ========================================================== */}
+// ====================================================
+// Textos do case: src/locales/<idioma>/case-thayna-aguiar.json
+// Aqui ficam só dados que não mudam com o idioma.
 
 const project = {
   title: 'Thayná Aguiar',
-  subtitle: 'Presença digital com identidade, estratégia e sofisticação.',
-  description:
-  'Desenvolvimento de identidade visual e landing page institucional focada em fortalecer o posicionamento digital de Thayná Aguiar.',
   tags: ['Branding', 'UI/UX Design', 'Front-End'],
-  infos : {
+  infos: {
     role: 'UI/UX Designer & Front-End',
     type: 'Web / Branding',
     stack: 'React + Tailwind + Vite',
@@ -46,8 +44,8 @@ const project = {
     github: 'https://github.com/ademirpatricio/thaynaaguiar',
     behance: 'https://www.behance.net/gallery/213505967/Thayna-Aguiar-Landingpage',
     liveUrl: 'https://thaynaaguiar.com.br',
+    mediaKit: 'https://drive.google.com/file/d/1DYMAKzxxF7iTj5k_gSW_kDRszFigters/view?usp=drive_link',
   },
-  tips: ['Controle total sobre animações', 'Carregamento fluido', 'Estrutura escalável'],
 }
 
 const images = {
@@ -59,22 +57,22 @@ const images = {
 }
 
 const gallery = [
-  {src: galery1, alt: 'galery1',},
-  {src: galery2, alt: 'galery2',},
-  {src: galery3, alt: 'galery3',},
-  {src: galery4, alt: 'galery4',},
-  {src: galery5, alt: 'galery5',},
-  {src: galery6, alt: 'galery6',},
+  { src: galery1, alt: 'galery1' },
+  { src: galery2, alt: 'galery2' },
+  { src: galery3, alt: 'galery3' },
+  { src: galery4, alt: 'galery4' },
+  { src: galery5, alt: 'galery5' },
+  { src: galery6, alt: 'galery6' },
 ]
 
 export default function ThaynaAguiar() {
+  const { t } = useTranslation('case-thayna-aguiar')
   usePageTitle(project.title)
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  const goals = t('goals.items', { returnObjects: true })
+  const delivered = t('delivered.items', { returnObjects: true })
+  const tips = t('develop.tips', { returnObjects: true })
 
-  {/* ========================================================== */}
   return (
     <>
 
@@ -83,134 +81,103 @@ export default function ThaynaAguiar() {
       {/* ── Hero ─────────────────────────────────────── */}
       <CaseHero
         image={images.hero}
-        imageAlt="Thayná Aguiar — identidade visual e landing page"
+        imageAlt={t('hero.imageAlt')}
         className="object-[82%_center] md:object-center h-[500px]"
         title={project.title}
-        subtitle="Presença digital com identidade, estratégia e sofisticação."
-        role = {project.infos.role}
-        type = {project.infos.type}
-        stack = {project.infos.stack}
-        year = {project.infos.year}
-        link = {project.links.liveUrl}
-        tags= {project.tags}
+        subtitle={t('hero.subtitle')}
+        role={project.infos.role}
+        type={project.infos.type}
+        stack={project.infos.stack}
+        year={project.infos.year}
+        link={project.links.liveUrl}
+        tags={project.tags}
       />
 
       {/* ── Sobre o projeto ─────────────────────────────────── */}
       <CaseSection
-        eyebrow = "Sobre o projeto"
-        title = "Uma identidade que fala antes de ela precisar explicar."
+        eyebrow={t('about.eyebrow')}
+        title={t('about.title')}
         image={images.about}
-        imageAlt="Detalhes da identidade visual de Thayná Aguiar">
-        <p>
-          Desenvolvimento de identidade visual e landing page institucional 
-          focada em fortalecer o posicionamento digital de Thayná Aguiar.
-        </p>
+        imageAlt={t('imageAlt')}>
+        <p>{t('about.text')}</p>
       </CaseSection>
 
       <CaseSection
-        title = "Sobre o Projeto."
+        title={t('client.title')}
         image={images.objectives}
-        imageAlt="Detalhes da identidade visual de Thayná Aguiar"
+        imageAlt={t('imageAlt')}
         reverse>
         <p className="mb-4">
-          Copywriter, recifense, apaixonada por futebol e pelo universo digital. 
-          <a href={project.links.liveUrl} target="_blank" rel="noreferrer"
-          className="text-solar-accent hover:text-solar-orange transition-colors"
-          > Thayná Aguiar</a>, é especialista em criar conteúdos que fazem a diferença 
-          nas redes sociais. Transforma marcas em histórias que conectam pessoas, 
-          engajam e convertem.
+          <Trans
+            t={t}
+            i18nKey="client.p1"
+            components={{
+              client: (
+                <a
+                  href={project.links.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-solar-accent hover:text-solar-orange transition-colors"
+                />
+              ),
+            }}
+          />
         </p>
-        <p className="mb-4">
-          Thayná já sabia quem era. Precisava de uma identidade 
-          que dissesse isso antes de ela precisar explicar.
-        </p>
-        <p className="mb-4">
-          Partimos do conceito que ela trouxe e desdobramos em site, 
-          criativos para redes sociais e mídia kit. Cada escolha visual tinha uma razão.</p>
+        <p className="mb-4">{t('client.p2')}</p>
+        <p className="mb-4">{t('client.p3')}</p>
       </CaseSection>
 
       {/* ── Objetivos ───────────────────────────────────────── */}
-      <CaseHighlights
-        title="O que precisava ser resolvido."
-        items={[
-          'Criar uma identidade que a represente com fidelidade',
-          'Desenvolver um site que gere confiança e contato',
-          'Estruturar criativos replicáveis para redes sociais',
-          'Entregar um mídia kit pronto para uso profissional',
-          'Garantir performance consistente em desktop e mobile',
-
-        ]}>
-        <p>
-          A identidade precisava transmitir autoridade sem perder calor humano. 
-          A interface precisava ser leve o suficiente para não disputar 
-          atenção com o que ela comunica.
-        </p>
-        <p>
-          A direção visual foi clara: menos decoração, mais intenção. 
-          Tipografia forte, respiro e micro interações sutis.
-        </p>
+      <CaseHighlights title={t('goals.title')} items={goals}>
+        <p>{t('goals.p1')}</p>
+        <p>{t('goals.p2')}</p>
       </CaseHighlights>
 
       {/* ── Mídia Kit ───────────────────────────────────────── */}
       <CasePdf
-        eyebrow="Mídia Kit"
-        title="Material gráfico do Projeto."
-        btLabel="Download do MidiaKit ↗"
-        href="https://drive.google.com/file/d/1DYMAKzxxF7iTj5k_gSW_kDRszFigters/view?usp=drive_link"
+        eyebrow={t('mediaKit.eyebrow')}
+        title={t('mediaKit.title')}
+        btLabel={t('mediaKit.button')}
+        href={project.links.mediaKit}
         target="_blank"
         image={images.mockup}
-        imageAlt="Detalhes da identidade visual de Thayná Aguiar"
+        imageAlt={t('imageAlt')}
         className="bg-nebula-violet"
         >
-        <p>
-          O mídia kit reúne os números, os links e o material visual 
-          que Thayná usa para se apresentar a marcas e parceiros.
-        </p>
-      </CasePdf>  
+        <p>{t('mediaKit.text')}</p>
+      </CasePdf>
 
       {/* ── Desenvolvimento ───────────────────────────────────────── */}
       <CaseDevelop
-        eyebrown={"Desenvolvimento"}
-        title={"React + Tailwind. Hospedado na Cloudflare."}
-        tips= {project.tips}
+        eyebrown={t('develop.eyebrow')}
+        title={t('develop.title')}
+        tips={tips}
         linkGithub={project.links.github}
         linkBehance={project.links.behance}
         >
-        <p>
-          O site foi desenvolvido em React com Tailwind e hospedado na 
-          Cloudflare com foco em performance, fluidez e escalabilidade.
-        </p>
+        <p>{t('develop.text')}</p>
       </CaseDevelop>
-      
+
       {/* ── O que foi entregue ──────────────────────────────── */}
       <CaseSectionList
-        eyebrow = "o que foi entregue"
-        title = "Do conceito ao deploy."
+        eyebrow={t('delivered.eyebrow')}
+        title={t('delivered.title')}
         image={images.web}
-        imageAlt="Detalhes da identidade visual de Thayná Aguiar"
-        btLabel="Confere o projeto no Behance ⇢"
-        href="https://drive.google.com/file/d/1DYMAKzxxF7iTj5k_gSW_kDRszFigters/view?usp=drive_link"
+        imageAlt={t('imageAlt')}
+        btLabel={t('delivered.button')}
+        href={project.links.mediaKit}
         target="_blank"
         reverse>
         <ul>
-          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Identidade visual completa com todos os desdobramentos
-          </li>
-          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Landing page responsiva com navegação intuitiva
-          </li>
-          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Criativos para redes sociais alinhados à identidade
-          </li>
-          <li className="flex items-start gap-3 text-body text-white-65 mb-2">
-            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
-            Mídia kit completo com números e links de contato
-          </li>
+          {delivered.map((item) => (
+            <li key={item} className="flex items-start gap-3 text-body text-white-65 mb-2">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orbit-cyan flex-shrink-0" />
+              {item}
+            </li>
+          ))}
         </ul>
       </CaseSectionList>
+
       <CaseCarousel images={gallery} />
       <Cta/>
     </main>

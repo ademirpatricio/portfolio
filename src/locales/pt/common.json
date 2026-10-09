@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "INÍCIO",
+    "about": "QUEM SOU",
+    "aboutMobile": "SOBRE",
+    "services": "O QUE FAÇO",
+    "projects": "PROJETOS",
+    "talk": "FALA COMIGO ⇢",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "whatsapp": {
+    "message": "Olá! Gostaria de falar com Ademir Patrício",
+    "ariaLabel": "Abrir conversa no WhatsApp"
+  },
+  "footer": {
+    "rights": "© 2026 Ademir Patrício - Todos os direitos reservados"
+  },
+  "cta": {
+    "eyebrow": "Entre em Contato",
+    "titleLine1": "Toda jornada começa",
+    "titleLine2": "com uma direção.",
+    "description": "Se você tem um projeto, uma vaga ou uma ideia no papel, fala comigo. A gente descobre juntos para qual direção isso precisa ir.",
+    "button": "Falar comigo ⇢",
+    "availabilityTitle": "Freelance / Disponibilidade:",
+    "availabilityLabel": "Aberto à oportunidades"
+  },
+  "cookie": {
+    "text": "Este site usa cookies para analisar o tráfego e entender melhor quem o visita. Ao aceitar, você consente com ferramentas como Google Analytics e LinkedIn Insight Tag.",
+    "decline": "Recusar",
+    "accept": "Aceitar"
+  }
+}

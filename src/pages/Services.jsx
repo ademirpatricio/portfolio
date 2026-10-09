@@ -3,6 +3,7 @@ import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeIndesign } from "react-icons/tb";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { motion } from 'framer-motion'
+import { useTranslation, Trans } from 'react-i18next'
 
 import Container from '../components/layout/Container'
 import Fade from '../components/ui/Fade'
@@ -11,91 +12,25 @@ import CasePdf from '../components/case-study/CasePdf'
 import Cta from '../components/layout/Cta'
 import usePageTitle from '../hooks/usePageTitle'
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] },
-})
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
-}
-
-const containerVariants = {
-  hidden: {},
-  show:   { transition: { staggerChildren: 0.08 } },
-}
-
 import imgGithub from '../assets/images/services-github.jpg'
+import { cardVariants, createContainerVariants, fadeUp } from '../utils/motion'
 
+const containerVariants = createContainerVariants(0.08)
+
+// Títulos e descrições ficam em src/locales/<idioma>/services.json
 const services = [
-  {
-    icon: <AiFillProduct />,
-    title: 'Product Design',
-    color: 'bg-cosmic-blue/10 text-cosmic-blue',
-    description:
-      'Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão.',
-  },
-  {
-    icon: <AiOutlineCodepen />,
-    title: 'Front-End',
-    color: 'bg-cosmic-blue/10 text-orbit-cyan',
-    description:
-      'O que projeto, sei construir. Uso React e Tailwind CSS e levo o componente até o deploy com apoio e revisão de IA. ',
-  },
-  {
-    icon: <AiOutlineInsertRowAbove />,
-    title: 'Design Systems',
-    color: 'bg-cosmic-blue/10 text-solar-gold',
-    description:
-      'Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce.',
-  },
+  { key: 'productDesign', icon: <AiFillProduct />, color: 'bg-cosmic-blue/10 text-cosmic-blue' },
+  { key: 'frontEnd', icon: <AiOutlineCodepen />, color: 'bg-cosmic-blue/10 text-orbit-cyan' },
+  { key: 'designSystems', icon: <AiOutlineInsertRowAbove />, color: 'bg-cosmic-blue/10 text-solar-gold' },
 ]
 
 const steps = [
-  {
-    number: '01',
-    title: 'Entender',
-    subtitle: 'Pesquisa',
-    description:
-      'Antes de abrir o Figma, entendo o contexto: para quem é, por que existe e como vai ser feito.',
-  },
-  {
-    number: '02',
-    title: 'Definir',
-    subtitle: 'Escopo',
-    description:
-      'Deixo o problema claro antes da solução. Defino escopo, critérios de sucesso e o que fica para depois.',
-  },
-  {
-    number: '03',
-    title: 'Projetar',
-    subtitle: 'Protótipo',
-    description:
-      'Primeiro o fluxo, depois o visual. As decisões de experiência vêm antes das decisões estéticas. A tela bonita é consequência.',
-  },
-  {
-    number: '04',
-    title: 'Construir',
-    subtitle: 'MVP',
-    description:
-      'Protótipo ou código, conforme o problema pede. Consigo entregar os dois. Uso IA para ganhar velocidade e reviso tudo que ela escreve.',
-  },
-  {
-    number: '05',
-    title: 'Validar',
-    subtitle: 'Testes',
-    description:
-      'Testo com quem vai usar e confiro se o que foi projetado vai ao ar e funciona. Ajusto antes de chamar de pronto.',
-  },
-  {
-    number: '06',
-    title: 'Evoluir',
-    subtitle: 'Roadmap',
-    description:
-      'Produto lançado é produto que começa. O que os dados mostram orienta o próximo ciclo.',
-  },
+  { number: '01', key: 'understand' },
+  { number: '02', key: 'define' },
+  { number: '03', key: 'design' },
+  { number: '04', key: 'build' },
+  { number: '05', key: 'validate' },
+  { number: '06', key: 'evolve' },
 ]
 
 const tools = [
@@ -163,7 +98,8 @@ const tools = [
 ]
 
 function Services() {
-  usePageTitle('O que faço')
+  const { t } = useTranslation('services')
+  usePageTitle(t('meta.title'))
 
   return (
     <main>
@@ -171,33 +107,32 @@ function Services() {
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative overflow-hidden text-left
       bg-midnight-deep pb-20 pt-40
-      bg-[url('./assets/images/services-page-bg.jpg')]
-      bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(100,101,247,0.12)_0%,transparent_70%)]" />
-
+      bg-[url('./assets/images/services-hero-bg.jpg')]
+      bg-cover bg-top-center bg-no-repeat">
+      
         <Container className="relative z-10">
 
           <motion.div {...fadeUp(0.1)} 
           className="mb-7 inline-flex
         text-span text-orbit-cyan text-neon">
-            O que faço
+            {t('hero.eyebrow')}
           </motion.div>
 
           <motion.h1 {...fadeUp(0.25)}
           className="mb-6 max-w-auto 
           text-h1 font-bold text-white">
-            Primeiro entendo.<br />
-            <span className="text-cosmic-blue"> Depois construo.</span>
+            {t('hero.titleLine1')}<br />
+            <span className="text-cosmic-blue"> {t('hero.titleLine2')}</span>
           </motion.h1>
 
           <motion.h4 {...fadeUp(0.4)} className="text-h4 font-medium mb-3 
           max-w-auto text-white">
-            Cada entrega começa com a pergunta certa.
+            {t('hero.subtitle')}
           </motion.h4>
 
           <motion.p {...fadeUp(0.5)} 
           className="text-body font-light max-w-[400px] text-stellar-white">
-            O briefing abre a conversa e o escopo vem depois de compreender o problema.
+            {t('hero.description')}
           </motion.p>
 
         </Container>
@@ -218,7 +153,7 @@ function Services() {
           >
             {services.map((service) => (
               <motion.article
-                key={service.title}
+                key={service.key}
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
@@ -231,10 +166,10 @@ function Services() {
                   {service.icon}
                 </div>
                 <h4 className="mb-3 text-h4 font-bold text-white">
-                  {service.title}
+                  {t(`items.${service.key}.title`)}
                 </h4>
                 <p className="text-body font-light text-stellar-white">
-                  {service.description}
+                  {t(`items.${service.key}.description`)}
                 </p>
               </motion.article>
             ))}
@@ -254,10 +189,10 @@ function Services() {
           <FadeIn className="mb-12 md:mb-16">
             <span className="mb-6 inline-flex items-center gap-2.5 
           text-span text-orbit-cyan text-neon">
-              Processo
+              {t('process.eyebrow')}
             </span>
             <h3 className="text-h3 font-bold text-white">
-              Seis etapas. Do problema ao próximo ciclo.
+              {t('process.title')}
             </h3>
           </FadeIn>
 
@@ -281,18 +216,16 @@ function Services() {
                   <p className="text-2xl font-semibold tracking-[0.12em] text-cosmic-blue">
                     {step.number}
                   </p>
-                  {step.subtitle && (
-                    <span className="text-[11px] font-medium uppercase 
-                    tracking-[0.12em] text-cosmic-blue">
-                      {step.subtitle}
-                    </span>
-                  )}
+                  <span className="text-[11px] font-medium uppercase 
+                  tracking-[0.12em] text-cosmic-blue">
+                    {t(`process.steps.${step.key}.subtitle`)}
+                  </span>
                 </div>
                 <h4 className="mb-3 text-h4 font-semibold text-white">
-                  {step.title}
+                  {t(`process.steps.${step.key}.title`)}
                 </h4>
                 <p className="text-body font-light text-stellar-white">
-                  {step.description}
+                  {t(`process.steps.${step.key}.description`)}
                 </p>
               </motion.div>
             ))}
@@ -310,10 +243,10 @@ function Services() {
           <FadeIn className="mb-12">
             <span className="mb-6 inline-flex items-center gap-2.5 
           text-span text-orbit-cyan text-neon">
-              Ferramentas
+              {t('tools.eyebrow')}
             </span>
             <h3 className="text-h3 font-bold text-white">
-              Com o que trabalho.
+              {t('tools.title')}
             </h3>
           </FadeIn>
 
@@ -352,7 +285,7 @@ function Services() {
           </motion.div>
 
           <p className="mt-8 text-[13px] leading-[1.6] text-white/50 text-center">
-            <strong>Outras ferramentas:</strong> Sketch, Zeplin, PHP, Elementor
+            <Trans t={t} i18nKey="tools.others" components={{ strong: <strong /> }} />
           </p>
 
         </Container>
@@ -361,18 +294,17 @@ function Services() {
 
 
       <CasePdf
-        eyebrow="Códigos"
-        title="O design vira código de verdade."
-        btLabel="Ver projetos no GitHub →"
+        eyebrow={t('github.eyebrow')}
+        title={t('github.title')}
+        btLabel={t('github.button')}
         href={"https://github.com/ademirpatricio"}
         target="_blank"
         image={imgGithub}
-        imageAlt="Tela do GitHub com projetos de design e front-end"
+        imageAlt={t('github.imageAlt')}
         className="bg-cover bg-center"
         >
         <p className="text-body font-light text-stellar-white">
-          No meu <strong>GitHub</strong> você encontra aplicações reais, experimentos, componentes
-          e produtos que desenvolvi do design ao deploy.
+          <Trans t={t} i18nKey="github.text" components={{ strong: <strong /> }} />
         </p>
       </CasePdf>
 

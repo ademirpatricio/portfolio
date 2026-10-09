@@ -7,6 +7,8 @@ import Nav from '../src/components/layout/Nav'
 import Footer from '../src/components/layout/Footer'
 import ScrollToTop from './components/utils/ScrollToTop'
 import CookieConsent from './components/ui/CookieConsent'
+import LanguageSync from './components/utils/LanguageSync'
+import { routes } from './i18n/routes'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -18,6 +20,19 @@ import ThaynaAguiar from './pages/projects/ThaynaAguiar'
 import PropostaRapida from './pages/projects/PropostaRapida'
 import Mowcar from './pages/projects/Mowcar'
 import DesignSystem from './pages/projects/DesignSystem'
+
+// Cada página é registrada uma vez, pelo caminho em português.
+// As rotas em inglês vêm de src/i18n/routes.js.
+const pages = {
+  '/': Home,
+  '/quem-sou': About,
+  '/o-que-faco': Services,
+  '/projetos': Projects,
+  '/projetos/thayna-aguiar': ThaynaAguiar,
+  '/projetos/proposta-rapida': PropostaRapida,
+  '/projetos/mowcar': Mowcar,
+  '/projetos/design-system': DesignSystem,
+}
 
 function App() {
   useEffect(() => {
@@ -39,19 +54,19 @@ function App() {
 
   return (
     <>
+    <LanguageSync />
     <ScrollToTop />
     <CookieConsent />
     <Nav />
 
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/quem-sou" element={<About />} />
-      <Route path="/o-que-faco" element={<Services />} />
-      <Route path="/projetos" element={<Projects />} />
-      <Route path="/projetos/thayna-aguiar" element={<ThaynaAguiar />} />
-      <Route path="/projetos/proposta-rapida" element={<PropostaRapida />} />
-      <Route path="/projetos/mowcar" element={<Mowcar />} />
-      <Route path="/projetos/design-system" element={<DesignSystem />} />
+      {routes.flatMap(({ pt, en }) => {
+        const Page = pages[pt]
+        return [
+          <Route key={pt} path={pt} element={<Page />} />,
+          <Route key={en} path={en} element={<Page />} />,
+        ]
+      })}
       <Route path="*" element={<NotFound />} />
     </Routes>
     

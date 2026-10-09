@@ -1,11 +1,16 @@
+import { useTranslation } from 'react-i18next'
 import Whatsapp from '../ui/Whatsapp'
+import useWhatsappLink from '../../hooks/useWhatsappLink'
 
 function Footer(){
+    const { t } = useTranslation('common')
+    const whatsappLink = useWhatsappLink()
+
     return(
       <footer className="flex flex-col items-center justify-between gap-4 
       px-6 py-8 text-center md:flex-row md:px-12 md:py-10 
       md:text-left">
-        <p className="text-small text-white-25">© 2026 Ademir Patrício - Todos os direitos reservados</p>
+        <p className="text-small text-white-25">{t('footer.rights')}</p>
         <ul className="flex list-none gap-5 md:gap-8">
           <li>
             <a
@@ -41,7 +46,7 @@ function Footer(){
           <li>
             <a
               className="text-small text-stellar-white transition hover:text-white" target="_blank"
-              href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio"
+              href={whatsappLink}
             >
               WhatsApp
             </a>

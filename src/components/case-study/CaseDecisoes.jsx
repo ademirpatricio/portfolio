@@ -5,11 +5,15 @@
 //   impact: string
 // }]
 
-function CaseDecisoes({ eyebrow = 'Processo e decisões', title, decisions = [] }) {
+import { useTranslation } from 'react-i18next'
+
+function CaseDecisoes({ eyebrow, title, decisions = [] }) {
+  const { t } = useTranslation('cases')
+
   return (
     <section className="px-12 max-w-container mx-auto py-16">
       <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
-        {eyebrow}
+        {eyebrow ?? t('decisions.eyebrow')}
       </p>
       {title && (
         <h2 className="text-h3 font-bold text-white mb-10">{title}</h2>
@@ -34,7 +38,7 @@ function CaseDecisoes({ eyebrow = 'Processo e decisões', title, decisions = [] 
             <div className="mb-5">
               <p className="text-label font-semibold uppercase 
               text-white mb-2">
-                O que foi feito
+                {t('decisions.done')}
               </p>
               <p className="text-body text-white-60">{item.decision}</p>
             </div>
@@ -43,7 +47,7 @@ function CaseDecisoes({ eyebrow = 'Processo e decisões', title, decisions = [] 
             <div className="mb-6">
               <p className="text-label font-semibold uppercase 
               text-white mb-2">
-                Alternativa descartada
+                {t('decisions.alternative')}
               </p>
               <p className="text-body text-white-60">{item.alternative}</p>
             </div>
@@ -51,7 +55,7 @@ function CaseDecisoes({ eyebrow = 'Processo e decisões', title, decisions = [] 
             {/* Divisor + Impacto */}
             <div className="border-t border-white-10 mt-auto pt-6">
               <p className="text-label font-semibold uppercase text-orbit-cyan mb-2">
-                Impacto
+                {t('decisions.impact')}
               </p>
               <p className="text-body text-white-60">{item.impact}</p>
             </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useLocalizedPath } from '../../hooks/useLang'
 
 function Button({
   children,
@@ -10,6 +11,8 @@ function Button({
   mobileFullWidth = false,
   iconRight
 }) {
+
+  const lp = useLocalizedPath()
 
   const variants = {
     primary:   `bg-cosmic-blue hover:bg-cosmic-blue-light text-white`,
@@ -26,7 +29,7 @@ function Button({
 
   return (
     <Link
-      to = {href}
+      to = {lp(href)}
       target = {target}
       className = {`
         font-medium uppercase

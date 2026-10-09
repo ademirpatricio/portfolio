@@ -1,10 +1,16 @@
+import { useTranslation } from 'react-i18next'
+import useWhatsappLink from '../../hooks/useWhatsappLink'
+
 export default function Whatsapp() {
+  const { t } = useTranslation('common')
+  const whatsappLink = useWhatsappLink()
+
   return (
     <a
-      href="https://wa.me/5581998590849?text=Olá! Gostaria de falar com Ademir Patrício"
+      href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Abrir conversa no WhatsApp"
+      aria-label={t('whatsapp.ariaLabel')}
       className="whatsapp-button"
     >
       <svg

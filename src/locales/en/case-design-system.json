@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "role": "Designer & Developer",
+    "type": "Design System"
+  },
+  "hero": {
+    "subtitle": "A consistent visual language, from Figma to code.",
+    "imageAlt": "Design System: Contemplative Vastness"
+  },
+  "context": {
+    "eyebrow": "Context",
+    "title": "A portfolio without a system is a series of isolated decisions.",
+    "p1": "The site already existed. So did the components. But each one had been built independently, with no shared reference. Repeated colors with different names, inconsistent typography between Figma and code, tokens that only existed in memory.",
+    "p2": "The Design System came from a concrete need: a place to consult, reuse and evolve each visual decision without losing consistency.",
+    "imageAlt": "Primitive and semantic tokens in Figma"
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "title": "What was wrong before the system existed.",
+    "imageAlt": "Primitive and semantic tokens in Figma",
+    "items": [
+      {
+        "title": "Tokens without defined contracts",
+        "content": "Colors like #6465F7 appeared directly in the code, with no name and no contract. Any change depended on remembering where that value had been used."
+      },
+      {
+        "title": "Figma and code disconnected",
+        "content": "A component could be updated in Figma while the code kept the old value, with no warning."
+      },
+      {
+        "title": "Components with no usage criteria or documentation",
+        "content": "There were buttons, cards and tags in Figma, but no documentation on when to use each one. The decision depended on who remembered."
+      }
+    ]
+  },
+  "decisions": {
+    "eyebrow": "Process and decisions",
+    "title": "Three choices that defined the structure of the system.",
+    "items": [
+      {
+        "title": "Two-level token architecture",
+        "decision": "We split the tokens into two layers: Primitives (raw values, like #6465F7) and Semantic (what that value means, like cosmic-blue). No component uses a raw value directly. Everything goes through the semantic token.",
+        "alternative": "Using hex values directly in the code and in Figma, as was being done in the first components.",
+        "impact": "Any change in color or spacing goes through a single place. Consistency between Figma and code no longer depends on memory."
+      },
+      {
+        "title": "Sync between Figma Variables and Tailwind",
+        "decision": "Every Figma token has an exact match in tailwind.config.js, with the same name. cosmic-blue in Figma is text-cosmic-blue in Tailwind, with no translation and no divergence.",
+        "alternative": "Keeping the two systems independent and syncing manually after every change, which is exactly what was happening.",
+        "impact": "Figma became the visual reference and Tailwind the implementation reference, with the same names on both sides."
+      },
+      {
+        "title": "Documentation standard per component",
+        "decision": "Each component has a documentation frame with: eyebrow, title, file path, variant preview, WHEN TO USE and WHEN NOT TO USE.",
+        "alternative": "Leaving the components in Figma with no usage context, only as a visual reference and with no application criteria.",
+        "impact": "Anyone who opens the file understands not only what the component is, but when and where to use it."
+      }
+    ]
+  },
+  "result": {
+    "eyebrow": "Result",
+    "title": "A system in evolution, not a finished product.",
+    "description": "The portfolio DS is not a final deliverable. It is a living base. Every new component that enters the site goes through the system first. Every visual decision is recorded.",
+    "metrics": [
+      {
+        "value": "6",
+        "label": "Documented components",
+        "description": "Button, Tags, Project Card, NavLink, Nav Desktop, Title"
+      },
+      {
+        "value": "2",
+        "label": "Token layers",
+        "description": "Primitives + Semantic, Figma and Tailwind in sync"
+      },
+      {
+        "value": "8",
+        "label": "Typographic styles",
+        "description": "h1 to span, all with line-height and tracking defined"
+      }
+    ]
+  },
+  "learning": {
+    "eyebrow": "Lessons learned",
+    "product": "A design system for an individual portfolio has different criteria than a corporate DS. It does not need to cover everything, only what repeats and what will change the most. Starting with the tokens and leaving the components for later would have saved rework.",
+    "process": "Building the DS alongside the site revealed inconsistencies that were invisible. Tokens with deprecated names, classes that did not exist in Tailwind, color variations with no purpose. The act of documenting forced the cleanup."
+  },
+  "cta": {
+    "eyebrow": "The system in use",
+    "title": "Everything you are seeing was built, and continues to be built, with this system.",
+    "label": "Follow along in Figma"
+  }
+}

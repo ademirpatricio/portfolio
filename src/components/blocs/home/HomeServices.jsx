@@ -1,45 +1,27 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 import Title from '../../ui/Title'
 import Fade from '../../ui/Fade'
 import FadeIn from '../../ui/FadeIn'
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
-}
-
-const containerVariants = {
-  hidden: {},
-  show:   { transition: { staggerChildren: 0.12 } },
-}
-
 import productDesignIcon from '../../../assets/icons/ic1.svg'
 import frontendIcon from '../../../assets/icons/ic2.svg'
 import designSystemIcon from '../../../assets/icons/ic3.svg'
+import { cardVariants, createContainerVariants } from '../../../utils/motion'
 
+const containerVariants = createContainerVariants(0.12)
+
+// Títulos e descrições ficam em src/locales/<idioma>/home.json (services.items.<key>)
 const services = [
-  {
-    icon: productDesignIcon,
-    title: 'Product Design',
-    description:
-      'Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão.',
-  },
-  {
-    icon: frontendIcon,
-    title: 'Front-End',
-    description:
-      'O que projeto, sei construir. Uso React, Next.js e Tailwind CSS e levo o componente do desenho até o deploy.',
-  },
-  {
-    icon: designSystemIcon,
-    title: 'Design Systems',
-    description:
-      'Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce.',
-  },
+  { key: 'productDesign', icon: productDesignIcon },
+  { key: 'frontEnd', icon: frontendIcon },
+  { key: 'designSystems', icon: designSystemIcon },
 ]
 
 function HomeServices() {
+  const { t } = useTranslation('home')
+
   return (
     <section id="services" className="bg-spacy-navy py-20 md:py-28 relative
     bg-[url('./assets/images/services-bg.jpg')] bg-cover bg-center bg-no-repeat w-full" 
@@ -47,8 +29,8 @@ function HomeServices() {
       <div className="mx-auto max-w-container px-6 md:px-12">
         <FadeIn className="mb-10 md:mb-16 text-center">
           <Title
-            span="O que faço"
-            titleH2="Onde posso ajudar cada projeto"
+            span={t('services.eyebrow')}
+            titleH2={t('services.title')}
           />
         </FadeIn>
 
@@ -65,7 +47,7 @@ function HomeServices() {
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
               className="rounded-card border border-cosmic-blue/12 bg-midnight-deep/45 p-8 hover:border-cosmic-blue/40 md:p-10 md:px-8"
-              key={service.title}
+              key={service.key}
             >
               <div
                 className="mb-6 flex h-20 w-20 items-center justify-center 
@@ -75,10 +57,10 @@ function HomeServices() {
                 <img src={service.icon} alt="" className="h-10 w-10 object-contain"/>
               </div>
               <h4 className="mb-3 text-h4 font-semibold text-white">
-                {service.title}
+                {t(`services.items.${service.key}.title`)}
               </h4>
               <p className="text-body text-stellar-white">
-                {service.description}
+                {t(`services.items.${service.key}.description`)}
               </p>
             </motion.article>
           ))}

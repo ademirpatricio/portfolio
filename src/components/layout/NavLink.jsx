@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useLocalizedPath } from '../../hooks/useLang'
 
 function NavLink({
   href,
@@ -6,6 +7,8 @@ function NavLink({
   variant = 'default',
   onClick,
 }) {
+  const lp = useLocalizedPath()
+
   const variants = {
     default: `
       text-body
@@ -43,7 +46,7 @@ function NavLink({
 
   return (
     <li>
-      <Link to={href} onClick={onClick} className={variants[variant]}>
+      <Link to={lp(href)} onClick={onClick} className={variants[variant]}>
         {children}
       </Link>
     </li>

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import Button from '../ui/Button'
 
 // eyebrow?: string
@@ -8,23 +10,26 @@ import Button from '../ui/Button'
 // target?: string
 
 function CaseCta({
-  eyebrow = 'Ver produto',
+  eyebrow,
   title,
   description,
-  label = 'Abrir produto',
+  label,
   href,
   target = '_blank',
   bgImage,
 }) {
+  const { t } = useTranslation('cases')
+  const eyebrowText = eyebrow === undefined ? t('cta.eyebrow') : eyebrow
+
   return (
     <section className="px-12 max-w-container mx-auto py-16">
       <div
         className="rounded-card py-24 px-12 text-center overflow-hidden"
         style={bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
       >
-        {eyebrow && (
+        {eyebrowText && (
           <p className="text-label font-medium uppercase text-solar-orange mb-4">
-            {eyebrow}
+            {eyebrowText}
           </p>
         )}
         {title && (
@@ -35,7 +40,7 @@ function CaseCta({
         )}
         {href && (
           <Button variant="accent" size="md" href={href} target={target}>
-            {label} ⇢
+            {label ?? t('cta.label')} ⇢
           </Button>
         )}
       </div>

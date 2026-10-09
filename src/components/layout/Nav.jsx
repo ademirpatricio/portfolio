@@ -1,12 +1,21 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getLenis } from '../../utils/lenisInstance'
 
 import Container from './Container'
 import NavLink from './NavLink'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLocalizedPath } from '../../hooks/useLang'
+import useWhatsappLink from '../../hooks/useWhatsappLink'
+import { toPtPath } from '../../i18n/routes'
 import logo from '../../assets/images/logo.svg'
 
 function Nav() {
+  const { t } = useTranslation('common')
+  const lp = useLocalizedPath()
+  const whatsappLink = useWhatsappLink()
+
   // Navbar ao scroll
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -32,7 +41,7 @@ function Nav() {
   const { pathname } = useLocation()
 
   const handleLogoClick = (e) => {
-    if (pathname === '/') {
+    if (toPtPath(pathname) === '/') {
       e.preventDefault()
       getLenis()?.scrollTo(0, { immediate: false })
     }
@@ -62,7 +71,7 @@ function Nav() {
 
           {/* Logo */}
           <Link
-            to="/"
+            to={lp('/')}
             onClick={handleLogoClick}
             className="text-body font-semibold"
           >
@@ -76,20 +85,24 @@ function Nav() {
           {/* Menu Desktop */}
           <ul className="hidden items-center gap-10 md:flex">
             <NavLink href="/quem-sou">
-              QUEM SOU
+              {t('nav.about')}
             </NavLink>
 
             <NavLink href="/o-que-faco">
-              O QUE FAÇO
+              {t('nav.services')}
             </NavLink>
 
             <NavLink href="/projetos">
-              PROJETOS
+              {t('nav.projects')}
             </NavLink>
 
-            <NavLink href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio" variant="cta">
-              FALA COMIGO ⇢
+            <NavLink href={whatsappLink} variant="cta">
+              {t('nav.talk')}
             </NavLink>
+
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
 
           {/* Botão Mobile */}
@@ -101,7 +114,7 @@ function Nav() {
               md:hidden
             "
             onClick={() => setIsMenuOpen(true)}
-            aria-label="Abrir menu"
+            aria-label={t('nav.openMenu')}
           >
             ☰
           </button>
@@ -167,7 +180,7 @@ function Nav() {
                 transition
                 hover:opacity-70
               "
-              aria-label="Fechar menu"
+              aria-label={t('nav.closeMenu')}
             >
               ✕
             </button>
@@ -191,36 +204,40 @@ function Nav() {
               href="/"
               onClick={closeMenu}
             >
-              INÍCIO
+              {t('nav.home')}
             </NavLink>
             <NavLink
               href="/quem-sou"
               onClick={closeMenu}
             >
-              SOBRE
+              {t('nav.aboutMobile')}
             </NavLink>
 
             <NavLink
               href="/o-que-faco"
               onClick={closeMenu}
             >
-              O QUE FAÇO
+              {t('nav.services')}
             </NavLink>
 
             <NavLink
               href="/projetos"
               onClick={closeMenu}
             >
-              PROJETOS
+              {t('nav.projects')}
             </NavLink>
 
             <NavLink
-              href="https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio"
+              href={whatsappLink}
               variant="cta"
               onClick={closeMenu}
             >
-              FALA COMIGO ⇢
+              {t('nav.talk')}
             </NavLink>
+
+            <li>
+              <LanguageSwitcher onClick={closeMenu} />
+            </li>
           </ul>
 
         </div>

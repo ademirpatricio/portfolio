@@ -1,5 +1,7 @@
 import { LuLaugh, LuCalendarCheck, LuPackage, LuCoffee } from "react-icons/lu";
 
+import { useTranslation } from 'react-i18next'
+
 import Tags from '../ui/Tags'
 
 function CaseHero ({
@@ -15,6 +17,7 @@ function CaseHero ({
     link,
     tags,
 }){
+    const { t } = useTranslation('cases')
 
     return (
         <>
@@ -42,29 +45,29 @@ function CaseHero ({
             <div className="grid grid-cols-2 gap-6 border-b border-white-10 pb-8 md:grid-cols-[repeat(5,max-content)] md:justify-between">
                 <div>
                     <span className="text-label font-medium uppercase
-                    text-white-25 flex gap-2"><LuLaugh /> Papel</span>
+                    text-white-25 flex gap-2"><LuLaugh /> {t('meta.role')}</span>
                     <p className="text-small text-white-60">{role}</p>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase
-                    text-white-25 flex gap-2"><LuCoffee /> Categoria</span>
+                    text-white-25 flex gap-2"><LuCoffee /> {t('meta.category')}</span>
                     <p className="text-small text-white-60">{type}</p>
                 </div>
                 <div>
                     <span className="text-label font-medium uppercase
-                    text-white-25 flex gap-2"><LuPackage /> Tecnologias</span>
+                    text-white-25 flex gap-2"><LuPackage /> {t('meta.stack')}</span>
                     <p className="text-small text-white-60">{stack}</p>
                 </div>
 
                 <div>
                     <span className="text-label font-medium uppercase
-                    text-white-25 flex gap-2"><LuCalendarCheck /> Ano</span>
+                    text-white-25 flex gap-2"><LuCalendarCheck /> {t('meta.year')}</span>
                     <p className="text-small text-white-60">{year}</p>
                 </div>
 
                 <div>
                     <span className="text-label font-medium uppercase
-                    text-white-25 flex gap-2"><LuCalendarCheck /> Projeto</span>
+                    text-white-25 flex gap-2"><LuCalendarCheck /> {t('meta.project')}</span>
                     <a href={link} target="_blank" rel="noreferrer">
                         <p className="text-small text-solar-gold hover:text-solar-orange whitespace-nowrap">{link}</p>
                     </a>

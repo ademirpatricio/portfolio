@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "role": "Papel",
+    "category": "Categoria",
+    "stack": "Tecnologias",
+    "year": "Ano",
+    "project": "Projeto"
+  },
+  "develop": {
+    "viewRepo": "Ver repositório no GitHub",
+    "viewBehance": "Ver projeto no Behance"
+  },
+  "context": {
+    "eyebrow": "Contexto"
+  },
+  "decisions": {
+    "eyebrow": "Processo e decisões",
+    "done": "O que foi feito",
+    "alternative": "Alternativa descartada",
+    "impact": "Impacto"
+  },
+  "result": {
+    "eyebrow": "Resultado",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "testimonial": "Depoimento {{number}}"
+  },
+  "learning": {
+    "eyebrow": "Aprendizado",
+    "product": "Sobre o produto",
+    "process": "Sobre o processo"
+  },
+  "cta": {
+    "eyebrow": "Ver produto",
+    "label": "Abrir produto"
+  }
+}

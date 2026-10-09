@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "role": "UX / UI Designer",
+    "type": "Aplicativo",
+    "tags": [
+      "Produto Digital",
+      "Aplicativo",
+      "UX/UI Design",
+      "Figma"
+    ]
+  },
+  "hero": {
+    "subtitle": "Aplicativo para gerenciamento de aluguel de veículos",
+    "imageAlt": "Mowcar: aplicativo para gerenciamento de aluguel de veículos"
+  },
+  "about": {
+    "eyebrow": "Sobre o projeto",
+    "title": "Um estudo de caso sobre simplificar operações complexas sem perder controle.",
+    "imageAlt": "Interface do Mowcar",
+    "p1": "O Mowcar é um projeto pessoal que nasceu de uma pergunta: dá para resolver a gestão de uma locadora de veículos com um app enxuto, sem abrir mão dos fluxos críticos?",
+    "p2": "Atuei como designer solo, do mapeamento de requisitos ao protótipo navegável no Figma. O foco foi priorizar o que realmente importa para o operador no dia a dia."
+  },
+  "challenge": {
+    "title": "Contexto e desafio",
+    "imageAlt": "Mowcar: contexto e desafio",
+    "p1": "O mercado de aluguel de veículos tem muitas etapas operacionais: cadastro, controle de frota, retirada, devolução, histórico e rastreamento. A maioria das soluções existentes resolve tudo isso com complexidade excessiva.",
+    "p2": "O desafio era priorizar: quais fluxos são críticos para um MVP funcional e quais podem esperar?",
+    "items": [
+      "Dois perfis de uso distintos: locatário e gestor de frota",
+      "Fluxo crítico com muitas etapas: reserva, retirada, uso e devolução",
+      "Necessidade de visibilidade em tempo real sobre o status de cada veículo"
+    ]
+  },
+  "gallery": {
+    "first": "Mowcar: tela inicial"
+  },
+  "process": {
+    "eyebrow": "Processo",
+    "title": "O projeto foi desenvolvido seguindo uma abordagem prática e orientada a produto:",
+    "imageAlt": "Mowcar: workflow do projeto",
+    "items": [
+      "Definição do escopo do MVP e mapeamento da arquitetura de informação",
+      "Fluxos de navegação, wireframes e prototipação no Figma",
+      "Design system com componentes reutilizáveis e tokens visuais"
+    ]
+  },
+  "solution": {
+    "eyebrow": "Solução proposta",
+    "title": "A solução final foi um aplicativo mobile com foco em:",
+    "imageAlt": "Mowcar: solução proposta",
+    "button": "Confere o projeto no Behance ⇢",
+    "items": [
+      "Hierarquia visual que destaca o status atual de cada veículo",
+      "Mapa integrado para contextualizar localização e rotas ativas",
+      "Fluxo de ações críticas (retirar, abrir, devolver) reduzido ao mínimo de passos",
+      "Padrão visual consistente com componentes reutilizáveis em todo o app"
+    ],
+    "note": "O design foi pensado para uso em movimento: o operador precisa agir rápido, sem ter que navegar por menus complexos para concluir uma tarefa simples.",
+    "toolsTitle": "Ferramentas utilizadas",
+    "tools": {
+      "figma": "Figma: UI Design, UX flows e prototipação",
+      "illustrator": "Adobe Illustrator: criação de ícones e elementos gráficos",
+      "photoshop": "Adobe Photoshop: ajustes visuais e tratamento de imagens"
+    }
+  }
+}

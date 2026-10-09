@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "role": "UX / UI Designer",
+    "type": "App",
+    "tags": [
+      "Digital Product",
+      "App",
+      "UX/UI Design",
+      "Figma"
+    ]
+  },
+  "hero": {
+    "subtitle": "App for managing vehicle rentals",
+    "imageAlt": "Mowcar: app for managing vehicle rentals"
+  },
+  "about": {
+    "eyebrow": "About the project",
+    "title": "A case study on simplifying complex operations without losing control.",
+    "imageAlt": "Mowcar interface",
+    "p1": "Mowcar is a personal project that started with a question: can a car rental business be managed with a lean app, without giving up the critical flows?",
+    "p2": "I worked as the solo designer, from mapping requirements to a clickable prototype in Figma. The focus was to prioritize what really matters to the operator every day."
+  },
+  "challenge": {
+    "title": "Context and challenge",
+    "imageAlt": "Mowcar: context and challenge",
+    "p1": "The vehicle rental market has many operational steps: registration, fleet control, pickup, return, history and tracking. Most existing solutions handle all of it with too much complexity.",
+    "p2": "The challenge was to prioritize: which flows are critical for a working MVP, and which can wait?",
+    "items": [
+      "Two distinct user profiles: renter and fleet manager",
+      "A critical flow with many steps: booking, pickup, use and return",
+      "Need for real-time visibility into the status of each vehicle"
+    ]
+  },
+  "gallery": {
+    "first": "Mowcar: home screen"
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "The project followed a practical, product-oriented approach:",
+    "imageAlt": "Mowcar: project workflow",
+    "items": [
+      "MVP scope definition and information architecture mapping",
+      "Navigation flows, wireframes and prototyping in Figma",
+      "Design system with reusable components and visual tokens"
+    ]
+  },
+  "solution": {
+    "eyebrow": "Proposed solution",
+    "title": "The final solution was a mobile app focused on:",
+    "imageAlt": "Mowcar: proposed solution",
+    "button": "See the project on Behance ⇢",
+    "items": [
+      "Visual hierarchy that highlights the current status of each vehicle",
+      "Built-in map to give context to location and active routes",
+      "Critical actions (pick up, open, return) reduced to the fewest steps",
+      "Consistent visual pattern with reusable components across the app"
+    ],
+    "note": "The design was made for use on the move: the operator needs to act fast, without digging through complex menus to finish a simple task.",
+    "toolsTitle": "Tools used",
+    "tools": {
+      "figma": "Figma: UI design, UX flows and prototyping",
+      "illustrator": "Adobe Illustrator: icons and graphic elements",
+      "photoshop": "Adobe Photoshop: visual adjustments and image editing"
+    }
+  }
+}

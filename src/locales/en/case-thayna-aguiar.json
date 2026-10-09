@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "subtitle": "Digital presence with identity, strategy and sophistication.",
+    "imageAlt": "Thayná Aguiar: visual identity and landing page"
+  },
+  "imageAlt": "Details of Thayná Aguiar's visual identity",
+  "about": {
+    "eyebrow": "About the project",
+    "title": "An identity that speaks before she has to explain.",
+    "text": "Visual identity and institutional landing page, focused on strengthening Thayná Aguiar's digital positioning."
+  },
+  "client": {
+    "title": "About the project.",
+    "p1": "Copywriter from Recife, passionate about football and the digital world. <client>Thayná Aguiar</client> is a specialist in creating content that makes a difference on social media. She turns brands into stories that connect people, engage and convert.",
+    "p2": "Thayná already knew who she was. She needed an identity that said it before she had to explain.",
+    "p3": "We started from the concept she brought and expanded it into a website, social media creatives and a media kit. Every visual choice had a reason."
+  },
+  "goals": {
+    "title": "What needed to be solved.",
+    "items": [
+      "Create an identity that represents her faithfully",
+      "Build a website that generates trust and contact",
+      "Structure replicable creatives for social media",
+      "Deliver a media kit ready for professional use",
+      "Ensure consistent performance on desktop and mobile"
+    ],
+    "p1": "The identity had to convey authority without losing human warmth. The interface had to be light enough not to compete for attention with what she communicates.",
+    "p2": "The visual direction was clear: less decoration, more intention. Strong typography, breathing room and subtle micro-interactions."
+  },
+  "mediaKit": {
+    "eyebrow": "Media Kit",
+    "title": "Graphic material for the project.",
+    "button": "Download the Media Kit ↗",
+    "text": "The media kit gathers the numbers, links and visual material Thayná uses to present herself to brands and partners."
+  },
+  "develop": {
+    "eyebrow": "Development",
+    "title": "React + Tailwind. Hosted on Cloudflare.",
+    "text": "The site was built in React with Tailwind and hosted on Cloudflare, focused on performance, fluidity and scalability.",
+    "tips": [
+      "Full control over animations",
+      "Smooth loading",
+      "Scalable structure"
+    ]
+  },
+  "delivered": {
+    "eyebrow": "what was delivered",
+    "title": "From concept to deploy.",
+    "button": "Check out the project on Behance ⇢",
+    "items": [
+      "Complete visual identity with all its applications",
+      "Responsive landing page with intuitive navigation",
+      "Social media creatives aligned with the identity",
+      "Complete media kit with numbers and contact links"
+    ]
+  }
+}

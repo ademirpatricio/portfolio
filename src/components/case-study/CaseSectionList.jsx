@@ -1,7 +1,5 @@
 import Button from '../ui/Button'
 
-import { FaBehance } from "react-icons/fa";
-
 function CaseSectionList({
   eyebrow,
   title,

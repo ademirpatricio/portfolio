@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Quem Sou"
+  },
+  "hero": {
+    "eyebrow": "Quem sou",
+    "titleLine1": "Do gráfico",
+    "titleLine2": "ao produto.",
+    "lead": "Mais de 10 anos projetando produtos digitais. Sempre começando pela pergunta certa.",
+    "description": "Me chamo Ademir Patrício. Sou designer de produto com base em desenvolvimento front-end. Atualmente em Recife, Brasil. Disponível para trabalhos, freelance e oportunidades remotas."
+  },
+  "trajectory": {
+    "links": {
+      "resumeTitle": "Mais informações:",
+      "resumeLabel": "Download do Currículo",
+      "behanceTitle": "Meus projetos:",
+      "behanceLabel": "Projetos no Behance",
+      "githubTitle": "Meus códigos:",
+      "githubLabel": "Meu Github",
+      "linkedinTitle": "Me segue lá:",
+      "linkedinLabel": "Perfil no Linkedin"
+    },
+    "eyebrow": "Minha jornada",
+    "title": "Como cheguei até aqui.",
+    "p1": "Comecei como designer gráfico em 2009 no departamento de marketing da Uninassau, um pouco antes de me formar em Publicidade e Propaganda. Fui entendendo que a forma como as coisas aparecem muda o que as pessoas pensam delas.",
+    "p2": "Pouco tempo depois comecei a estudar web design / front-end e fui chamado para o núcleo de tecnologia da instituição. Foi lá que comecei a entender como as coisas funcionam e são projetadas.",
+    "p3": "Com o tempo, o trabalho ficou mais complexo. Em 2018, na Serttel, atuei no desenvolvimento do aplicativo Zona Azul Digital de Recife. Mobilidade urbana com problema real, escala e resultado para medir. Foi lá que ficou claro o tipo de trabalho que quero fazer.",
+    "p4": "Em 2019 co-fundei a <malabares>Malabares MKT</malabares>. Aprendi a operar os dois lados: do conceito ao código. Isso mudou como trabalho. Projeto entendendo como será feita a implementação.",
+    "p5": "Hoje atuo como product designer na GoExplosion e sigo construindo projetos próprios. O próximo passo é colaborar com times globais em produtos que valham a pena existir."
+  },
+  "manifesto": {
+    "eyebrow": "Manifesto",
+    "lines": [
+      "Antes de projetar, entender.",
+      "Antes de entregar, questionar.",
+      "O problema vem primeiro.",
+      "A solução, depois.",
+      "Só existe o que vale a pena existir."
+    ]
+  },
+  "values": {
+    "eyebrow": "O que orienta cada decisão",
+    "title": "Três <highlight>princípios</highlight> que não mudam.",
+    "items": {
+      "understand": {
+        "title": "Entender antes de desenhar",
+        "description": "Antes de propor qualquer solução, pergunto o que precisa ser resolvido e para quem. Entender primeiro leva um pouco mais de tempo e evita muito retrabalho."
+      },
+      "code": {
+        "title": "Projetar com o código em mente",
+        "description": "Como também construo, sei o que cada decisão custa na implementação. Isso me leva a propor soluções que o time consegue entregar."
+      },
+      "lasting": {
+        "title": "Construir produtos para durar",
+        "description": "Penso no que acontece depois da entrega. Componentes reutilizáveis e um sistema de design mantêm o produto pronto para crescer sem recomeçar do zero."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experiência",
+    "title": "O caminho até aqui.",
+    "items": {
+      "goexplosion": {
+        "period": "2021 – hoje",
+        "company": "GoExplosion",
+        "role": "Product Designer & Front-End Developer",
+        "description": "Design de produto, sistemas internos e páginas de conversão para plataforma de infoprodutos. Ponte entre design e engenharia."
+      },
+      "malabares": {
+        "period": "2019 – 2026",
+        "company": "Malabares MKT",
+        "role": "Co-fundador & UX/UI Designer",
+        "description": "Do briefing ao código. Design, desenvolvimento e estratégia digital para pequenas e médias empresas."
+      },
+      "crope": {
+        "period": "2020 – 2021",
+        "company": "CRO-PE",
+        "role": "Designer Gráfico",
+        "description": "Comunicação visual institucional em diferentes canais digitais e eventos."
+      },
+      "serttel": {
+        "period": "2018 – 2019",
+        "company": "Serttel",
+        "role": "Designer de Produtos Digitais",
+        "description": "Mobilidade urbana. Participei da concepção do aplicativo Zona Azul Digital de Recife. Da prototipação à validação com usuários reais."
+      },
+      "gruposer": {
+        "period": "2013 – 2015",
+        "company": "Grupo Ser",
+        "role": "Web Designer",
+        "description": "Produtos digitais para educação. Sites institucionais e padronização visual."
+      },
+      "early": {
+        "period": "2009 – 2012",
+        "company": "Início de carreira",
+        "role": "Web & Graphic Designer",
+        "description": "Naips Technology, Icorp, Trupe, Faculdade Nassau. Design web, gráfico e interfaces."
+      }
+    }
+  }
+}

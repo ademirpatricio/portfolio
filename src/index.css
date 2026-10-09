@@ -4,6 +4,7 @@
 /* text-span: tamanho, espaçamento e peso vêm do tailwind.config.js.
    O uppercase fica aqui porque o fontSize do Tailwind não aceita textTransform. */
 @layer components {
+  .text-h5,
   .text-span {
     text-transform: uppercase;
   }
@@ -18,6 +19,7 @@
     min-width: 320px;
     margin: 0;
     font-family: theme(fontFamily.sans);
+    font-weight: 400;
     color: theme(colors.white);
     background: theme(colors.midnight-deep);
     font-synthesis: none;

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "role": "Role",
+    "category": "Category",
+    "stack": "Technologies",
+    "year": "Year",
+    "project": "Project"
+  },
+  "develop": {
+    "viewRepo": "View repository on GitHub",
+    "viewBehance": "View project on Behance"
+  },
+  "context": {
+    "eyebrow": "Context"
+  },
+  "decisions": {
+    "eyebrow": "Process and decisions",
+    "done": "What was done",
+    "alternative": "Discarded alternative",
+    "impact": "Impact"
+  },
+  "result": {
+    "eyebrow": "Result",
+    "previous": "Previous",
+    "next": "Next",
+    "testimonial": "Testimonial {{number}}"
+  },
+  "learning": {
+    "eyebrow": "Lessons learned",
+    "product": "About the product",
+    "process": "About the process"
+  },
+  "cta": {
+    "eyebrow": "See the product",
+    "label": "Open product"
+  }
+}

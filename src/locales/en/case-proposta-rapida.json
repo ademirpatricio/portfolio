@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "role": "Designer & Developer",
+    "type": "Product / SaaS",
+    "tags": [
+      "Digital Product",
+      "SaaS",
+      "Full-Stack"
+    ]
+  },
+  "hero": {
+    "subtitle": "Professional proposals in minutes. No sign-up. No hassle.",
+    "imageAlt": "Proposta Rápida: business proposal generator"
+  },
+  "context": {
+    "eyebrow": "Context",
+    "imageAlt": "Proposta Rápida: product interface",
+    "p1": "Proposta Rápida started from a problem I kept seeing: freelancers losing clients because of poorly made proposals, or proposals sent too late.",
+    "p2": "I was the designer and developer, from zero to deploy, using Next.js, Tailwind and TypeScript. A Malabares product that has been live since 2026."
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "title": "The sales process breaks before it starts.",
+    "p1": "Freelancers lose clients not because they lack skill, but because of the sales process. Building a proposal in Word takes hours, needs manual formatting and still arrives late, when the client has already picked someone else.",
+    "p2": "The tools that exist are heavy, generic or too expensive for people just starting out.",
+    "pain": [
+      {
+        "title": "Time lost on formatting",
+        "description": "Building a proposal in Word takes about 2 hours on average, time that could go into the project."
+      },
+      {
+        "title": "A look that does not build trust",
+        "description": "Proposals without a visual standard look improvised, even when the professional is good."
+      },
+      {
+        "title": "Delays that cost the client",
+        "description": "Being first matters more than being polished. The proposal that wins is the one that arrived first."
+      }
+    ]
+  },
+  "users": {
+    "eyebrow": "Main personas",
+    "title": "Who spends time building proposals every day.",
+    "personas": [
+      {
+        "name": "Rafael",
+        "role": "Freelance designer · 34 years old",
+        "bio": "Works with 4 to 6 clients at once. Spends about 2 hours a week building proposals in Word, time he could spend on projects.",
+        "pain": "Has lost clients because of slow replies. Knows the problem is not the price, it is the reaction time.",
+        "tags": [
+          "Freelancer",
+          "São Paulo",
+          "R$ 8–15k/month"
+        ]
+      },
+      {
+        "name": "Carla",
+        "role": "Agency manager · 41 years old",
+        "bio": "Runs a small agency with 4 people. The proposal process has no standard: everyone does it their own way, which creates rework and visual inconsistency.",
+        "pain": "Has no time to standardize the process internally. Needs a tool that is ready to use.",
+        "tags": [
+          "Small agency",
+          "Curitiba",
+          "4 team members"
+        ]
+      }
+    ]
+  },
+  "statement": {
+    "text": "Freelancers need a fast way to create and send proposals because the manual process makes them lose clients to faster competitors.",
+    "hmw": "How might we cut the time it takes to create a proposal, so professionals can reply to the client the same day, without giving up a professional-looking result?"
+  },
+  "decisions": {
+    "eyebrow": "Process and decisions",
+    "title": "Why the product turned out this way.",
+    "items": [
+      {
+        "title": "Single form vs. step-by-step wizard",
+        "decision": "A single form with the proposal preview beside it, updated in real time.",
+        "alternative": "A multi-step wizard, which would look more structured but add unnecessary clicks.",
+        "impact": "With the preview beside the form, users see the result while they type. There is no screen between the form and the PDF."
+      },
+      {
+        "title": "Export with window.print() vs. PDF library",
+        "decision": "Export using window.print() with dedicated print styles.",
+        "alternative": "A PDF generation library such as pdfmake, or puppeteer on the server.",
+        "impact": "print() keeps full fidelity to the preview: what you see is what the client gets. External libraries bring rendering differences and server costs."
+      },
+      {
+        "title": "Freemium vs. paid from day one",
+        "decision": "A free version with a watermark + a PRO version without the watermark.",
+        "alternative": "A paid product from first use, with a 7-day trial.",
+        "impact": "Freemium removes the entry barrier. Users try the product before paying, and the watermark on the PDF works as passive promotion."
+      }
+    ]
+  },
+  "flow": {
+    "eyebrow": "Flow",
+    "title": "Experience architecture.",
+    "description": "I designed the product so that creating and sending a proposal never takes more than 4 steps.",
+    "root": "Proposta Rápida",
+    "branches": [
+      {
+        "label": "Landing",
+        "children": [
+          "Value proposition",
+          "CTA: Create for free"
+        ]
+      },
+      {
+        "label": "Create proposal",
+        "children": [
+          "Basic information",
+          "Project details",
+          "Pricing and deadline"
+        ]
+      },
+      {
+        "label": "Preview + PDF",
+        "children": [
+          "Real-time preview",
+          "Export via print()",
+          "Watermark (free)"
+        ]
+      },
+      {
+        "label": "PRO version",
+        "children": [
+          "Sales page",
+          "PDF without watermark",
+          "Confirmation"
+        ]
+      }
+    ]
+  },
+  "screens": {
+    "eyebrow": "The screens",
+    "title": "From form to professional PDF.",
+    "main": {
+      "alt": "Proposta Rápida landing page",
+      "caption": "Landing page: a clear value proposition before any sign-up or friction."
+    },
+    "items": [
+      {
+        "alt": "Proposal creation form",
+        "caption": "Users define scope and price before seeing the final document."
+      },
+      {
+        "alt": "PDF generated by Proposta Rápida",
+        "caption": "A preview that matches the exported PDF: what you see is what the client gets."
+      },
+      {
+        "alt": "PRO version page",
+        "caption": "PRO is offered at the right moment, when the user has already felt the value."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "See the product",
+    "title": "Want to see how it works in practice?",
+    "description": "Proposta Rápida is live. Create a free proposal in under 8 minutes.",
+    "label": "Open Proposta Rápida"
+  },
+  "learning": {
+    "eyebrow": "Lessons learned",
+    "imageAlt": "Proposta Rápida: product detail",
+    "product": "The product does what it set out to do. But the biggest discovery was that the barrier was not technical, it was trust. Users need to see the PDF come out looking professional before they risk sending it to a real client. Improving the preview did the most to drive adoption.",
+    "process": "I started coding before the flow was fully clear. A classic mistake. I rebuilt the creation screen twice. If I had spent more time on the wireframe before opening VS Code, I would have saved a week."
+  },
+  "gallery": [
+    "Proposta Rápida home screen",
+    "Proposal creation form",
+    "Real-time proposal preview",
+    "PDF generated by Proposta Rápida",
+    "PRO version sales page",
+    "Proposta Rápida on mobile"
+  ]
+}

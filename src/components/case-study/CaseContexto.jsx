@@ -12,13 +12,18 @@ Se uma imagem for fornecida, ela será exibida à esquerda e o texto à direita.
 Caso contrário, apenas o texto será exibido alinhado à esquerda.
 */
 
+import { useTranslation } from 'react-i18next'
+
 function CaseContexto({ 
-  eyebrow = 'Contexto', 
+  eyebrow, 
   title, 
   children, 
   image, 
   imageAlt = '' }) 
   {
+  const { t } = useTranslation('cases')
+  const label = eyebrow ?? t('context.eyebrow')
+
   if (image) {
     return (
       <section className="px-12 max-w-container mx-auto py-16">
@@ -37,7 +42,7 @@ function CaseContexto({
           {/* Coluna direita — texto (2/3) */}
           <div>
             <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
-              {eyebrow}
+              {label}
             </p>
             {title && (
               <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>
@@ -54,7 +59,7 @@ function CaseContexto({
     <section className="px-12 max-w-container mx-auto py-16">
       <div className="max-w-3xl">
         <p className="text-label font-medium uppercase tracking-widest text-orbit-cyan mb-4">
-          {eyebrow}
+          {label}
         </p>
         {title && (
           <h2 className="text-h3 font-bold text-white mb-6">{title}</h2>

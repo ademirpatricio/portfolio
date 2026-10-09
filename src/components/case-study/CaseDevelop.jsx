@@ -1,5 +1,6 @@
 import { FaGithub } from 'react-icons/fa6'
 import { FaBehance } from "react-icons/fa";
+import { useTranslation } from 'react-i18next'
 
 function CaseDevelop ({
     eyebrown,
@@ -9,6 +10,8 @@ function CaseDevelop ({
     linkBehance,
     children
 }){
+    const { t } = useTranslation('cases')
+
     return (
         <section className="px-6 max-w-container mx-auto my-24">
         <div className="bg-white-10 border border-white-10 rounded-card p-8 md:p-12">
@@ -35,7 +38,7 @@ function CaseDevelop ({
                     className="inline-flex items-center gap-2 text-small px-4 py-2 
                     rounded-btn text-white hover:text-stellar-white transition 
                     hover:bg-nebula-violet/50">
-                    <FaGithub className="text-orbit-cyan" /> Ver repositório no GitHub</a>
+                    <FaGithub className="text-orbit-cyan" /> {t('develop.viewRepo')}</a>
                 )}
                 {linkBehance && (
                     <a
@@ -45,7 +48,7 @@ function CaseDevelop ({
                     className="inline-flex items-center gap-2 text-small px-4 py-2 
                     rounded-btn text-white hover:text-stellar-white transition 
                     hover:bg-nebula-violet/50">
-                    <FaBehance className="text-solar-gold" /> Ver projeto no Behance</a>
+                    <FaBehance className="text-solar-gold" /> {t('develop.viewBehance')}</a>
                 )}
             </div>
         </div>

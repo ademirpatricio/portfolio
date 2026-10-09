@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "eyebrow": "UI / UX · Product Design · Front-end",
+    "titleLine1": "Antes de criar,",
+    "titleLine2": "compreender.",
+    "description": "Sou <strong>Ademir Patrício</strong>, designer e front-end com mais de 10 anos no digital. Meu trabalho é encontrar as perguntas certas e transformar as respostas em um produto com direção.",
+    "viewProjects": "Ver projetos",
+    "talk": "Falar comigo ⇢"
+  },
+  "about": {
+    "eyebrow": "Quem sou eu",
+    "title": "Aprendi a projetar construindo e questionando.",
+    "content": "Comecei no design gráfico, passei pela web e front-end e hoje trabalho com produtos digitais. Trabalhei em agências, times de marketing e empresas de tecnologia, de mobilidade urbana à educação. Em cada fase, a pergunta foi a mesma: para onde isso precisa levar as pessoas?",
+    "cta": "Ver minha trajetória ⇢",
+    "resumeTitle": "Mais informações:",
+    "resumeLabel": "Download do Currículo",
+    "codeTitle": "Meus códigos:",
+    "codeLabel": "Github em Desenvolvimento"
+  },
+  "services": {
+    "eyebrow": "O que faço",
+    "title": "Onde posso ajudar cada projeto",
+    "items": {
+      "productDesign": {
+        "title": "Product Design",
+        "description": "Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão."
+      },
+      "frontEnd": {
+        "title": "Front-End",
+        "description": "O que projeto, sei construir. Uso React, Next.js e Tailwind CSS e levo o componente do desenho até o deploy."
+      },
+      "designSystems": {
+        "title": "Design Systems",
+        "description": "Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projetos em destaque",
+    "title": "Do problema ao deploy.",
+    "more": "Ver mais projetos ⇢"
+  }
+}

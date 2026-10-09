@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 import Title from '../../ui/Title'
 import Fade from '../../ui/Fade'
@@ -7,19 +8,15 @@ import ProjectCard from '../../ui/ProjectCard'
 import FadeIn from '../../ui/FadeIn'
 import Button from '../../ui/Button'
 
-import { featuredProjects as projects } from '../../../data/projects'
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
-}
-
-const containerVariants = {
-  hidden: {},
-  show:   { transition: { staggerChildren: 0.1 } },
-}
+import { useFeaturedProjects } from '../../../hooks/useProjects'
+import { useLocalizedPath } from '../../../hooks/useLang'
+import { cardVariants, containerVariants } from '../../../utils/motion'
 
 function HomeProjects() {
+  const { t } = useTranslation('home')
+  const projects = useFeaturedProjects()
+  const lp = useLocalizedPath()
+
   return (
     <section
       className="relative bg-deep-blue pt-4 py-10 md:py-28"
@@ -29,8 +26,8 @@ function HomeProjects() {
       <div className="mx-auto max-w-container px-6 md:px-12">
         <FadeIn className="mb-10 text-center md:mb-16">
           <Title
-            span="Projetos em destaque"
-            titleH2="Do problema ao deploy."
+            span={t('projects.eyebrow')}
+            titleH2={t('projects.title')}
           />
         </FadeIn>
 
@@ -65,7 +62,7 @@ function HomeProjects() {
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.2 }}
               >
-                <Link to={project.link} className={className}>
+                <Link to={lp(project.link)} className={className}>
                   <ProjectCard {...project} />
                 </Link>
               </motion.div>
@@ -75,7 +72,7 @@ function HomeProjects() {
 
         <FadeIn className="mt-10 text-center md:mt-16">
           <Button variant="secondary" href="/projetos" size="md">
-            Ver mais projetos ⇢
+            {t('projects.more')}
           </Button>
         </FadeIn>
       </div>

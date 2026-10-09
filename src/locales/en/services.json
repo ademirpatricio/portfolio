@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "What I do"
+  },
+  "hero": {
+    "eyebrow": "What I do",
+    "titleLine1": "Understand first,",
+    "titleLine2": "then build.",
+    "subtitle": "Every delivery starts with the right question.",
+    "description": "The brief opens the conversation. The scope comes after I understand the problem."
+  },
+  "items": {
+    "productDesign": {
+      "title": "Product Design",
+      "description": "I start with the problem and only then open Figma. I design flows, prototype what needs testing and explain every decision."
+    },
+    "frontEnd": {
+      "title": "Front-End",
+      "description": "What I design, I know how to build. I use React and Tailwind CSS and take each component to deploy, with AI support and review."
+    },
+    "designSystems": {
+      "title": "Design Systems",
+      "description": "I organize tokens, components and patterns so the product keeps moving in the same direction, even as the team grows."
+    }
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "Six steps. From the problem to the next cycle.",
+    "steps": {
+      "understand": {
+        "title": "Understand",
+        "subtitle": "Research",
+        "description": "Before opening Figma, I understand the context: who it is for, why it exists and how it will be built."
+      },
+      "define": {
+        "title": "Define",
+        "subtitle": "Scope",
+        "description": "I make the problem clear before the solution. I define scope, success criteria and what stays for later."
+      },
+      "design": {
+        "title": "Design",
+        "subtitle": "Prototype",
+        "description": "Flow first, then visuals. Experience decisions come before aesthetic ones. The beautiful screen is a consequence."
+      },
+      "build": {
+        "title": "Build",
+        "subtitle": "MVP",
+        "description": "Prototype or code, depending on what the problem needs. I can deliver both. I use AI to move faster and review everything it writes."
+      },
+      "validate": {
+        "title": "Validate",
+        "subtitle": "Testing",
+        "description": "I test with the people who will use it and check that what was designed goes live and works. I adjust before calling it done."
+      },
+      "evolve": {
+        "title": "Evolve",
+        "subtitle": "Roadmap",
+        "description": "A launched product is a product that begins. What the data shows guides the next cycle."
+      }
+    }
+  },
+  "tools": {
+    "eyebrow": "Tools",
+    "title": "What I work with.",
+    "others": "<strong>Other tools:</strong> Sketch, Zeplin, PHP, Elementor"
+  },
+  "github": {
+    "eyebrow": "Code",
+    "title": "Design becomes real code.",
+    "button": "View projects on GitHub →",
+    "imageAlt": "GitHub screen with design and front-end projects",
+    "text": "On my <strong>GitHub</strong> you will find real applications, experiments, components and products I built from design to deploy."
+  }
+}

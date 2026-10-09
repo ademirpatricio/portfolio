@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 import Cta from '../components/layout/Cta'
 import FadeIn from '../components/ui/FadeIn'
@@ -7,34 +8,31 @@ import Title from '../components/ui/Title'
 import ProjectCard from '../components/ui/ProjectCard'
 import usePageTitle from '../hooks/usePageTitle'
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
-}
-
-const containerVariants = {
-  hidden: {},
-  show:   { transition: { staggerChildren: 0.1 } },
-}
-
-import { projects } from '../data/projects'
+import { useProjects } from '../hooks/useProjects'
+import { useLocalizedPath } from '../hooks/useLang'
+import { cardVariants, containerVariants } from '../utils/motion'
 
 function Projects() {
-  usePageTitle('Projetos')
+  const { t } = useTranslation('projects')
+  usePageTitle(t('page.title'))
+  const projects = useProjects()
+  const lp = useLocalizedPath()
 
   return (
     <>
     <section
-      className="relative bg-deep-blue py-20 md:py-28"
+      className="relative bg-deep-blue py-20 md:pt-50 md:pb-28
+      bg-[url('./assets/images/projects-hero-bg.jpg')] 
+      bg-top bg-no-repeat bg-contain"
       id="projects"
       aria-labelledby="projects-title"
     >
       <div className="mx-auto max-w-container px-6 md:px-12">
         <FadeIn className="mb-10 text-center md:mb-16">
           <Title
-            span="Projetos em destaque"
-            titleH2="Do problema ao deploy."
-            content="Projetos reais. Coisas que estão em órbita."
+            span={t('page.eyebrow')}
+            titleH2={t('page.heading')}
+            content={t('page.content')}
           />
         </FadeIn>
 
@@ -69,7 +67,7 @@ function Projects() {
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.2 }}
               >
-                <Link to={project.link} className={className}>
+                <Link to={lp(project.link)} className={className}>
                   <ProjectCard {...project} />
                 </Link>
               </motion.div>

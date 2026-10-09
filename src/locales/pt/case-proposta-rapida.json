@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "role": "Designer & Desenvolvedor",
+    "type": "Produto / SaaS",
+    "tags": [
+      "Produto Digital",
+      "SaaS",
+      "Full-Stack"
+    ]
+  },
+  "hero": {
+    "subtitle": "Propostas profissionais em minutos. Sem cadastro. Sem complicação.",
+    "imageAlt": "Proposta Rápida: gerador de propostas comerciais"
+  },
+  "context": {
+    "eyebrow": "Contexto",
+    "imageAlt": "Proposta Rápida: interface do produto",
+    "p1": "Proposta Rápida nasceu de um problema que eu via direto: profissionais autônomos perdendo clientes por causa de propostas mal feitas ou enviadas tarde demais.",
+    "p2": "Fui designer e desenvolvedor, do zero ao deploy, usando Next.js, Tailwind e TypeScript. Um produto da Malabares que está no ar desde 2026."
+  },
+  "problem": {
+    "eyebrow": "O problema",
+    "title": "O processo de venda quebra antes de começar.",
+    "p1": "Profissionais autônomos perdem clientes não por falta de competência, mas pelo processo de venda. Montar uma proposta no Word leva horas, exige formatação manual e ainda chega tarde, quando o cliente já fechou com outra pessoa.",
+    "p2": "As ferramentas que existem são pesadas, genéricas ou caras demais para quem está começando.",
+    "pain": [
+      {
+        "title": "Tempo perdido em formatação",
+        "description": "Montar uma proposta no Word consome em média 2 horas, tempo que podia estar no projeto."
+      },
+      {
+        "title": "Visual que não transmite confiança",
+        "description": "Propostas sem padrão visual passam imagem de improviso, mesmo quando o profissional é bom."
+      },
+      {
+        "title": "Atraso que custa o cliente",
+        "description": "Chegar primeiro importa mais do que chegar bem feito. A proposta que fecha é a que chegou antes."
+      }
+    ]
+  },
+  "users": {
+    "eyebrow": "Principais personas",
+    "title": "Quem perde tempo criando propostas todo dia.",
+    "personas": [
+      {
+        "name": "Rafael",
+        "role": "Designer freelancer · 34 anos",
+        "bio": "Trabalha com 4 a 6 clientes simultâneos. Passa cerca de 2 horas por semana montando propostas no Word, perdendo tempo que poderia dedicar a projetos.",
+        "pain": "Já perdeu clientes por demora na resposta. Sabe que o problema não é o preço, é o tempo de reação.",
+        "tags": [
+          "Autônomo",
+          "São Paulo",
+          "R$ 8–15k/mês"
+        ]
+      },
+      {
+        "name": "Carla",
+        "role": "Gestora de agência · 41 anos",
+        "bio": "Comanda uma pequena agência com 4 pessoas. O processo de proposta não tem padrão: cada pessoa faz do seu jeito, o que gera retrabalho e inconsistência visual.",
+        "pain": "Não tem tempo para padronizar o processo internamente. Precisa de uma ferramenta que já venha pronta.",
+        "tags": [
+          "Agência pequena",
+          "Curitiba",
+          "4 colaboradores"
+        ]
+      }
+    ]
+  },
+  "statement": {
+    "text": "Profissionais autônomos precisam de uma forma rápida de criar e enviar propostas porque o processo manual os faz perder clientes para concorrentes mais ágeis.",
+    "hmw": "Como poderíamos reduzir o tempo de criação de uma proposta para que o profissional consiga responder ao cliente no mesmo dia, sem abrir mão de um resultado visualmente profissional?"
+  },
+  "decisions": {
+    "eyebrow": "Processo e decisões",
+    "title": "Por que o produto ficou assim.",
+    "items": [
+      {
+        "title": "Formulário único vs. wizard em etapas",
+        "decision": "Formulário único com preview da proposta ao lado, atualizado em tempo real.",
+        "alternative": "Wizard em múltiplas etapas, que pareceria mais estruturado mas adicionaria cliques desnecessários.",
+        "impact": "Com o preview ao lado, o usuário vê o resultado enquanto preenche. Não há tela intermediária entre o formulário e o PDF."
+      },
+      {
+        "title": "Exportação via window.print() vs. biblioteca PDF",
+        "decision": "Exportação usando window.print() com estilos dedicados para impressão.",
+        "alternative": "Biblioteca de geração de PDF como pdfmake ou puppeteer no servidor.",
+        "impact": "O print() mantém fidelidade total ao preview: o que você vê é o que o cliente recebe. Bibliotecas externas introduzem diferenças de renderização e custos de servidor."
+      },
+      {
+        "title": "Freemium vs. pago direto",
+        "decision": "Versão gratuita com marca d'água + versão PRO sem marca d'água.",
+        "alternative": "Produto pago desde o primeiro uso, com trial de 7 dias.",
+        "impact": "O freemium elimina a barreira de entrada. O usuário experimenta o produto antes de pagar, e a marca d'água no PDF funciona como divulgação passiva."
+      }
+    ]
+  },
+  "flow": {
+    "eyebrow": "Fluxo",
+    "title": "Arquitetura da experiência.",
+    "description": "Desenhei o produto para que criar e enviar uma proposta nunca passasse de 4 passos.",
+    "root": "Proposta Rápida",
+    "branches": [
+      {
+        "label": "Landing",
+        "children": [
+          "Proposta de valor",
+          "CTA: Criar grátis"
+        ]
+      },
+      {
+        "label": "Criar proposta",
+        "children": [
+          "Informações básicas",
+          "Detalhes do projeto",
+          "Valores e prazo"
+        ]
+      },
+      {
+        "label": "Preview + PDF",
+        "children": [
+          "Preview em tempo real",
+          "Exportar via print()",
+          "Marca d'água (free)"
+        ]
+      },
+      {
+        "label": "Versão PRO",
+        "children": [
+          "Página de venda",
+          "PDF sem marca d'água",
+          "Confirmação"
+        ]
+      }
+    ]
+  },
+  "screens": {
+    "eyebrow": "As telas",
+    "title": "Do formulário ao PDF profissional.",
+    "main": {
+      "alt": "Landing page do Proposta Rápida",
+      "caption": "Landing page: proposta de valor clara antes de qualquer cadastro ou fricção."
+    },
+    "items": [
+      {
+        "alt": "Formulário de criação de proposta",
+        "caption": "Usuário define escopo e valor antes de visualizar o documento final."
+      },
+      {
+        "alt": "PDF gerado pelo Proposta Rápida",
+        "caption": "Preview fiel ao PDF exportado: o que você vê é o que o cliente recebe."
+      },
+      {
+        "alt": "Página da versão PRO",
+        "caption": "Versão PRO apresentada no momento certo, quando o usuário já sentiu o valor."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Ver produto",
+    "title": "Quer ver como fica na prática?",
+    "description": "O Proposta Rápida está no ar. Cria uma proposta grátis em menos de 8 minutos.",
+    "label": "Abrir Proposta Rápida"
+  },
+  "learning": {
+    "eyebrow": "Aprendizado",
+    "imageAlt": "Proposta Rápida: detalhe do produto",
+    "product": "O produto resolve o que se propõe a resolver. Mas a maior descoberta foi perceber que a barreira não era técnica: era de confiança. O usuário precisa ver o PDF sair profissional antes de arriscar enviar para um cliente real. Melhorar o preview foi o que mais moveu a adoção.",
+    "process": "Comecei a codar antes de ter clareza total no fluxo. Erro clássico. Refiz a tela de criação duas vezes. Se tivesse passado mais tempo no wireframe antes de abrir o VS Code, teria economizado uma semana."
+  },
+  "gallery": [
+    "Tela inicial do Proposta Rápida",
+    "Formulário de criação de proposta",
+    "Preview da proposta em tempo real",
+    "PDF gerado pelo Proposta Rápida",
+    "Página de vendas da versão PRO",
+    "Proposta Rápida em mobile"
+  ]
+}

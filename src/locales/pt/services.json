@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "O que faço"
+  },
+  "hero": {
+    "eyebrow": "O que faço",
+    "titleLine1": "Primeiro entender,",
+    "titleLine2": "depois construir.",
+    "subtitle": "Cada entrega começa com a pergunta certa.",
+    "description": "O briefing abre a conversa e o escopo vem depois de compreender o problema."
+  },
+  "items": {
+    "productDesign": {
+      "title": "Product Design",
+      "description": "Começo pelo problema e só depois abro o Figma. Desenho fluxos, prototipo o que precisa de teste e explico cada decisão."
+    },
+    "frontEnd": {
+      "title": "Front-End",
+      "description": "O que projeto, sei construir. Uso React e Tailwind CSS e levo o componente até o deploy com apoio e revisão de IA."
+    },
+    "designSystems": {
+      "title": "Design Systems",
+      "description": "Organizo tokens, componentes e padrões para o produto seguir na mesma direção, mesmo quando o time cresce."
+    }
+  },
+  "process": {
+    "eyebrow": "Processo",
+    "title": "Seis etapas. Do problema ao próximo ciclo.",
+    "steps": {
+      "understand": {
+        "title": "Entender",
+        "subtitle": "Pesquisa",
+        "description": "Antes de abrir o Figma, entendo o contexto: para quem é, por que existe e como vai ser feito."
+      },
+      "define": {
+        "title": "Definir",
+        "subtitle": "Escopo",
+        "description": "Deixo o problema claro antes da solução. Defino escopo, critérios de sucesso e o que fica para depois."
+      },
+      "design": {
+        "title": "Projetar",
+        "subtitle": "Protótipo",
+        "description": "Primeiro o fluxo, depois o visual. As decisões de experiência vêm antes das decisões estéticas. A tela bonita é consequência."
+      },
+      "build": {
+        "title": "Construir",
+        "subtitle": "MVP",
+        "description": "Protótipo ou código, conforme o problema pede. Consigo entregar os dois. Uso IA para ganhar velocidade e reviso tudo que ela escreve."
+      },
+      "validate": {
+        "title": "Validar",
+        "subtitle": "Testes",
+        "description": "Testo com quem vai usar e confiro se o que foi projetado vai ao ar e funciona. Ajusto antes de chamar de pronto."
+      },
+      "evolve": {
+        "title": "Evoluir",
+        "subtitle": "Roadmap",
+        "description": "Produto lançado é produto que começa. O que os dados mostram orienta o próximo ciclo."
+      }
+    }
+  },
+  "tools": {
+    "eyebrow": "Ferramentas",
+    "title": "Com o que trabalho.",
+    "others": "<strong>Outras ferramentas:</strong> Sketch, Zeplin, PHP, Elementor"
+  },
+  "github": {
+    "eyebrow": "Códigos",
+    "title": "O design vira código de verdade.",
+    "button": "Ver projetos no GitHub →",
+    "imageAlt": "Tela do GitHub com projetos de design e front-end",
+    "text": "No meu <strong>GitHub</strong> você encontra aplicações reais, experimentos, componentes e produtos que desenvolvi do design ao deploy."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "aboutMobile": "ABOUT",
+    "services": "WHAT I DO",
+    "projects": "PROJECTS",
+    "talk": "LET'S TALK ⇢",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "whatsapp": {
+    "message": "Hi! I'd like to talk to Ademir Patrício",
+    "ariaLabel": "Open WhatsApp chat"
+  },
+  "footer": {
+    "rights": "© 2026 Ademir Patrício - All rights reserved"
+  },
+  "cta": {
+    "eyebrow": "Get in touch",
+    "titleLine1": "Every journey starts",
+    "titleLine2": "with a direction.",
+    "description": "If you have a project, a job opening or an idea on paper, talk to me. Together we find out which direction it needs to go.",
+    "button": "Let's talk ⇢",
+    "availabilityTitle": "Freelance / Availability:",
+    "availabilityLabel": "Open to opportunities"
+  },
+  "cookie": {
+    "text": "This site uses cookies to analyze traffic and better understand who visits it. By accepting, you consent to tools such as Google Analytics and LinkedIn Insight Tag.",
+    "decline": "Decline",
+    "accept": "Accept"
+  }
+}

@@ -1,20 +1,24 @@
+import { useTranslation } from 'react-i18next'
+
 function CaseAprendizado({ 
-  eyebrow = 'Aprendizado', 
+  eyebrow, 
   productOpinion, 
   processOpinion, 
   image, 
   imageAlt = '' }) 
   {
+  const { t } = useTranslation('cases')
+
   const content = (
     <>
       <p className="text-small font-medium uppercase text-orbit-cyan mb-4">
-        {eyebrow}
+        {eyebrow ?? t('learning.eyebrow')}
       </p>
 
       {productOpinion && (
         <div className="mb-8">
           <p className="text-label font-semibold uppercase text-white mb-3">
-            Sobre o produto
+            {t('learning.product')}
           </p>
           <p className="text-body text-white-60">{productOpinion}</p>
         </div>
@@ -23,7 +27,7 @@ function CaseAprendizado({
       {processOpinion && (
         <div>
           <p className="text-label font-semibold uppercase text-white mb-3">
-            Sobre o processo
+            {t('learning.process')}
           </p>
           <p className="text-body text-white-60">{processOpinion}</p>
         </div>

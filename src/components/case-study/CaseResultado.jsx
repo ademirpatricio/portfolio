@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 
 // metrics: [{ value: string, label: string, description?: string }]
 // testimonials: [{ quote: string, name: string, role: string }]
 
-function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = [], testimonials = [] }) {
+function CaseResultado({ eyebrow, title, description, metrics = [], testimonials = [] }) {
+  const { t } = useTranslation('cases')
   const [current, setCurrent] = useState(0)
 
   const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1))
@@ -13,7 +15,7 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
   return (
     <section className="px-12 max-w-container mx-auto py-16">
       <p className="text-label font-medium uppercase text-orbit-cyan mb-4">
-        {eyebrow}
+        {eyebrow ?? t('result.eyebrow')}
       </p>
       {title && (
         <h3 className="text-h3 font-bold text-white mb-4">{title}</h3>
@@ -72,7 +74,7 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
                     onClick={prev}
                     className="w-8 h-8 rounded-lg border border-white-07 flex items-center justify-center
                       text-white-35 hover:text-white hover:border-white-35 transition-colors"
-                    aria-label="Anterior"
+                    aria-label={t('result.previous')}
                   >
                     <LuChevronLeft size={16} />
                   </button>
@@ -85,7 +87,7 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
                         className={`h-1.5 rounded-full transition-all ${
                           i === current ? 'w-5 bg-cosmic-blue' : 'w-1.5 bg-white-07'
                         }`}
-                        aria-label={`Depoimento ${i + 1}`}
+                        aria-label={t('result.testimonial', { number: i + 1 })}
                       />
                     ))}
                   </div>
@@ -94,7 +96,7 @@ function CaseResultado({ eyebrow = 'Resultado', title, description, metrics = []
                     onClick={next}
                     className="w-8 h-8 rounded-lg border border-white-07 flex items-center justify-center
                       text-white-35 hover:text-white hover:border-white-35 transition-colors"
-                    aria-label="Próximo"
+                    aria-label={t('result.next')}
                   >
                     <LuChevronRight size={16} />
                   </button>

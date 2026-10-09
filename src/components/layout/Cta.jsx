@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { GiCoffeeCup } from 'react-icons/gi'
+import { useTranslation } from 'react-i18next'
+import useWhatsappLink from '../../hooks/useWhatsappLink'
 import FadeIn from '../ui/FadeIn'
 
 import ctaBg from '../../assets/images/cta-bg.jpg'
@@ -10,9 +12,10 @@ import Fade from '../ui/Fade'
 
 function Cta() {
 
-  // Número de Whastapp para contato
-  const whatsappLink =
-  'https://wa.me/5581998590849?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20Ademir%20Patr%C3%ADcio'
+  const { t } = useTranslation('common')
+
+  // Link de WhatsApp para contato (mensagem no idioma atual)
+  const whatsappLink = useWhatsappLink()
 
   // Efeito de parallax — offset relativo ao centro da seção
   const sectionRef = useRef(null)
@@ -62,18 +65,17 @@ function Cta() {
       <FadeIn className="relative z-60 mx-auto max-w-[650px] px-6 md:px-12">
         <span className="mb-4 inline-block text-span
         text-orbit-cyan text-neon">
-          Entre em Contato
+          {t('cta.eyebrow')}
         </span>
 
         <h2 id="contact-title" className="text-h2 font-bold text-white mb-8 ">
-          Toda jornada começa 
+          {t('cta.titleLine1')}
           <span className="text-stellar-white">
-          <br className="hidden md:block" /> com uma direção.</span>
+          <br className="hidden md:block" /> {t('cta.titleLine2')}</span>
         </h2>
 
         <p className="mb-10 text-body text-stellar-white">
-          Se você tem um projeto, uma vaga ou uma ideia no papel, 
-          fala comigo. A gente descobre juntos para qual direção isso precisa ir.
+          {t('cta.description')}
         </p>
 
         <Button
@@ -83,15 +85,15 @@ function Cta() {
           href={whatsappLink}
           target="_blank"
         >
-          Falar comigo ⇢
+          {t('cta.button')}
         </Button>
 
         <div className="mt-8 flex justify-center relative z-60">
           <IconeText
             icon={GiCoffeeCup}
             iconClassName="text-orbit-cyan"
-            title="Freelance / Disponibilidade:"
-            label="Aberto à oportunidades"
+            title={t('cta.availabilityTitle')}
+            label={t('cta.availabilityLabel')}
             link={whatsappLink}
             target="_blank"
           />

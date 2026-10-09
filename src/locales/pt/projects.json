@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Projetos",
+    "eyebrow": "Projetos em destaque",
+    "heading": "Do problema ao deploy.",
+    "content": "Projetos reais. Coisas que estão em órbita."
+  },
+  "proposta-rapida": {
+    "tag": "Produto / SaaS",
+    "description": "Gerador de propostas comerciais para freelancers e agências. Do zero ao deploy."
+  },
+  "mowcar": {
+    "tag": "Aplicativo",
+    "description": "Aplicativo para gerenciamento de aluguel de veículos de frotas corporativas."
+  },
+  "thayna-aguiar": {
+    "tag": "Web / Branding",
+    "description": "Portfólio pessoal construído em React, do wireframe ao ar em uma semana."
+  },
+  "design-system": {
+    "tag": "Design System",
+    "description": "Sistema de design do portfólio. Tokens, componentes e padrões visuais."
+  },
+  "malabares": {
+    "tag": "Web / Branding",
+    "description": "Agência de marketing digital completa. Tudo que você precisa para o seu negócio."
+  },
+  "malabares-wedding": {
+    "tag": "Web",
+    "description": "Serviço focado em identidade visual, sites de casamento e experiência emocional."
+  },
+  "instituto-valentim": {
+    "tag": "Web / Branding",
+    "description": "Instituto focado em metodologias próprias e desenvolvimento humano."
+  },
+  "thayna-e-ademir": {
+    "tag": "Web / Branding",
+    "description": "Personalidade, simplicidade e delicadeza definem bem a nossa identidade visual."
+  },
+  "ana-tomazelli": {
+    "tag": "Web / Branding",
+    "description": "Desenvolvimento da landing page oficial para o evento Aminders."
+  }
+}
